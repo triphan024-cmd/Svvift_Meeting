@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Svvift OS | Live Factory Dashboard Demo</title>
+    
+    <!-- Google Fonts: Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons (Lucide) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">SVVIFT <span>OS</span></div>
+                <div class="badge-demo">LIVE DEMO</div>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <div class="nav-group">Core Operations</div>
+                <a href="#" class="nav-item active"><i data-lucide="layout-dashboard"></i> Overview</a>
+                <a href="#" class="nav-item"><i data-lucide="book-open"></i> Department SOPs</a>
+                <a href="#" class="nav-item"><i data-lucide="git-merge"></i> Workflows</a>
+                
+                <div class="nav-group">Factory Floor</div>
+                <a href="#" class="nav-item"><i data-lucide="factory"></i> Production Live</a>
+                <a href="#" class="nav-item"><i data-lucide="package"></i> Inventory & Warehousing</a>
+                
+                <div class="nav-group">Business</div>
+                <a href="#" class="nav-item"><i data-lucide="users"></i> HR & GA</a>
+                <a href="#" class="nav-item"><i data-lucide="shopping-cart"></i> Sales Orders</a>
+                <a href="#" class="nav-item"><i data-lucide="pie-chart"></i> Financials</a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <a href="index.html" class="back-link"><i data-lucide="arrow-left"></i> Back to Proposal</a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Header -->
+            <header class="top-header">
+                <div class="header-search">
+                    <i data-lucide="search"></i>
+                    <input type="text" placeholder="Search orders, employees, SOPs...">
+                </div>
+                <div class="header-actions">
+                    <div class="status-indicator">
+                        <span class="pulse"></span> System: Optimal
+                    </div>
+                    <button class="icon-btn"><i data-lucide="bell"></i></button>
+                    <div class="user-profile">
+                        <div class="avatar">F</div>
+                        <span>Fay & Scot</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Dashboard Content -->
+            <div class="content-scroll">
+                <div class="page-title">
+                    <h1>Real-Time Operations Center</h1>
+                    <p>Live snapshot of Svvift's integrated systems.</p>
+                </div>
+
+                <!-- KPI Widgets -->
+                <div class="grid-4">
+                    <div class="kpi-card">
+                        <div class="kpi-header">
+                            <span class="kpi-title">OEE (Overall Equipment Effectiveness)</span>
+                            <i data-lucide="activity" class="text-blue"></i>
+                        </div>
+                        <div class="kpi-value">87.4%</div>
+                        <div class="kpi-trend positive"><i data-lucide="trending-up"></i> +2.1% from last week</div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-header">
+                            <span class="kpi-title">Active Sales Orders</span>
+                            <i data-lucide="shopping-bag" class="text-gold"></i>
+                        </div>
+                        <div class="kpi-value">142</div>
+                        <div class="kpi-trend"><i data-lucide="minus"></i> Steady</div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-header">
+                            <span class="kpi-title">SOP Adherence Rate</span>
+                            <i data-lucide="check-circle" class="text-green"></i>
+                        </div>
+                        <div class="kpi-value">94.8%</div>
+                        <div class="kpi-trend positive"><i data-lucide="trending-up"></i> +5.4% (New Living System)</div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-header">
+                            <span class="kpi-title">Est. Revenue (MTD)</span>
+                            <i data-lucide="dollar-sign" class="text-purple"></i>
+                        </div>
+                        <div class="kpi-value">$1.24M</div>
+                        <div class="kpi-trend positive"><i data-lucide="trending-up"></i> +12% vs Target</div>
+                    </div>
+                </div>
+
+                <!-- Charts & Complex Data -->
+                <div class="grid-2 mt-4">
+                    <!-- Production Chart -->
+                    <div class="panel">
+                        <div class="panel-header">
+                            <h3 class="panel-title">Production Output vs Target (7 Days)</h3>
+                            <button class="btn-small">View Report</button>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="productionChart"></canvas>
+                        </div>
+                    </div>
+
+                    <!-- Live Workflow Alerts -->
+                    <div class="panel">
+                        <div class="panel-header">
+                            <h3 class="panel-title">Active Workflows & Alerts</h3>
+                        </div>
+                        <div class="list-group">
+                            <div class="list-item">
+                                <div class="icon-circle bg-yellow"><i data-lucide="alert-triangle"></i></div>
+                                <div class="item-details">
+                                    <h4>Low Inventory: Raw Material A-45</h4>
+                                    <p>Auto-Purchase Order triggered to Supplier XYZ.</p>
+                                </div>
+                                <div class="item-time">2m ago</div>
+                            </div>
+                            <div class="list-item">
+                                <div class="icon-circle bg-green"><i data-lucide="check"></i></div>
+                                <div class="item-details">
+                                    <h4>Quality Check Passed: Line 3</h4>
+                                    <p>SOP checklist #4022 completed by Inspector John.</p>
+                                </div>
+                                <div class="item-time">15m ago</div>
+                            </div>
+                            <div class="list-item">
+                                <div class="icon-circle bg-blue"><i data-lucide="file-text"></i></div>
+                                <div class="item-details">
+                                    <h4>New Sales Order Received</h4>
+                                    <p>Order #99201 synced to Production Schedule.</p>
+                                </div>
+                                <div class="item-time">1h ago</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Inventory & HR Overview -->
+                <div class="grid-2 mt-4">
+                    <div class="panel">
+                        <div class="panel-header">
+                            <h3 class="panel-title">Department SOP Status</h3>
+                        </div>
+                        <div class="progress-list">
+                            <div class="progress-item">
+                                <div class="progress-label"><span>Assembly Line</span> <span>98% Updated</span></div>
+                                <div class="progress-bar"><div class="fill bg-green" style="width: 98%"></div></div>
+                            </div>
+                            <div class="progress-item">
+                                <div class="progress-label"><span>Quality Control</span> <span>92% Updated</span></div>
+                                <div class="progress-bar"><div class="fill bg-blue" style="width: 92%"></div></div>
+                            </div>
+                            <div class="progress-item">
+                                <div class="progress-label"><span>Warehouse</span> <span>85% Updated</span></div>
+                                <div class="progress-bar"><div class="fill bg-yellow" style="width: 85%"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel">
+                        <div class="panel-header">
+                            <h3 class="panel-title">HR & Shift Allocation</h3>
+                        </div>
+                        <div class="chart-container" style="height: 200px;">
+                            <canvas id="hrChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <script src="dashboard.js"></script>
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>
