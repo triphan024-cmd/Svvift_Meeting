@@ -25,18 +25,20 @@ document.addEventListener('DOMContentLoaded', () => {
         revealOnScroll.observe(el);
     });
 
-    // 2. Navbar Background change on scroll
+    // 2. Navbar Background change on scroll (Light Mode)
     const navbar = document.querySelector('.navbar');
     
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
-            navbar.style.background = 'rgba(5, 5, 5, 0.95)';
-            navbar.style.borderBottom = '1px solid rgba(255, 255, 255, 0.1)';
+            navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+            navbar.style.borderBottom = '1px solid rgba(0, 0, 0, 0.05)';
             navbar.style.padding = '1rem 0';
+            navbar.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.03)';
         } else {
-            navbar.style.background = 'rgba(5, 5, 5, 0.8)';
-            navbar.style.borderBottom = '1px solid rgba(255, 255, 255, 0.05)';
+            navbar.style.background = 'rgba(255, 255, 255, 0.7)';
+            navbar.style.borderBottom = '1px solid rgba(0, 0, 0, 0.05)';
             navbar.style.padding = '1.5rem 0';
+            navbar.style.boxShadow = 'none';
         }
     });
 
@@ -47,10 +49,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const x = e.clientX / window.innerWidth * 100;
         const y = e.clientY / window.innerHeight * 100;
         
-        // Slightly move the gradient centers based on mouse position to create a dynamic depth effect
+        // Dynamic depth effect with soft light colors
         bgGradient.style.background = `
-            radial-gradient(circle at ${15 + (x * 0.05)}% ${50 + (y * 0.05)}%, var(--accent-teal-glow), transparent 40%),
-            radial-gradient(circle at ${85 - (x * 0.05)}% ${30 - (y * 0.05)}%, var(--accent-gold-glow), transparent 40%)
+            radial-gradient(circle at ${15 + (x * 0.05)}% ${50 + (y * 0.05)}%, rgba(30,58,138,0.06), transparent 50%),
+            radial-gradient(circle at ${85 - (x * 0.05)}% ${30 - (y * 0.05)}%, rgba(180,83,9,0.05), transparent 50%)
         `;
     });
 });
