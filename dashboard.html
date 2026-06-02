@@ -289,32 +289,38 @@
                                 <div class="p-4" style="max-height: 400px; overflow-y: auto;">
                                     <div class="mb-4">
                                         <h4 style="margin-bottom: 8px; font-size: 0.9rem; color: var(--text-secondary);">Workflow 1: Quality Control (QA)</h4>
-                                        <div class="workflow-visual">
-                                            <div class="wf-node">1. Defect Logged (Tablet)</div>
-                                            <i data-lucide="arrow-down" class="wf-arrow"></i>
-                                            <div class="wf-node bg-yellow-light">2. Auto Line Pause <span class="text-secondary">(Saved 45m scrap)</span></div>
-                                            <i data-lucide="arrow-down" class="wf-arrow"></i>
-                                            <div class="wf-node bg-green-light">3. Root Cause logged to DB</div>
+                                        <div class="mermaid">
+                                            flowchart LR
+                                                A[1. Defect Logged <br/>on Tablet] --> B[2. Auto Line Pause <br/>Saved 45m scrap]
+                                                B --> C[3. Root Cause <br/>logged to DB]
+                                                
+                                                style A fill:#f1f5f9,stroke:#cbd5e1,color:#1e293b
+                                                style B fill:#fef3c7,stroke:#fde68a,color:#92400e
+                                                style C fill:#dcfce7,stroke:#bbf7d0,color:#166534
                                         </div>
                                     </div>
                                     <div class="mb-4">
                                         <h4 style="margin-bottom: 8px; font-size: 0.9rem; color: var(--text-secondary);">Workflow 2: Material Shortage</h4>
-                                        <div class="workflow-visual">
-                                            <div class="wf-node">1. Inventory Drop < 20%</div>
-                                            <i data-lucide="arrow-down" class="wf-arrow"></i>
-                                            <div class="wf-node bg-blue-light">2. Auto-Reorder Triggered <span class="text-secondary">(Supplier Notified)</span></div>
-                                            <i data-lucide="arrow-down" class="wf-arrow"></i>
-                                            <div class="wf-node bg-green-light">3. Forklift Dispatched to Line</div>
+                                        <div class="mermaid">
+                                            flowchart LR
+                                                A[1. Inventory Drop <br/> < 20%] --> B[2. Auto-Reorder Triggered <br/> Supplier Notified]
+                                                B --> C[3. Forklift Dispatched <br/> to Line]
+                                                
+                                                style A fill:#f1f5f9,stroke:#cbd5e1,color:#1e293b
+                                                style B fill:#dbeafe,stroke:#bfdbfe,color:#1e40af
+                                                style C fill:#dcfce7,stroke:#bbf7d0,color:#166534
                                         </div>
                                     </div>
                                     <div>
                                         <h4 style="margin-bottom: 8px; font-size: 0.9rem; color: var(--text-secondary);">Workflow 3: Maintenance (TPM)</h4>
-                                        <div class="workflow-visual">
-                                            <div class="wf-node">1. Abnormal Vibration (IoT Sensor)</div>
-                                            <i data-lucide="arrow-down" class="wf-arrow"></i>
-                                            <div class="wf-node bg-yellow-light">2. Work Order Auto-Generated</div>
-                                            <i data-lucide="arrow-down" class="wf-arrow"></i>
-                                            <div class="wf-node bg-green-light">3. Technician Assigned (SLA: 15m)</div>
+                                        <div class="mermaid">
+                                            flowchart LR
+                                                A[1. Abnormal Vibration <br/> IoT Sensor] --> B[2. Work Order <br/> Auto-Generated]
+                                                B --> C[3. Technician Assigned <br/> SLA: 15m]
+                                                
+                                                style A fill:#f1f5f9,stroke:#cbd5e1,color:#1e293b
+                                                style B fill:#fef3c7,stroke:#fde68a,color:#92400e
+                                                style C fill:#dcfce7,stroke:#bbf7d0,color:#166534
                                         </div>
                                     </div>
                                 </div>
@@ -350,7 +356,7 @@
 
                     <div class="grid-2 mb-4">
                         <div class="panel">
-                            <div class="panel-header"><h3 class="panel-title">Dây chuyền Sản xuất Chổi (Broom)</h3></div>
+                            <div class="panel-header"><h3 class="panel-title">Line 1: Ostrich Feather Broom</h3></div>
                             <div class="list-group" style="padding: 0;">
                                 <div class="list-item">
                                     <div class="icon-circle bg-green-light"><i data-lucide="check"></i></div>
@@ -378,7 +384,7 @@
                         </div>
 
                         <div class="panel">
-                            <div class="panel-header"><h3 class="panel-title">Dây chuyền Sản xuất Cọ sơn (Brush)</h3></div>
+                            <div class="panel-header"><h3 class="panel-title">Line 2: Sheep Wool Paint Brush</h3></div>
                             <div class="list-group" style="padding: 0;">
                                 <div class="list-item">
                                     <div class="icon-circle bg-green-light"><i data-lucide="check"></i></div>
@@ -403,6 +409,52 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+
+                    <div class="panel mb-4">
+                        <div class="panel-header">
+                            <h3 class="panel-title">Work In Process (WIP) Tracking</h3>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>Batch ID</th>
+                                        <th>Product</th>
+                                        <th>Current Stage</th>
+                                        <th>Qty</th>
+                                        <th>Scrap Rate</th>
+                                        <th>Est. Completion</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><span style="font-family: monospace; font-weight: 500;">BCH-291</span></td>
+                                        <td>Ostrich Feather Broom</td>
+                                        <td><span class="badge bg-blue">Feather Sorting</span></td>
+                                        <td>500 units</td>
+                                        <td>1.0%</td>
+                                        <td>Today, 14:00</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span style="font-family: monospace; font-weight: 500;">BCH-292</span></td>
+                                        <td>Ostrich Feather Broom</td>
+                                        <td><span class="badge bg-yellow">Handle Assembly</span></td>
+                                        <td>1,200 units</td>
+                                        <td>2.5%</td>
+                                        <td>Tomorrow, 09:00</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span style="font-family: monospace; font-weight: 500;">BCH-304</span></td>
+                                        <td>Sheep Wool Paint Brush</td>
+                                        <td><span class="badge bg-green">Packaging</span></td>
+                                        <td>3,000 units</td>
+                                        <td>0.5%</td>
+                                        <td>Today, 16:30</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
 
@@ -453,6 +505,60 @@
                                 <div class="chart-container"><canvas id="inventoryPieChart"></canvas></div>
                             </div>
                         </div>
+
+                        <div class="panel" style="margin-top: 1.5rem;">
+                            <div class="panel-header">
+                                <h3 class="panel-title">Current Stock List (Danh sách tồn kho)</h3>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="data-table">
+                                    <thead>
+                                        <tr>
+                                            <th>SKU</th>
+                                            <th>Material / Item</th>
+                                            <th>Category</th>
+                                            <th>Qty in Stock</th>
+                                            <th>Reorder Level</th>
+                                            <th>Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><span style="font-family: monospace; font-weight: 500;">RM-OF-01</span></td>
+                                            <td style="font-weight: 500;">Premium Ostrich Feathers</td>
+                                            <td>Raw Material</td>
+                                            <td>450 kg</td>
+                                            <td>200 kg</td>
+                                            <td><span class="badge bg-green">Healthy</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span style="font-family: monospace; font-weight: 500;">RM-SW-02</span></td>
+                                            <td style="font-weight: 500;">Natural Sheep Wool</td>
+                                            <td>Raw Material</td>
+                                            <td>180 kg</td>
+                                            <td>250 kg</td>
+                                            <td><span class="badge bg-yellow">Low Stock</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span style="font-family: monospace; font-weight: 500;">CM-WH-10</span></td>
+                                            <td style="font-weight: 500;">Varnished Wooden Handles (1.2m)</td>
+                                            <td>Component</td>
+                                            <td>12,500 pcs</td>
+                                            <td>5,000 pcs</td>
+                                            <td><span class="badge bg-green">Healthy</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span style="font-family: monospace; font-weight: 500;">CH-EX-05</span></td>
+                                            <td style="font-weight: 500;">Industrial Epoxy Resin</td>
+                                            <td>Chemical</td>
+                                            <td>45 L</td>
+                                            <td>50 L</td>
+                                            <td><span class="badge bg-yellow">Reorder Triggered</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
                     </div>
 
                     <!-- Sub Pane: Outbound -->
@@ -484,27 +590,31 @@
                                         <tr>
                                             <th>Manifest ID</th>
                                             <th>Destination</th>
-                                            <th>Quantity</th>
+                                            <th>Items Dispatched</th>
+                                            <th>Total Qty</th>
                                             <th>Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td>MNF-8821</td>
+                                            <td><span style="font-family: monospace; font-weight: 500;">MNF-8821</span></td>
                                             <td>US Distribution Center</td>
-                                            <td>5,000 units</td>
+                                            <td style="font-size: 0.9rem;">3,000x Ostrich Broom<br>2,000x Wool Paint Brush</td>
+                                            <td style="font-weight: 500;">5,000 units</td>
                                             <td><span class="badge bg-green">Dispatched</span></td>
                                         </tr>
                                         <tr>
-                                            <td>MNF-8822</td>
+                                            <td><span style="font-family: monospace; font-weight: 500;">MNF-8822</span></td>
                                             <td>EU Logistics Hub</td>
-                                            <td>3,500 units</td>
+                                            <td style="font-size: 0.9rem;">3,500x Wool Paint Brush</td>
+                                            <td style="font-weight: 500;">3,500 units</td>
                                             <td><span class="badge bg-yellow">Loading</span></td>
                                         </tr>
                                         <tr>
-                                            <td>MNF-8823</td>
+                                            <td><span style="font-family: monospace; font-weight: 500;">MNF-8823</span></td>
                                             <td>Local Retailer</td>
-                                            <td>1,200 units</td>
+                                            <td style="font-size: 0.9rem;">800x Ostrich Broom<br>400x Wool Paint Brush</td>
+                                            <td style="font-weight: 500;">1,200 units</td>
                                             <td><span class="badge bg-blue">Scheduled</span></td>
                                         </tr>
                                     </tbody>
@@ -581,6 +691,60 @@
                             <div class="chart-container"><canvas id="laborCostChart"></canvas></div>
                         </div>
                     </div>
+
+                    <div class="panel" style="margin-top: 1.5rem;">
+                        <div class="panel-header">
+                            <h3 class="panel-title">Employee Roster (Danh sách nhân sự)</h3>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>Emp ID</th>
+                                        <th>Name</th>
+                                        <th>Department</th>
+                                        <th>Base Salary</th>
+                                        <th>Insurance (SI/HI/UI)</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><span style="font-family: monospace; font-weight: 500;">EMP-1042</span></td>
+                                        <td style="font-weight: 500;">Nguyen Van A</td>
+                                        <td>Production - Line 1</td>
+                                        <td>12,500,000 ₫</td>
+                                        <td><span class="badge bg-green-light" style="color: #047857;">Fully Covered</span></td>
+                                        <td><span class="badge bg-green">Active</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span style="font-family: monospace; font-weight: 500;">EMP-1088</span></td>
+                                        <td style="font-weight: 500;">Tran Thi B</td>
+                                        <td>Quality Assurance</td>
+                                        <td>15,000,000 ₫</td>
+                                        <td><span class="badge bg-green-light" style="color: #047857;">Fully Covered</span></td>
+                                        <td><span class="badge bg-green">Active</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span style="font-family: monospace; font-weight: 500;">EMP-1102</span></td>
+                                        <td style="font-weight: 500;">Le Van C</td>
+                                        <td>Warehouse Logistics</td>
+                                        <td>11,000,000 ₫</td>
+                                        <td><span class="badge bg-yellow-light" style="color: #B45309;">Pending (Probation)</span></td>
+                                        <td><span class="badge bg-yellow">Probation</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span style="font-family: monospace; font-weight: 500;">EMP-1105</span></td>
+                                        <td style="font-weight: 500;">Pham Thi D</td>
+                                        <td>Production - Line 2</td>
+                                        <td>12,500,000 ₫</td>
+                                        <td><span class="badge bg-green-light" style="color: #047857;">Fully Covered</span></td>
+                                        <td><span class="badge bg-green">Active</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- ================= TAB: ORDERS ================= -->
@@ -625,26 +789,51 @@
                                             <th>Order ID</th>
                                             <th>Client</th>
                                             <th>Value</th>
+                                            <th>Tracking No. / Carrier</th>
+                                            <th>Documents</th>
                                             <th>Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td>ORD-2024-891</td>
+                                            <td><span style="font-family: monospace; font-weight: 500;">ORD-2024-891</span></td>
                                             <td>HomeDepot US</td>
-                                            <td>$125,000</td>
+                                            <td style="font-weight: 500;">$125,000</td>
+                                            <td><span style="color: var(--accent-primary); font-family: monospace;">FX-9182374</span> (FedEx)</td>
+                                            <td>
+                                                <span class="badge" style="background: rgba(30,58,138,0.1); color: var(--accent-primary);">BoL</span>
+                                                <span class="badge" style="background: rgba(30,58,138,0.1); color: var(--accent-primary);">Inv</span>
+                                            </td>
                                             <td><span class="badge bg-blue">Processing</span></td>
                                         </tr>
                                         <tr>
-                                            <td>ORD-2024-890</td>
+                                            <td><span style="font-family: monospace; font-weight: 500;">ORD-2024-890</span></td>
                                             <td>Walmart EU</td>
-                                            <td>$85,500</td>
+                                            <td style="font-weight: 500;">$85,500</td>
+                                            <td><span style="color: var(--text-muted); font-style: italic;">Pending Generation</span></td>
+                                            <td>
+                                                <span class="badge" style="background: rgba(245,158,11,0.1); color: #B45309;">Draft</span>
+                                            </td>
                                             <td><span class="badge bg-yellow">Documentation</span></td>
                                         </tr>
                                         <tr>
-                                            <td>ORD-2024-889</td>
+                                            <td><span style="font-family: monospace; font-weight: 500;">ORD-2024-889</span></td>
                                             <td>Local Dist.</td>
-                                            <td>$12,000</td>
+                                            <td style="font-weight: 500;">$12,000</td>
+                                            <td><span style="color: var(--accent-primary); font-family: monospace;">VN-LT8271</span> (VNPost)</td>
+                                            <td>
+                                                <span class="badge bg-green-light" style="color: #047857;">Signed BoL</span>
+                                            </td>
+                                            <td><span class="badge bg-green">Shipped</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span style="font-family: monospace; font-weight: 500;">ORD-2024-888</span></td>
+                                            <td>Amazon FBA</td>
+                                            <td style="font-weight: 500;">$45,000</td>
+                                            <td><span style="color: var(--accent-primary); font-family: monospace;">UPS-1Z999</span> (UPS Freight)</td>
+                                            <td>
+                                                <span class="badge bg-green-light" style="color: #047857;">Customs Cleared</span>
+                                            </td>
                                             <td><span class="badge bg-green">Shipped</span></td>
                                         </tr>
                                     </tbody>
@@ -722,6 +911,10 @@
     <script src="dashboard.js"></script>
     <script>
         lucide.createIcons();
+    </script>
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({ startOnLoad: true, theme: 'base', themeVariables: { fontFamily: 'Inter, sans-serif' } });
     </script>
 </body>
 </html>
