@@ -20,17 +20,16 @@
         <aside class="sidebar">
             <div class="sidebar-header">
                 <div class="logo">SVVIFT <span>OS</span></div>
-                <div class="badge-demo">LIVE DEMO</div>
+                <div class="badge-demo">DEMO</div>
             </div>
             
             <nav class="sidebar-nav">
                 <a href="#" class="nav-item active" data-target="tab-overview"><i data-lucide="layout-dashboard"></i> Overview</a>
-                <a href="#" class="nav-item" data-target="tab-sops"><i data-lucide="book-open"></i> Department SOPs</a>
-                <a href="#" class="nav-item" data-target="tab-workflows"><i data-lucide="git-merge"></i> Workflows</a>
-                <a href="#" class="nav-item" data-target="tab-production"><i data-lucide="factory"></i> Production Live</a>
+                <a href="#" class="nav-item" data-target="tab-procedure"><i data-lucide="book-open"></i> Procedure</a>
+                <a href="#" class="nav-item" data-target="tab-production"><i data-lucide="factory"></i> Production</a>
                 <a href="#" class="nav-item" data-target="tab-inventory"><i data-lucide="package"></i> Inventory</a>
                 <a href="#" class="nav-item" data-target="tab-hr"><i data-lucide="users"></i> HR & GA</a>
-                <a href="#" class="nav-item" data-target="tab-sales"><i data-lucide="shopping-cart"></i> Sales Orders</a>
+                <a href="#" class="nav-item" data-target="tab-orders"><i data-lucide="shopping-cart"></i> Orders</a>
                 <a href="#" class="nav-item" data-target="tab-financials"><i data-lucide="pie-chart"></i> Financials</a>
             </nav>
 
@@ -92,11 +91,11 @@
                         </div>
                         <div class="kpi-card">
                             <div class="kpi-header">
-                                <span class="kpi-title">SOP Compliance</span>
-                                <i data-lucide="check-circle" class="text-green"></i>
+                                <span class="kpi-title">Factory Health Score</span>
+                                <i data-lucide="heart" class="text-green"></i>
                             </div>
-                            <div class="kpi-value">94.8%</div>
-                            <div class="kpi-trend positive"><i data-lucide="trending-up"></i> +5.4% (Living System)</div>
+                            <div class="kpi-value">94/100</div>
+                            <div class="kpi-trend positive"><i data-lucide="trending-up"></i> +2 points (Optimal)</div>
                         </div>
                         <div class="kpi-card">
                             <div class="kpi-header">
@@ -149,116 +148,176 @@
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <!-- ================= TAB: SOPS ================= -->
-                <div id="tab-sops" class="tab-pane">
-                    <div class="page-title">
-                        <h1>SOPs & Corporate Governance</h1>
-                        <p>Monitoring the "Living Ecosystem" of standard operating procedures.</p>
-                    </div>
-                    
-                    <div class="grid-3 mb-4">
-                        <div class="kpi-card">
-                            <div class="kpi-title">Audit Score (Last 30 Days)</div>
-                            <div class="kpi-value text-blue">96/100</div>
-                            <p class="kpi-trend">Pass Grade</p>
-                        </div>
-                        <div class="kpi-card">
-                            <div class="kpi-title">Critical Non-Compliance</div>
-                            <div class="kpi-value text-green">0</div>
-                            <p class="kpi-trend">Zero Incidents</p>
-                        </div>
-                        <div class="kpi-card">
-                            <div class="kpi-title">SOP Update Frequency</div>
-                            <div class="kpi-value text-purple">14 Days</div>
-                            <p class="kpi-trend">Avg. review cycle (Agile)</p>
-                        </div>
-                    </div>
-
-                    <div class="grid-2">
+                    <div class="grid-2 mt-4">
                         <div class="panel">
-                            <div class="panel-header"><h3 class="panel-title">SOP Compliance Trend (6 Months)</h3></div>
-                            <div class="chart-container"><canvas id="complianceChart"></canvas></div>
+                            <div class="panel-header">
+                                <h3 class="panel-title">Revenue vs Operating Costs (YTD)</h3>
+                            </div>
+                            <div class="chart-container">
+                                <canvas id="overviewFinancialChart"></canvas>
+                            </div>
                         </div>
                         <div class="panel">
                             <div class="panel-header">
-                                <h3 class="panel-title">Department Review Status</h3>
+                                <h3 class="panel-title">Resource Utilization (Real-time)</h3>
                             </div>
-                            <div class="table-responsive">
-                                <table class="data-table">
-                                    <thead>
-                                        <tr>
-                                            <th>Department</th>
-                                            <th>SOPs Active</th>
-                                            <th>Adherence Rate</th>
-                                            <th>Status</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Production</td>
-                                            <td>45</td>
-                                            <td><div class="progress-bar-small"><div class="fill bg-green" style="width: 98%"></div></div> 98%</td>
-                                            <td><span class="badge bg-green">Compliant</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Quality Control</td>
-                                            <td>18</td>
-                                            <td><div class="progress-bar-small"><div class="fill bg-yellow" style="width: 82%"></div></div> 82%</td>
-                                            <td><span class="badge bg-yellow">Audit Pending</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Warehouse</td>
-                                            <td>22</td>
-                                            <td><div class="progress-bar-small"><div class="fill bg-blue" style="width: 95%"></div></div> 95%</td>
-                                            <td><span class="badge bg-green">Compliant</span></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                            <div class="p-4">
+                                <div class="progress-label"><span>Machine Capacity</span> <span>82%</span></div>
+                                <div class="progress-bar mb-4"><div class="fill bg-blue" style="width: 82%"></div></div>
+                                
+                                <div class="progress-label"><span>Labor Allocation</span> <span>94%</span></div>
+                                <div class="progress-bar mb-4"><div class="fill bg-green" style="width: 94%"></div></div>
+                                
+                                <div class="progress-label"><span>Energy Consumption</span> <span>76%</span></div>
+                                <div class="progress-bar mb-4"><div class="fill bg-yellow" style="width: 76%"></div></div>
+
+                                <div class="progress-label"><span>Warehouse Space</span> <span>65%</span></div>
+                                <div class="progress-bar"><div class="fill bg-purple" style="width: 65%"></div></div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- ================= TAB: WORKFLOWS ================= -->
-                <div id="tab-workflows" class="tab-pane">
+                <!-- ================= TAB: PROCEDURE ================= -->
+                <div id="tab-procedure" class="tab-pane">
                     <div class="page-title">
-                        <h1>Workflow Automation & ROI</h1>
-                        <p>Measuring the impact of bridging SOPs with real-world execution.</p>
+                        <h1>Procedure & Corporate Governance</h1>
+                        <p>Monitoring the "Living Ecosystem" of standard operating procedures and workflows.</p>
                     </div>
 
-                    <div class="grid-3 mb-4">
-                        <div class="kpi-card">
-                            <div class="kpi-title">Admin Hours Saved</div>
-                            <div class="kpi-value text-green">340 hrs</div>
-                            <p class="kpi-trend">Per month via automation</p>
+                    <div class="sub-nav">
+                        <button class="sub-nav-btn active" data-sub="sub-sop">SOPs</button>
+                        <button class="sub-nav-btn" data-sub="sub-workflow">Workflows</button>
+                    </div>
+
+                    <!-- Sub Pane: SOP -->
+                    <div id="sub-sop" class="sub-pane active">
+                        <div class="grid-3 mb-4">
+                            <div class="kpi-card">
+                                <div class="kpi-title">Audit Score (Last 30 Days)</div>
+                                <div class="kpi-value text-blue">96/100</div>
+                                <p class="kpi-trend">Pass Grade</p>
+                            </div>
+                            <div class="kpi-card">
+                                <div class="kpi-title">Critical Non-Compliance</div>
+                                <div class="kpi-value text-green">0</div>
+                                <p class="kpi-trend">Zero Incidents</p>
+                            </div>
+                            <div class="kpi-card">
+                                <div class="kpi-title">SOP Update Frequency</div>
+                                <div class="kpi-value text-purple">14 Days</div>
+                                <p class="kpi-trend">Avg. review cycle (Agile)</p>
+                            </div>
                         </div>
-                        <div class="kpi-card">
-                            <div class="kpi-title">Process Bottlenecks</div>
-                            <div class="kpi-value text-blue">2</div>
-                            <p class="kpi-trend">Down from 15 last quarter</p>
-                        </div>
-                        <div class="kpi-card">
-                            <div class="kpi-title">Approval Turnaround</div>
-                            <div class="kpi-value text-purple">1.2 hrs</div>
-                            <p class="kpi-trend">Vs. 24 hrs previously</p>
+
+                        <div class="grid-2">
+                            <div class="panel">
+                                <div class="panel-header"><h3 class="panel-title">SOP Compliance Trend (6 Months)</h3></div>
+                                <div class="chart-container"><canvas id="complianceChart"></canvas></div>
+                            </div>
+                            <div class="panel">
+                                <div class="panel-header">
+                                    <h3 class="panel-title">Department SOPs (Detailed)</h3>
+                                </div>
+                                <div class="p-4" style="max-height: 400px; overflow-y: auto;">
+                                    <!-- Production -->
+                                    <div class="mb-4">
+                                        <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                                            <h4 style="font-size: 0.95rem; font-weight: 600;">Production</h4>
+                                            <span class="badge bg-green">98% Compliant</span>
+                                        </div>
+                                        <ul style="list-style: none; padding-left: 0; margin-bottom: 0; font-size: 0.85rem; color: var(--text-secondary);">
+                                            <li style="margin-bottom: 4px;"><i data-lucide="file-text" style="width: 14px; height: 14px; vertical-align: middle;"></i> SOP-PROD-01: CNC Machine Setup</li>
+                                            <li style="margin-bottom: 4px;"><i data-lucide="file-text" style="width: 14px; height: 14px; vertical-align: middle;"></i> SOP-PROD-02: Line Changeover</li>
+                                            <li><i data-lucide="file-text" style="width: 14px; height: 14px; vertical-align: middle;"></i> SOP-PROD-03: End of Shift Cleaning</li>
+                                        </ul>
+                                    </div>
+                                    <!-- HR -->
+                                    <div class="mb-4">
+                                        <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                                            <h4 style="font-size: 0.95rem; font-weight: 600;">Human Resources (HR)</h4>
+                                            <span class="badge bg-green">100% Compliant</span>
+                                        </div>
+                                        <ul style="list-style: none; padding-left: 0; margin-bottom: 0; font-size: 0.85rem; color: var(--text-secondary);">
+                                            <li style="margin-bottom: 4px;"><i data-lucide="file-text" style="width: 14px; height: 14px; vertical-align: middle;"></i> SOP-HR-01: New Hire Onboarding</li>
+                                            <li style="margin-bottom: 4px;"><i data-lucide="file-text" style="width: 14px; height: 14px; vertical-align: middle;"></i> SOP-HR-02: Safety Incident Reporting</li>
+                                        </ul>
+                                    </div>
+                                    <!-- Inspection -->
+                                    <div>
+                                        <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                                            <h4 style="font-size: 0.95rem; font-weight: 600;">Inspection (QA)</h4>
+                                            <span class="badge bg-yellow">82% Pending Audit</span>
+                                        </div>
+                                        <ul style="list-style: none; padding-left: 0; margin-bottom: 0; font-size: 0.85rem; color: var(--text-secondary);">
+                                            <li style="margin-bottom: 4px;"><i data-lucide="file-text" style="width: 14px; height: 14px; vertical-align: middle;"></i> SOP-QA-01: First Piece Inspection</li>
+                                            <li style="margin-bottom: 4px;"><i data-lucide="file-text" style="width: 14px; height: 14px; vertical-align: middle;"></i> SOP-QA-02: Defect Quarantining</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="grid-2">
-                        <div class="panel">
-                            <div class="panel-header"><h3 class="panel-title">Manual vs Automated Tasks (YTD)</h3></div>
-                            <div class="chart-container"><canvas id="automationChart"></canvas></div>
+                    <!-- Sub Pane: WORKFLOWS -->
+                    <div id="sub-workflow" class="sub-pane">
+                        <div class="grid-3 mb-4">
+                            <div class="kpi-card">
+                                <div class="kpi-title">Admin Hours Saved</div>
+                                <div class="kpi-value text-green">340 hrs</div>
+                                <p class="kpi-trend">Per month via automation</p>
+                            </div>
+                            <div class="kpi-card">
+                                <div class="kpi-title">Process Bottlenecks</div>
+                                <div class="kpi-value text-blue">2</div>
+                                <p class="kpi-trend">Down from 15 last quarter</p>
+                            </div>
+                            <div class="kpi-card">
+                                <div class="kpi-title">Approval Turnaround</div>
+                                <div class="kpi-value text-purple">1.2 hrs</div>
+                                <p class="kpi-trend">Vs. 24 hrs previously</p>
+                            </div>
                         </div>
-                        <div class="panel">
-                            <div class="panel-header"><h3 class="panel-title">Live Automation Value Stream</h3></div>
-                            <div class="workflow-visual">
-                                <div class="wf-node">1. Quality Defect Logged (Worker tablet)</div>
-                                <i data-lucide="arrow-down" class="wf-arrow"></i>
-                                <div class="wf-node bg-yellow-light">2. Line Pause & QA Alert <span class="text-secondary">(Saved 45m of scrap)</span></div>
-                                <i data-lucide="arrow-down" class="wf-arrow"></i>
-                                <div class="wf-node bg-green-light">3. Root Cause Analysis logged to database</div>
+
+                        <div class="grid-2">
+                            <div class="panel">
+                                <div class="panel-header"><h3 class="panel-title">Manual vs Automated Tasks (YTD)</h3></div>
+                                <div class="chart-container"><canvas id="automationChart"></canvas></div>
+                            </div>
+                            <div class="panel">
+                                <div class="panel-header"><h3 class="panel-title">Live Automation Value Streams</h3></div>
+                                <div class="p-4" style="max-height: 400px; overflow-y: auto;">
+                                    <div class="mb-4">
+                                        <h4 style="margin-bottom: 8px; font-size: 0.9rem; color: var(--text-secondary);">Workflow 1: Quality Control (QA)</h4>
+                                        <div class="workflow-visual">
+                                            <div class="wf-node">1. Defect Logged (Tablet)</div>
+                                            <i data-lucide="arrow-down" class="wf-arrow"></i>
+                                            <div class="wf-node bg-yellow-light">2. Auto Line Pause <span class="text-secondary">(Saved 45m scrap)</span></div>
+                                            <i data-lucide="arrow-down" class="wf-arrow"></i>
+                                            <div class="wf-node bg-green-light">3. Root Cause logged to DB</div>
+                                        </div>
+                                    </div>
+                                    <div class="mb-4">
+                                        <h4 style="margin-bottom: 8px; font-size: 0.9rem; color: var(--text-secondary);">Workflow 2: Material Shortage</h4>
+                                        <div class="workflow-visual">
+                                            <div class="wf-node">1. Inventory Drop < 20%</div>
+                                            <i data-lucide="arrow-down" class="wf-arrow"></i>
+                                            <div class="wf-node bg-blue-light">2. Auto-Reorder Triggered <span class="text-secondary">(Supplier Notified)</span></div>
+                                            <i data-lucide="arrow-down" class="wf-arrow"></i>
+                                            <div class="wf-node bg-green-light">3. Forklift Dispatched to Line</div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h4 style="margin-bottom: 8px; font-size: 0.9rem; color: var(--text-secondary);">Workflow 3: Maintenance (TPM)</h4>
+                                        <div class="workflow-visual">
+                                            <div class="wf-node">1. Abnormal Vibration (IoT Sensor)</div>
+                                            <i data-lucide="arrow-down" class="wf-arrow"></i>
+                                            <div class="wf-node bg-yellow-light">2. Work Order Auto-Generated</div>
+                                            <i data-lucide="arrow-down" class="wf-arrow"></i>
+                                            <div class="wf-node bg-green-light">3. Technician Assigned (SLA: 15m)</div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -268,14 +327,14 @@
                 <div id="tab-production" class="tab-pane">
                     <div class="page-title">
                         <h1>Production & Capacity</h1>
-                        <p>High-level view of facility utilization and efficiency.</p>
+                        <p>Real-time factory floor metrics for Broom and Paint Brush production.</p>
                     </div>
 
                     <div class="grid-3 mb-4">
                         <div class="kpi-card">
-                            <div class="kpi-title">Capacity Utilization</div>
-                            <div class="kpi-value text-blue">82%</div>
-                            <p class="kpi-trend">Optimal range (75-85%)</p>
+                            <div class="kpi-title">Daily Output (All Lines)</div>
+                            <div class="kpi-value text-blue">7,750</div>
+                            <p class="kpi-trend">Units Produced Today</p>
                         </div>
                         <div class="kpi-card">
                             <div class="kpi-title">Scrap / Defect Rate</div>
@@ -283,117 +342,170 @@
                             <p class="kpi-trend positive"><i data-lucide="trending-down"></i> -0.5% vs target</p>
                         </div>
                         <div class="kpi-card">
-                            <div class="kpi-title">Machine Uptime</div>
-                            <div class="kpi-value text-yellow">96.5%</div>
-                            <p class="kpi-trend">Maintained via TPM SOPs</p>
+                            <div class="kpi-title">Overall OEE</div>
+                            <div class="kpi-value text-yellow">87.4%</div>
+                            <p class="kpi-trend">Avg. across 4 active lines</p>
                         </div>
                     </div>
 
-                    <div class="grid-2">
+                    <div class="grid-2 mb-4">
                         <div class="panel">
-                            <div class="panel-header"><h3 class="panel-title">OEE Trend (Last 12 Weeks)</h3></div>
-                            <div class="chart-container"><canvas id="oeeTrendChart"></canvas></div>
+                            <div class="panel-header"><h3 class="panel-title">Dây chuyền Sản xuất Chổi (Broom)</h3></div>
+                            <div class="list-group" style="padding: 0;">
+                                <div class="list-item">
+                                    <div class="icon-circle bg-green-light"><i data-lucide="check"></i></div>
+                                    <div class="item-details" style="flex-grow: 1;">
+                                        <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
+                                            <h4>Line 1: Broom Assembly</h4>
+                                            <span class="badge bg-green">Active</span>
+                                        </div>
+                                        <p>Output: 1200 / 1500 units | OEE: 92%</p>
+                                        <div class="progress-bar mt-2"><div class="fill bg-green" style="width: 80%"></div></div>
+                                    </div>
+                                </div>
+                                <div class="list-item">
+                                    <div class="icon-circle bg-yellow-light"><i data-lucide="alert-triangle"></i></div>
+                                    <div class="item-details" style="flex-grow: 1;">
+                                        <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
+                                            <h4>Line 2: Handle Shaping</h4>
+                                            <span class="badge bg-yellow">Maintenance</span>
+                                        </div>
+                                        <p>Output: 450 / 1500 units | OEE: 74%</p>
+                                        <div class="progress-bar mt-2"><div class="fill bg-yellow" style="width: 30%"></div></div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+
                         <div class="panel">
-                            <div class="panel-header"><h3 class="panel-title">Defect Pareto Analysis</h3></div>
-                            <div class="chart-container"><canvas id="defectChart"></canvas></div>
+                            <div class="panel-header"><h3 class="panel-title">Dây chuyền Sản xuất Cọ sơn (Brush)</h3></div>
+                            <div class="list-group" style="padding: 0;">
+                                <div class="list-item">
+                                    <div class="icon-circle bg-green-light"><i data-lucide="check"></i></div>
+                                    <div class="item-details" style="flex-grow: 1;">
+                                        <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
+                                            <h4>Line 1: Bristle Inserting</h4>
+                                            <span class="badge bg-green">Active</span>
+                                        </div>
+                                        <p>Output: 3200 / 3500 units | OEE: 95%</p>
+                                        <div class="progress-bar mt-2"><div class="fill bg-green" style="width: 91%"></div></div>
+                                    </div>
+                                </div>
+                                <div class="list-item">
+                                    <div class="icon-circle bg-green-light"><i data-lucide="check"></i></div>
+                                    <div class="item-details" style="flex-grow: 1;">
+                                        <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
+                                            <h4>Line 2: Brush Packaging</h4>
+                                            <span class="badge bg-green">Active</span>
+                                        </div>
+                                        <p>Output: 2900 / 3500 units | OEE: 88%</p>
+                                        <div class="progress-bar mt-2"><div class="fill bg-green" style="width: 82%"></div></div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+                    </div>
+
+                    <div class="panel">
+                        <div class="panel-header"><h3 class="panel-title">Productivity Chart (Năng suất) - 7 Days</h3></div>
+                        <div class="chart-container"><canvas id="productivityChart"></canvas></div>
                     </div>
                 </div>
 
                 <!-- ================= TAB: INVENTORY ================= -->
                 <div id="tab-inventory" class="tab-pane">
                     <div class="page-title">
-                        <h1>Supply Chain & Working Capital</h1>
-                        <p>Inventory health and capital lock-up metrics.</p>
+                        <h1>Supply Chain & Inventory</h1>
+                        <p>Inventory health, inbound materials, and outbound shipping metrics.</p>
                     </div>
 
-                    <div class="grid-3 mb-4">
-                        <div class="kpi-card">
-                            <div class="kpi-title">Working Capital Tied Up</div>
-                            <div class="kpi-value text-purple">$420k</div>
-                            <p class="kpi-trend positive"><i data-lucide="trending-down"></i> Reduced by 15%</p>
-                        </div>
-                        <div class="kpi-card">
-                            <div class="kpi-title">Inventory Turns (Annual)</div>
-                            <div class="kpi-value text-blue">8.5x</div>
-                            <p class="kpi-trend positive"><i data-lucide="trending-up"></i> Lean manufacturing</p>
-                        </div>
-                        <div class="kpi-card">
-                            <div class="kpi-title">Stockout Risk Level</div>
-                            <div class="kpi-value text-green">Low</div>
-                            <p class="kpi-trend">AI Prediction active</p>
-                        </div>
+                    <div class="sub-nav">
+                        <button class="sub-nav-btn active" data-sub="sub-inbound">Inbound (Nhập kho)</button>
+                        <button class="sub-nav-btn" data-sub="sub-outbound">Outbound (Xuất kho)</button>
                     </div>
 
-                    <div class="grid-2">
-                        <div class="panel">
-                            <div class="panel-header"><h3 class="panel-title">Inventory Value Trend</h3></div>
-                            <div class="chart-container"><canvas id="inventoryTrendChart"></canvas></div>
+                    <!-- Sub Pane: Inbound -->
+                    <div id="sub-inbound" class="sub-pane active">
+                        <div class="grid-3 mb-4">
+                            <div class="kpi-card">
+                                <div class="kpi-title">Raw Material Stock</div>
+                                <div class="kpi-value text-blue">24 Days</div>
+                                <p class="kpi-trend">Coverage before stockout</p>
+                            </div>
+                            <div class="kpi-card">
+                                <div class="kpi-title">Inbound QA Pass Rate</div>
+                                <div class="kpi-value text-green">99.1%</div>
+                                <p class="kpi-trend positive"><i data-lucide="trending-up"></i> Improved supplier quality</p>
+                            </div>
+                            <div class="kpi-card">
+                                <div class="kpi-title">Working Capital Tied Up</div>
+                                <div class="kpi-value text-purple">$420k</div>
+                                <p class="kpi-trend positive"><i data-lucide="trending-down"></i> Reduced by 15%</p>
+                            </div>
                         </div>
-                        <div class="panel">
-                            <div class="panel-header"><h3 class="panel-title">Inventory by Category</h3></div>
-                            <div class="chart-container"><canvas id="inventoryPieChart"></canvas></div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ================= TAB: HR & GA ================= -->
-                <div id="tab-hr" class="tab-pane">
-                    <div class="page-title">
-                        <h1>Human Resources & Safety</h1>
-                        <p>Workforce stability, safety, and labor economics.</p>
-                    </div>
-                    
-                    <div class="grid-3 mb-4">
-                        <div class="kpi-card">
-                            <div class="kpi-title">Direct Labor Cost vs Output</div>
-                            <div class="kpi-value text-blue">$0.85/unit</div>
-                            <p class="kpi-trend positive"><i data-lucide="trending-down"></i> Improved efficiency</p>
-                        </div>
-                        <div class="kpi-card">
-                            <div class="kpi-title">Employee Turnover Rate</div>
-                            <div class="kpi-value text-green">4.2%</div>
-                            <p class="kpi-trend">Well below industry avg (12%)</p>
-                        </div>
-                        <div class="kpi-card">
-                            <div class="kpi-title">Safety Incidents (YTD)</div>
-                            <div class="kpi-value text-green">0</div>
-                            <p class="kpi-trend">180 Days without LTI</p>
+                        <div class="grid-2">
+                            <div class="panel">
+                                <div class="panel-header"><h3 class="panel-title">Inventory Value Trend</h3></div>
+                                <div class="chart-container"><canvas id="inventoryTrendChart"></canvas></div>
+                            </div>
+                            <div class="panel">
+                                <div class="panel-header"><h3 class="panel-title">Inventory by Category</h3></div>
+                                <div class="chart-container"><canvas id="inventoryPieChart"></canvas></div>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="grid-2">
-                        <div class="panel">
-                            <div class="panel-header"><h3 class="panel-title">Labor Cost Efficiency</h3></div>
-                            <div class="chart-container"><canvas id="laborCostChart"></canvas></div>
+                    <!-- Sub Pane: Outbound -->
+                    <div id="sub-outbound" class="sub-pane">
+                        <div class="grid-3 mb-4">
+                            <div class="kpi-card">
+                                <div class="kpi-title">Finished Goods Ready</div>
+                                <div class="kpi-value text-green">12,400</div>
+                                <p class="kpi-trend">Units waiting for dispatch</p>
+                            </div>
+                            <div class="kpi-card">
+                                <div class="kpi-title">Outbound Processing Time</div>
+                                <div class="kpi-value text-blue">4.5 hrs</div>
+                                <p class="kpi-trend positive"><i data-lucide="trending-down"></i> Faster loading times</p>
+                            </div>
+                            <div class="kpi-card">
+                                <div class="kpi-title">Shipment Accuracy</div>
+                                <div class="kpi-value text-purple">100%</div>
+                                <p class="kpi-trend">Zero mis-shipments this month</p>
+                            </div>
                         </div>
                         <div class="panel">
-                            <div class="panel-header"><h3 class="panel-title">Training & Certification Matrix</h3></div>
+                            <div class="panel-header">
+                                <h3 class="panel-title">Recent Dispatch Logs</h3>
+                            </div>
                             <div class="table-responsive">
                                 <table class="data-table">
                                     <thead>
                                         <tr>
-                                            <th>Role</th>
-                                            <th>Certified Staff</th>
-                                            <th>Gap/Risk</th>
+                                            <th>Manifest ID</th>
+                                            <th>Destination</th>
+                                            <th>Quantity</th>
+                                            <th>Status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td>CNC Operators</td>
-                                            <td>12 / 12</td>
-                                            <td><span class="badge bg-green">Zero Risk</span></td>
+                                            <td>MNF-8821</td>
+                                            <td>US Distribution Center</td>
+                                            <td>5,000 units</td>
+                                            <td><span class="badge bg-green">Dispatched</span></td>
                                         </tr>
                                         <tr>
-                                            <td>QA Inspectors</td>
-                                            <td>4 / 5</td>
-                                            <td><span class="badge bg-yellow">Need 1 more</span></td>
+                                            <td>MNF-8822</td>
+                                            <td>EU Logistics Hub</td>
+                                            <td>3,500 units</td>
+                                            <td><span class="badge bg-yellow">Loading</span></td>
                                         </tr>
                                         <tr>
-                                            <td>Forklift Drivers</td>
-                                            <td>6 / 6</td>
-                                            <td><span class="badge bg-green">Zero Risk</span></td>
+                                            <td>MNF-8823</td>
+                                            <td>Local Retailer</td>
+                                            <td>1,200 units</td>
+                                            <td><span class="badge bg-blue">Scheduled</span></td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -402,39 +514,146 @@
                     </div>
                 </div>
 
-                <!-- ================= TAB: SALES ================= -->
-                <div id="tab-sales" class="tab-pane">
+                <!-- ================= TAB: HR & GA ================= -->
+                <div id="tab-hr" class="tab-pane">
                     <div class="page-title">
-                        <h1>Sales & Fulfillment</h1>
-                        <p>Revenue pipeline and delivery reliability.</p>
+                        <h1>HR & General Affairs</h1>
+                        <p>Workforce overview, recruitment, and office asset management.</p>
                     </div>
-
-                    <div class="grid-3 mb-4">
+                    
+                    <div class="grid-4 mb-4">
                         <div class="kpi-card">
-                            <div class="kpi-title">Order Book Value</div>
-                            <div class="kpi-value text-blue">$3.4M</div>
-                            <p class="kpi-trend">Q3 & Q4 Backlog</p>
+                            <div class="kpi-title">Total Headcount</div>
+                            <div class="kpi-value text-blue">245</div>
+                            <p class="kpi-trend">Tổng số nhân sự</p>
                         </div>
                         <div class="kpi-card">
-                            <div class="kpi-title">OTIF Delivery Rate</div>
-                            <div class="kpi-value text-green">98.2%</div>
-                            <p class="kpi-trend positive"><i data-lucide="trending-up"></i> Client trust score high</p>
+                            <div class="kpi-title">Recruitment Status</div>
+                            <div class="kpi-value text-yellow">5 Open</div>
+                            <p class="kpi-trend">Tình hình tuyển dụng</p>
                         </div>
                         <div class="kpi-card">
-                            <div class="kpi-title">Avg. Lead Time</div>
-                            <div class="kpi-value text-purple">12 Days</div>
-                            <p class="kpi-trend positive"><i data-lucide="trending-down"></i> -2 days vs last year</p>
+                            <div class="kpi-title">Turnover Rate</div>
+                            <div class="kpi-value text-green">4.2%</div>
+                            <p class="kpi-trend">Well below industry avg (12%)</p>
+                        </div>
+                        <div class="kpi-card">
+                            <div class="kpi-title">Safety Incidents</div>
+                            <div class="kpi-value text-green">0</div>
+                            <p class="kpi-trend">180 Days without LTI</p>
                         </div>
                     </div>
 
                     <div class="grid-2">
                         <div class="panel">
-                            <div class="panel-header"><h3 class="panel-title">On-Time In-Full (OTIF) Trend</h3></div>
-                            <div class="chart-container"><canvas id="otifChart"></canvas></div>
+                            <div class="panel-header"><h3 class="panel-title">Office Assets & Facilities (Tài sản)</h3></div>
+                            <div class="table-responsive">
+                                <table class="data-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Asset Category</th>
+                                            <th>Total Count</th>
+                                            <th>Status / Condition</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>IT Equipment (Laptops, PCs)</td>
+                                            <td>120</td>
+                                            <td><span class="badge bg-green">Good</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Office Furniture</td>
+                                            <td>85 sets</td>
+                                            <td><span class="badge bg-green">Good</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Company Vehicles</td>
+                                            <td>4</td>
+                                            <td><span class="badge bg-yellow">1 in Maintenance</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                         <div class="panel">
-                            <div class="panel-header"><h3 class="panel-title">Top Client Dependencies</h3></div>
-                            <div class="chart-container"><canvas id="clientPieChart"></canvas></div>
+                            <div class="panel-header"><h3 class="panel-title">Labor Cost Efficiency</h3></div>
+                            <div class="chart-container"><canvas id="laborCostChart"></canvas></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ================= TAB: ORDERS ================= -->
+                <div id="tab-orders" class="tab-pane">
+                    <div class="page-title">
+                        <h1>Orders & Fulfillment</h1>
+                        <p>Track order status, shipments, and documentation.</p>
+                    </div>
+
+                    <div class="grid-4 mb-4">
+                        <div class="kpi-card">
+                            <div class="kpi-title">Active Orders</div>
+                            <div class="kpi-value text-blue">42</div>
+                            <p class="kpi-trend">Processing / In Transit</p>
+                        </div>
+                        <div class="kpi-card">
+                            <div class="kpi-title">Bills Pending</div>
+                            <div class="kpi-value text-yellow">12</div>
+                            <p class="kpi-trend">Awaiting payment</p>
+                        </div>
+                        <div class="kpi-card">
+                            <div class="kpi-title">Shipments Today</div>
+                            <div class="kpi-value text-purple">8</div>
+                            <p class="kpi-trend">Dispatched successfully</p>
+                        </div>
+                        <div class="kpi-card">
+                            <div class="kpi-title">Missing Documents</div>
+                            <div class="kpi-value text-green">0</div>
+                            <p class="kpi-trend">100% Compliance</p>
+                        </div>
+                    </div>
+
+                    <div class="grid-2">
+                        <div class="panel">
+                            <div class="panel-header">
+                                <h3 class="panel-title">Recent Orders Status</h3>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="data-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Order ID</th>
+                                            <th>Client</th>
+                                            <th>Value</th>
+                                            <th>Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>ORD-2024-891</td>
+                                            <td>HomeDepot US</td>
+                                            <td>$125,000</td>
+                                            <td><span class="badge bg-blue">Processing</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>ORD-2024-890</td>
+                                            <td>Walmart EU</td>
+                                            <td>$85,500</td>
+                                            <td><span class="badge bg-yellow">Documentation</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>ORD-2024-889</td>
+                                            <td>Local Dist.</td>
+                                            <td>$12,000</td>
+                                            <td><span class="badge bg-green">Shipped</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="panel">
+                            <div class="panel-header"><h3 class="panel-title">On-Time In-Full (OTIF) Trend</h3></div>
+                            <div class="chart-container"><canvas id="otifChart"></canvas></div>
                         </div>
                     </div>
                 </div>
@@ -448,24 +667,24 @@
                     
                     <div class="grid-4 mb-4">
                         <div class="kpi-card" style="background: linear-gradient(135deg, var(--accent-blue) 0%, #1E3A8A 100%); color: white;">
-                            <div class="kpi-title" style="color: rgba(255,255,255,0.8)">EBITDA Margin</div>
+                            <div class="kpi-title" style="color: rgba(255,255,255,0.8)">Sức khỏe Tài chính (EBITDA)</div>
                             <div class="kpi-value" style="color: white;">18.5%</div>
                             <p><i data-lucide="trending-up" style="color: white; width:14px; vertical-align:middle;"></i> +2.1% Industry avg</p>
                         </div>
                         <div class="kpi-card">
-                            <div class="kpi-title">Gross Revenue (YTD)</div>
+                            <div class="kpi-title">Gross Revenue (Doanh thu)</div>
                             <div class="kpi-value text-green">$7.2M</div>
                             <p class="kpi-trend">On track for $12M Goal</p>
                         </div>
                         <div class="kpi-card">
-                            <div class="kpi-title">OpEx Variance</div>
-                            <div class="kpi-value text-yellow">-4.5%</div>
-                            <p class="kpi-trend">Savings from lean SOPs</p>
+                            <div class="kpi-title">Operating Cash Flow</div>
+                            <div class="kpi-value text-purple">$1.4M</div>
+                            <p class="kpi-trend">Healthy liquidity</p>
                         </div>
                         <div class="kpi-card">
-                            <div class="kpi-title">Cash Flow Status</div>
-                            <div class="kpi-value text-purple">Healthy</div>
-                            <p class="kpi-trend">90 days runway</p>
+                            <div class="kpi-title">OpEx Savings (Chi phí)</div>
+                            <div class="kpi-value text-yellow">4.5%</div>
+                            <p class="kpi-trend">Savings from lean SOPs</p>
                         </div>
                     </div>
 

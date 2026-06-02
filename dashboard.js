@@ -37,6 +37,27 @@ document.addEventListener('DOMContentLoaded', () => {
         mobileOverlay.classList.remove('active');
     });
 
+    // --- Sub-Tabs Navigation Logic ---
+    const subNavBtns = document.querySelectorAll('.sub-nav-btn');
+    subNavBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const parentPane = btn.closest('.tab-pane');
+            if (!parentPane) return;
+
+            parentPane.querySelectorAll('.sub-nav-btn').forEach(b => b.classList.remove('active'));
+            parentPane.querySelectorAll('.sub-pane').forEach(p => p.classList.remove('active'));
+
+            btn.classList.add('active');
+            
+            const targetId = btn.getAttribute('data-sub');
+            if (targetId) {
+                const targetPane = document.getElementById(targetId);
+                if (targetPane) targetPane.classList.add('active');
+            }
+        });
+    });
+
     // --- Chart Helpers ---
     const commonOptions = {
         responsive: true,
@@ -58,8 +79,23 @@ document.addEventListener('DOMContentLoaded', () => {
             data: {
                 labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
                 datasets: [
-                    { label: 'Actual Output', data: [1200, 1350, 1250, 1400, 1450, 1100, 1280], borderColor: '#2563EB', backgroundColor: 'rgba(37, 99, 235, 0.1)', borderWidth: 3, fill: true, tension: 0.4 },
-                    { label: 'Target', data: [1300, 1300, 1300, 1300, 1300, 1100, 1100], borderColor: '#94A3B8', borderWidth: 2, borderDash: [5, 5], fill: false, tension: 0 }
+                    { label: 'Actual Output', data: [1200, 1350, 1100, 1400, 1500, 1450, 1600], borderColor: '#2563EB', backgroundColor: 'rgba(37, 99, 235, 0.1)', fill: true, tension: 0.4 },
+                    { label: 'Target', data: [1300, 1300, 1300, 1400, 1400, 1500, 1500], borderColor: '#94A3B8', borderDash: [5, 5], fill: false, tension: 0 }
+                ]
+            },
+            options: commonOptions
+        });
+    }
+
+    const overviewFinCanvas = document.getElementById('overviewFinancialChart');
+    if (overviewFinCanvas) {
+        new Chart(overviewFinCanvas.getContext('2d'), {
+            type: 'bar',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+                datasets: [
+                    { label: 'Revenue ($)', data: [1.1, 1.3, 1.2, 1.5, 1.4, 1.7], backgroundColor: '#10B981' },
+                    { label: 'OpCost ($)', data: [0.8, 0.9, 0.85, 1.0, 0.95, 1.1], backgroundColor: '#EF4444' }
                 ]
             },
             options: commonOptions

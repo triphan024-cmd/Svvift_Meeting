@@ -21,132 +21,286 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-content">
-            <div class="logo">SVVIFT <span>PROPOSAL</span></div>
+            <div class="logo">
+                <img src="logo.png" alt="Svvift Logo" class="logo-img">
+                The <span>Proposal</span>
+            </div>
             <div class="nav-links">
                 <a href="#hero">Overview</a>
                 <a href="#experience">Philosophy</a>
                 <a href="#roadmap">Roadmap</a>
                 <a href="#risk-free">Investment</a>
-                <a href="dashboard.html" style="background: var(--accent-primary); color: #fff; padding: 0.4rem 1.2rem; border-radius: 50px; text-decoration: none;">Live Demo</a>
+                <a href="dashboard.html" class="nav-demo-btn">Demo</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <header class="hero" id="hero">
+        <!-- Abstract Glowing Orbs -->
+        <div class="hero-glow hero-glow-1"></div>
+        <div class="hero-glow hero-glow-2"></div>
+        
         <div class="hero-content fade-in-up">
-            <div class="badge">Prepared for Ms. Fay & Mr. Scot</div>
-            <h1 class="hero-title">From Static SOPs to a <span class="gradient-text">Living Ecosystem</span></h1>
-            <p class="hero-subtitle">An adaptive roadmap to achieve your 2026 targets and build a self-sustaining operation.</p>
-            <a href="#experience" class="cta-button">Explore the Vision</a>
+            <div class="hero-badge">
+                <span class="pulse-dot"></span>
+                Ms. Fay & Mr. Scot
+            </div>
+            <h1 class="hero-title">Manufacturing <br><span class="gradient-text">Operational Systems</span></h1>
+            <p class="hero-subtitle">Comprehensive diagnostic and system implementation driving 100% adherence and establishing total factory autonomy.</p>
+            <div class="hero-actions">
+                <a href="#experience" class="cta-button">
+                    Explore the Proposal
+                    <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2.5" fill="none" style="margin-left: 8px;"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+            </div>
         </div>
     </header>
 
-    <main>
-        <!-- Experience & Philosophy -->
-        <section class="section experience" id="experience">
+    <main class="bento-layout-main">
+        <!-- Premium Experience Bento Section -->
+        <section class="section bento-section" id="experience">
             <div class="section-container">
-                <div class="section-header reveal">
-                    <h2 class="section-title">01. The Battlefield is <span class="accent-text">Execution</span></h2>
-                    <p class="section-meta">My Philosophy & Experience</p>
+                <div class="philosophy-layout">
+                    <!-- Left Side: Content -->
+                    <div class="philosophy-content reveal">
+                        <div class="section-header" style="text-align: left; margin-bottom: 3rem;">
+                            <h2 class="section-title">Executive <span class="accent-text" style="position: relative; display: inline-block;">Experience<svg style="position: absolute; bottom: -8px; left: 0; width: 100%; height: 12px; opacity: 0.5;" viewBox="0 0 100 12" preserveAspectRatio="none"><path d="M0 8 Q 50 -4 100 8" stroke="var(--accent-primary)" stroke-width="6" fill="none" stroke-linecap="round"/></svg></span></h2>
+                        </div>
+
+                        <div class="philosophy-cards">
+                            <div class="ph-card glass-card">
+                                <div class="ph-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                                </div>
+                                <div class="ph-text">
+                                    <h4>Industrial Systems Architect & Entrepreneur</h4>
+                                    <p>Engineered end-to-end operational solutions, including digitized SOPs, ISO compliance frameworks, and custom digital workspace software for factory environments.</p>
+                                </div>
+                            </div>
+
+                            <div class="ph-card glass-card">
+                                <div class="ph-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                                </div>
+                                <div class="ph-text">
+                                    <h4>Factory Operations Director</h4>
+                                    <p>Commanded a high-precision automotive component facility with a 200+ floor workforce, driving production standards for global tier-1 brands (Toyota & Hyundai).</p>
+                                </div>
+                            </div>
+
+                            <div class="ph-highlight-card">
+                                <div class="ph-highlight-header">
+                                    <span style="color:#F59E0B; margin-right: 8px;">💡</span> <span class="highlight-label">THE GROUND TRUTH</span>
+                                </div>
+                                <p class="ph-highlight-text">
+                                    The answer is <span style="color: #DC2626;">never a thick manual SOP</span> on paper. Ultimate success hinges on: <strong>Execution & Adherence</strong> and the ability to <strong>continuously evolve</strong> to match ongoing changes.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Side: Image Card -->
+                    <div class="philosophy-image-card reveal delay-1">
+                        <div class="ph-image-wrapper">
+                            <div class="ph-image-badge">THE ULTIMATE GOAL</div>
+                            <h3 class="ph-image-text">
+                                "Building a self-sustaining ecosystem that guarantees long-term compliance and true <span class="accent-text-light">Control Without Involvement.</span>"
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- The 3-Phase Adaptive Roadmap Node -->
+        <!-- Proposal Options Section -->
+        <section class="section options-section" id="options">
+            <div class="section-container">
+                <div class="section-header text-center reveal">
+                    <p class="section-meta">Long-term Proposal</p>
+                    <h2 class="section-title">The Proposal <span class="accent-text">Options</span></h2>
+                </div>
+
+                <!-- Phase 1 Common Block -->
+                <div class="phase-one-block glass-card reveal delay-1" style="margin-bottom: 1.5rem; padding-bottom: 2rem;">
+                    <div class="phase-one-badge">PHASE 1</div>
+                    <h3 style="margin-bottom: 0.25rem;">The Blue Print</h3>
+                    <div style="font-size: 0.9rem; font-weight: 700; color: var(--accent-primary); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 1.5rem;">Duration: 4 Weeks</div>
+                    <p style="margin-bottom: 1.5rem;">A rigorous foundational phase designed to decode your current manufacturing complexities, map existing workflows, and architect a robust operational framework that scales.</p>
+                    <ul class="opt-features" style="text-align: left; max-width: 650px; margin: 0 auto;">
+                        <li><strong>The Deliverable:</strong> A comprehensive Operational Audit Report and a finalized set of Digital SOPs tailored for your precision manufacturing.</li>
+                        <li><strong>The Approach:</strong> Deep-dive factory floor observation, process mapping, and eliminating procedural bottlenecks.</li>
+                    </ul>
                 </div>
                 
-                <div class="glass-card reveal delay-1">
-                    <div class="quote-icon">"</div>
-                    <p class="body-text highlight">
-                        In my career, I’ve audited and advised multiple factories, and I used to run a manufacturing facility supplying precision parts for Toyota. If there is one thing I’ve learned from the Toyota Production System (Kaizen), it’s this: <strong>SOPs on paper are dead. The real battlefield is Execution and Adherence.</strong>
-                    </p>
-                    <p class="body-text">
-                        Getting 100+ workers to strictly follow a new process, adapting to changing local state regulations, and shifting market demands—that is the real challenge. SOPs cannot be static; they must be a living, evolving ecosystem. If we just write a thick manual and put it on a shelf, we fail.
-                    </p>
-                    <p class="body-text emphasis">
-                        That’s why I don't look at this as an 8-week consulting gig. I want to build a long-term solution for Svvift to buy back your time so you can transition to Australia.
-                    </p>
-                </div>
-            </div>
-        </section>
+                <div style="width: 2px; height: 1.5rem; background: var(--accent-primary); margin: 0 auto; opacity: 0.5;"></div>
 
-        <!-- The 3-Phase Adaptive Roadmap -->
-        <section class="section roadmap" id="roadmap">
-            <div class="section-container">
-                <div class="section-header reveal">
-                    <h2 class="section-title">02. The 3-Phase <span class="accent-text">Adaptive Roadmap</span></h2>
-                    <p class="section-meta">Pathway to 2026 Autonomy</p>
+                <!-- Phase 2 Common Block -->
+                <div class="phase-one-block glass-card reveal delay-1" style="margin-bottom: 3rem; background: var(--text-primary); color: white;">
+                    <div class="phase-one-badge" style="background: rgba(255,255,255,0.15); color: #fff;">PHASE 2</div>
+                    <h3 style="color: white; margin-bottom: 0.25rem;">Execution</h3>
+                    <div style="font-size: 0.9rem; font-weight: 700; color: #38BDF8; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 1.5rem;">Duration: 4 Weeks</div>
+                    <p style="color: rgba(255,255,255,0.85); margin-bottom: 0; max-width: 650px; margin-inline: auto;">Translating the Blueprint into operational reality. Depending on your 2026 vision and required level of involvement, we execute through one of the two dedicated pathways below.</p>
                 </div>
 
-                <div class="timeline-container">
-                    <!-- Phase 1 -->
-                    <div class="timeline-card glass-card reveal">
-                        <div class="phase-number">Phase 1</div>
-                        <h3 class="phase-title">Diagnostic, Mapping & Living SOPs</h3>
-                        <div class="phase-duration">Duration: 8 Weeks</div>
-                        <p class="phase-desc">Deep-dive into current operations, identifying bottlenecks, and establishing dynamic, living standard operating procedures that adapt to real-world conditions.</p>
-                    </div>
+                <div class="branch-connector reveal delay-1"></div>
 
-                    <!-- Phase 2 -->
-                    <div class="timeline-card glass-card reveal delay-1">
-                        <div class="phase-number">Phase 2</div>
-                        <h3 class="phase-title">Live Integration & Digital Workspace</h3>
-                        <div class="phase-duration">Target: Q3/2026</div>
-                        <p class="phase-desc">Moving from paper to digital. Implementing the living SOPs directly onto the factory floor and ensuring 100% workforce adherence through integrated systems.</p>
-                    </div>
-
-                    <!-- Phase 3 -->
-                    <div class="timeline-card glass-card reveal delay-2">
-                        <div class="phase-number">Phase 3</div>
-                        <h3 class="phase-title">System Optimization & Autonomy</h3>
-                        <div class="phase-duration">Target: Q4/2026</div>
-                        <p class="phase-desc">Refining the ecosystem based on data. The factory becomes a self-sustaining machine, completely buying back your time for your transition.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Risk-Free Solution -->
-        <section class="section risk-free" id="risk-free">
-            <div class="section-container">
-                <div class="section-header reveal">
-                    <h2 class="section-title">03. A Completely <span class="accent-text">Risk-Free Solution</span></h2>
-                    <p class="section-meta">Aligned Incentives</p>
-                </div>
-
-                <div class="grid-2-col">
-                    <!-- Payment Structure -->
-                    <div class="glass-card structure-card reveal">
-                        <div class="card-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                <div class="options-grid">
+                    <!-- Option 1 -->
+                    <div class="option-card glass-card reveal delay-1">
+                        <div class="opt-header">
+                            <span class="opt-label">OPTION 1</span>
+                            <h3>The System Builder</h3>
+                            <p class="opt-subtitle">Manufacturing Execution System (MES)</p>
                         </div>
-                        <h3 class="card-title">Performance-Based Structure</h3>
-                        <p class="body-text">Fay, as a business owner, I completely understand the concern around 'Cost'. We want results, not bills. Instead of the 40-40-20, I propose a <strong>20-40-40</strong> structure:</p>
-                        
-                        <ul class="payment-list">
-                            <li>
-                                <div class="percentage">20%</div>
-                                <div class="payment-desc"><strong>Commencement</strong><br>To kick off the engine.</div>
-                            </li>
-                            <li>
-                                <div class="percentage">40%</div>
-                                <div class="payment-desc"><strong>Week 6 Delivery</strong><br>On delivery of the final SOPs.</div>
-                            </li>
-                            <li class="highlight-item">
-                                <div class="percentage">40%</div>
-                                <div class="payment-desc"><strong>The Reality Check</strong><br>You keep it. Do not pay me until the factory completely and successfully runs on the new system.</div>
-                            </li>
-                        </ul>
-                        <p class="quote-text">"A premium system builder should cost you nothing, because the efficiency they create will fund their own rate. I am that confident."</p>
+                        <div class="opt-body">
+                            <p class="body-text-sm">Engineered strategically for founders who choose to retain direct operational command and high-level management of their facility, yet require an elite, enterprise-grade technological framework to monitor, audit, and direct the factory floor from anywhere in the world.</p>
+                            <ul class="opt-features">
+                                <li style="line-height: 1.5;"><strong>The Deliverable:</strong> A bespoke Manufacturing Execution System (MES) Web Application deployed directly onto the production floor to eliminate operational blind spots.</li>
+                                <li style="line-height: 1.5;"><strong>The Strategy:</strong> I architect the operational engine (SOPs), engineer the custom software, train your local team for standalone compliance, and transition out.</li>
+                            </ul>
+
+                            <div class="pros-cons-box" style="margin: 0.5rem 0 2rem 0; padding: 1.5rem; background: rgba(30,58,138,0.03); border-radius: 8px; border: 1px solid rgba(0,0,0,0.05);">
+                                <div style="margin-bottom: 1.25rem;">
+                                    <strong style="color: #059669; display: flex; align-items: center; gap: 8px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg> Advantages</strong>
+                                    <ul style="font-size: 0.95rem; margin-top: 0.35rem; margin-bottom: 0; padding-left: 1.25rem; color: var(--text-secondary); line-height: 1.6;">
+                                        <li style="margin-bottom: 0.35rem;"><strong>Maintain Leadership:</strong> Owners maintain absolute, unmediated command and data transparency from anywhere in the world.</li>
+                                        <li style="margin-bottom: 0.35rem;"><strong>Real-Time Production & Output Tracking:</strong> Replaces human guesswork with systematic, data-driven remote management.</li>
+                                        <li><strong>Clear workflow:</strong> Eradicates manual, slow logbooks and translation lag by embedding digitized workflows straight into local team workstations.</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <strong style="color: #DC2626; display: flex; align-items: center; gap: 8px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M18 6L6 18M6 6l12 12"/></svg> Disadvantages</strong>
+                                    <ul style="font-size: 0.95rem; margin-top: 0.35rem; margin-bottom: 0; padding-left: 1.25rem; color: var(--text-secondary); line-height: 1.6;">
+                                        <li style="margin-bottom: 0.35rem;"><strong>Active Remote Enforcement:</strong> Requires the remote ownership team to consistently monitor daily metrics to enforce operational standards.</li>
+                                        <li style="margin-bottom: 0.35rem;"><strong>Static Software Scope:</strong> Fixed to finalized development workflows. Future process modifications, regulatory updates, or custom feature requests will incur separate development fees.</li>
+                                        <li><strong>Ongoing IT Fees:</strong> Subject to ongoing cloud infrastructure hosting and standard system maintenance fees.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="risk-free-box light-box" style="margin-top: 0; display: flex; flex-direction: column;">
+                                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem;">
+                                    <h4 style="margin-bottom: 0; font-weight: 500;">Risk-Free Structure</h4>
+                                    <span style="color: var(--accent-primary); font-size: 1.15rem; font-weight: bold;">160M ₫ <span style="font-size: 0.9rem; opacity: 0.8; font-weight: 600;">($6k)</span></span>
+                                </div>
+                                <div class="rf-tier">
+                                    <span class="rf-percent">20%</span>
+                                    <div class="rf-text" style="width: 100%;">
+                                        <strong style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 0.5rem;">
+                                            <span>Project Kickoff</span>
+                                            <span style="color: var(--accent-primary); font-size: 1.1rem;">32M ₫ <span style="font-size: 0.9rem; opacity: 0.8; font-weight: 600;">($1.2k)</span></span>
+                                        </strong>
+                                        <span style="display: block; margin-top: 0.25rem; font-weight: normal; color: var(--text-secondary);">Initial launch diagnostics process.</span>
+                                    </div>
+                                </div>
+                                <div class="rf-tier">
+                                    <span class="rf-percent">40%</span>
+                                    <div class="rf-text" style="width: 100%;">
+                                        <strong style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 0.5rem;">
+                                            <span>Week 5 : Phase 2 Execution</span>
+                                            <span style="color: var(--accent-primary); font-size: 1.1rem;">64M ₫ <span style="font-size: 0.9rem; opacity: 0.8; font-weight: 600;">($2.4k)</span></span>
+                                        </strong>
+                                        <span style="display: block; margin-top: 0.25rem; font-weight: normal; color: var(--text-secondary);">Upon delivery of the completed SOP blueprint.</span>
+                                    </div>
+                                </div>
+                                <div class="rf-tier highlight">
+                                    <span class="rf-percent">40%</span>
+                                    <div class="rf-text" style="width: 100%;">
+                                        <strong style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 0.5rem;">
+                                            <span>Performance Gate</span>
+                                            <span style="color: var(--accent-secondary); font-size: 1.1rem;">64M ₫ <span style="font-size: 0.9rem; opacity: 0.8; font-weight: 600;">($2.4k)</span></span>
+                                        </strong>
+                                        <span style="display: block; margin-top: 0.25rem; font-weight: normal; color: var(--text-secondary);">ONLY after the real-time MES run successfully</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="opt-footer">
+                                <strong>The "Efficiency" Principle</strong><br>Zero long-term cost: A premium system builder should cost you nothing. The efficiency created will fund the rate.
+                            </div>
+                        </div>
                     </div>
 
-                    <!-- Conflict of Interest -->
-                    <div class="glass-card conflict-card reveal delay-1">
-                        <div class="card-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                    <!-- Option 2 -->
+                    <div class="option-card accent-glass reveal delay-2">
+                        <div class="opt-header">
+                            <span class="opt-label text-white" style="background: rgba(255,255,255,0.2);">OPTION 2</span>
+                            <h3 class="text-white">The Partner</h3>
+                            <p class="opt-subtitle text-white opacity-80">Managing Deputy Director (Full time)</p>
                         </div>
-                        <h3 class="card-title">All-In Commitment</h3>
-                        <p class="body-text">As Cong probably mentioned to you, I am already executing my exit plan from Torasung. I am selling 100% of my shares back to the founders there.</p>
-                        <p class="body-text">I believe in the power of 'The One Thing'.</p>
-                        <div class="commitment-box">
-                            <p class="body-text strong">For the next 2 months minimum, I am all in 100% into this project.</p>
-                            <p class="body-text">This is not a short-term band-aid solution for me; this is a win-win partnership to build a legacy system. I am all in.</p>
+                        <div class="opt-body">
+                            <p class="body-text-sm text-white opacity-90">As an on-the-ground executive with an owner’s mindset, developer capabilities, and industrial expertise, I partner directly with you to build an adaptive operational foundation—executing your goals to secure absolute freedom.</p>
+                            <ul class="opt-features text-white">
+                                <li style="line-height: 1.5;"><strong>The Deliverable:</strong> Absolute operational stabilization, a systematic executive handover window, and a fully optimized factory floor executing under strict accountability metrics.</li>
+                                <li style="line-height: 1.5;"><strong>The Strategy:</strong> I execute a high-intensity 4-week diagnostic sprint and deploy your digital infrastructure. Concurrently, I step into full-time local leadership, permanently absorbing operational tasks to establish true control without involvement.</li>
+                            </ul>
+
+                            <div class="pros-cons-box" style="margin: 0.5rem 0 2rem 0; padding: 1.5rem; background: rgba(255,255,255,0.06); border-radius: 8px; border: 1px solid rgba(255,255,255,0.1);">
+                                <div style="margin-bottom: 1.25rem;">
+                                    <strong style="color: #34D399; display: flex; align-items: center; gap: 8px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg> Advantages</strong>
+                                    <ul style="font-size: 0.95rem; margin-top: 0.35rem; margin-bottom: 0; padding-left: 1.25rem; color: rgba(255,255,255,0.85); line-height: 1.6;">
+                                        <li style="margin-bottom: 0.35rem;"><strong>Industrial Leadership & Owner Mindset:</strong> Deep expertise in heavy manufacturing, worker psychology, and multicultural dynamics between ANZ leadership and Vietnamese labor—delivering the precise high-level metrics required for absolute remote peace of mind.</li>
+                                        <li style="margin-bottom: 0.35rem;"><strong>Built-In Developer Capability (Zero IT OpEx):</strong> I personally architect, code, and deploy your custom MES and Live Dashboards. This completely eliminates the overhead, friction, and security risks of hiring an external IT agency.</li>
+                                        <li><strong>Living System Adaptation:</strong> SOPs and software never stay static. I deliver continuous, live upgrades to instantly adapt to shifting Vietnamese laws, market volatility, and floor realities—with zero additional development fees.</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <strong style="color: #F87171; display: flex; align-items: center; gap: 8px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M18 6L6 18M6 6l12 12"/></svg> Disadvantages</strong>
+                                    <ul style="font-size: 0.95rem; margin-top: 0.35rem; margin-bottom: 0; padding-left: 1.25rem; color: rgba(255,255,255,0.85); line-height: 1.6;">
+                                        <li style="margin-bottom: 0.35rem;"><strong>OpEx Commitment:</strong> Requires a long-term executive payroll allocation (Base Salary + Performance-Driven Incentives).</li>
+                                        <li><strong>Strategic Alignment:</strong> Requires high-level trust and a structured executive reporting cadence between the Board and local leadership.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="risk-free-box dark-box" style="margin-top: 0; display: flex; flex-direction: column;">
+                                <h4 class="text-white" style="margin-bottom: 1.5rem; font-weight: 500;">Risk-Free Compensation</h4>
+                                
+                                <div class="rf-tier" style="border-bottom-color: rgba(255,255,255,0.1);">
+                                    <div style="min-width: 40px; display: flex; align-items: flex-start; padding-top: 0.1rem;">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F87171" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="filter: drop-shadow(0 0 8px rgba(248,113,113,0.3));"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                                    </div>
+                                    <div class="rf-text" style="width: 100%;">
+                                        <strong style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 0.5rem; color: white;">
+                                            <span>Trial Period <span style="opacity: 0.6; font-size: 0.9rem; font-weight: 500;">(2 Months)</span></span>
+                                            <span style="color: #F87171; font-size: 1.15rem;">55M ₫ <span style="font-size: 0.9rem; opacity: 0.8; font-weight: 600;">($2k) / mo</span></span>
+                                        </strong>
+                                        <span style="display: block; margin-top: 0.25rem; font-weight: normal; color: rgba(255,255,255,0.7); font-size: 0.95rem;">Stop any time. No questions asked.</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="rf-tier" style="border-bottom-color: rgba(255,255,255,0.1);">
+                                    <div style="min-width: 40px; display: flex; align-items: flex-start; padding-top: 0.1rem;">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#34D399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="filter: drop-shadow(0 0 8px rgba(52,211,153,0.3));"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                                    </div>
+                                    <div class="rf-text" style="width: 100%;">
+                                        <strong style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 0.5rem; color: white;">
+                                            <span>Official <span style="opacity: 0.6; font-size: 0.9rem; font-weight: 500;">(3rd Month Onward)</span></span>
+                                            <span style="color: #34D399; font-size: 1.15rem;">80M ₫ <span style="font-size: 0.9rem; opacity: 0.8; font-weight: 600;">($3k) / mo</span></span>
+                                        </strong>
+                                        <div style="display: flex; justify-content: space-between; margin-top: 0.25rem; color: rgba(255,255,255,0.7); font-size: 0.95rem;">
+                                            <span style="font-weight: 400;">1 year contract</span>
+                                            <span style="color: #34D399; font-weight: 600;">+ Bonus (KPI)</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="rf-tier highlight">
+                                    <div style="min-width: 40px; display: flex; align-items: flex-start; padding-top: 0.1rem;">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="filter: drop-shadow(0 0 8px rgba(56,189,248,0.3));"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                    </div>
+                                    <div class="rf-text" style="width: 100%;">
+                                        <strong style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 0.5rem; color: white;">
+                                            <span>Partnership Guarantee</span>
+                                            <span style="color: #38BDF8; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 1px; margin-top: 0.15rem;">Long-Term</span>
+                                        </strong>
+                                        <span style="display: block; margin-top: 0.25rem; font-weight: normal; color: rgba(255,255,255,0.7); font-size: 0.95rem; line-height: 1.5;">Continuous optimization and long-term scale</span>
+                                    </div>
+                                </div>
+                            </div>     </div>
+                            <div class="opt-footer text-white">
+                                <strong>The "One Thing" Focus</strong><br>Absolute 100% Commitment: Full divestment from Torasung to ensure zero conflict of interest, and build a legacy system here.
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -156,9 +310,10 @@
 
     <footer class="footer">
         <div class="footer-content reveal">
-            <h2 class="footer-cta">Let's build this.</h2>
+            <h2 class="footer-cta" style="margin-bottom: 0.5rem;">Let's build this.</h2>
+            <p style="font-size: 1.25rem; color: var(--text-secondary); margin-bottom: 2rem; font-weight: 500;">Engineering your permanent operational ecosystem.</p>
             <div class="footer-line"></div>
-            <p class="copyright">Confidential Proposal for Svvift. © 2026</p>
+            <p class="copyright">Confidential Proposal for Svvift © 2026 by Tri Phan.</p>
         </div>
     </footer>
 

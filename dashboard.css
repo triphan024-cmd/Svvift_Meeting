@@ -73,7 +73,19 @@ body {
     justify-content: space-between;
 }
 
-.sidebar-header .logo { font-size: 1.25rem; font-weight: 800; letter-spacing: 1px; }
+.sidebar-header .logo { 
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.25rem; 
+    font-weight: 800; 
+    letter-spacing: 1px; 
+}
+.sidebar-header .logo-img {
+    height: 28px;
+    width: auto;
+    object-fit: contain;
+}
 .sidebar-header .logo span { color: var(--accent-blue); }
 
 .badge-demo {
@@ -141,6 +153,14 @@ body {
 .tab-pane.active { display: block; }
 
 @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+/* Sub Navigation */
+.sub-nav { display: flex; gap: 1rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; }
+.sub-nav-btn { background: transparent; border: none; font-size: 0.95rem; font-weight: 500; color: var(--text-secondary); cursor: pointer; padding: 0.5rem 1rem; border-radius: 6px; transition: all 0.2s; font-family: inherit; }
+.sub-nav-btn:hover { background: #F8FAFC; color: var(--text-primary); }
+.sub-nav-btn.active { background: rgba(37,99,235,0.1); color: var(--accent-blue); }
+.sub-pane { display: none; animation: fadeIn 0.3s ease; }
+.sub-pane.active { display: block; }
 
 .page-title { margin-bottom: 2rem; }
 .page-title h1 { font-size: 1.75rem; font-weight: 700; }
