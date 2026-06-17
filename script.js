@@ -59,12 +59,22 @@ document.addEventListener('DOMContentLoaded', () => {
     // 4. Blueprint Process Tabs Logic
     const tabNodes = document.querySelectorAll('.bp-tab-node');
     const tabPanels = document.querySelectorAll('.bp-tab-panel');
+    const tabLines = document.querySelectorAll('.bp-tab-line');
 
-    tabNodes.forEach(node => {
+    tabNodes.forEach((node, index) => {
         node.addEventListener('click', () => {
             // Remove active from all nodes and panels
             tabNodes.forEach(n => n.classList.remove('active'));
             tabPanels.forEach(p => p.classList.remove('active'));
+
+            // Handle active lines for progress effect
+            tabLines.forEach((line, i) => {
+                if (i < index) {
+                    line.classList.add('active-line');
+                } else {
+                    line.classList.remove('active-line');
+                }
+            });
 
             // Add active to clicked node
             node.classList.add('active');

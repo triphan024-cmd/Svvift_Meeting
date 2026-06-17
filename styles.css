@@ -1225,12 +1225,18 @@ body {
 
 .bp-tab-line {
     flex-grow: 1;
-    height: 2px;
-    background: rgba(0,0,0,0.1);
+    height: 4px;
+    background: rgba(0,0,0,0.06);
     margin: 0 1rem;
     position: relative;
     top: -15px; /* align with circles */
-    transition: background 0.4s;
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    border-radius: 2px;
+}
+
+.bp-tab-line.active-line {
+    background: linear-gradient(90deg, var(--accent-primary) 0%, #F59E0B 100%);
+    box-shadow: 0 0 10px rgba(180,83,9,0.2);
 }
 
 .bp-tab-node {
@@ -1240,7 +1246,11 @@ body {
     cursor: pointer;
     gap: 0.75rem;
     position: relative;
-    transition: all 0.3s;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.bp-tab-node:hover:not(.active) {
+    transform: translateY(-3px);
 }
 
 .node-circle {
@@ -1254,6 +1264,7 @@ body {
     justify-content: center;
     font-weight: 800;
     font-size: 1.1rem;
+    font-family: monospace;
     color: var(--text-secondary);
     transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     position: relative;
@@ -1261,29 +1272,49 @@ body {
 }
 
 .node-label {
-    font-weight: 600;
+    font-weight: 700;
     font-size: 0.9rem;
     color: var(--text-secondary);
-    transition: color 0.3s;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     text-align: center;
     white-space: nowrap;
+}
+
+.bp-tab-node:hover:not(.active) .node-label {
+    text-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    color: var(--text-primary);
 }
 
 .bp-tab-node.active .node-circle {
     border-color: var(--accent-primary);
     background: var(--accent-primary);
     color: white;
-    box-shadow: 0 0 20px rgba(180,83,9,0.3);
-    transform: scale(1.1);
+    transform: scale(1.15);
+    box-shadow: 0 0 0 0 rgba(180,83,9,0.4);
+    animation: beacon-pulse 2s infinite;
 }
 
 .bp-tab-node.active .node-label {
     color: var(--accent-primary);
+    text-shadow: 0 0 1px rgba(180,83,9,0.2);
 }
 
 .bp-tab-node:hover:not(.active) .node-circle {
     border-color: var(--accent-secondary);
     color: var(--accent-secondary);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+@keyframes beacon-pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(180,83,9,0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 15px rgba(180,83,9,0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(180,83,9,0);
+    }
 }
 
 .bp-tab-panels {
@@ -1292,16 +1323,22 @@ body {
 
 .bp-tab-panel {
     display: none;
-    animation: fadeIn 0.5s ease;
+    animation: slideFadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 .bp-tab-panel.active {
     display: block;
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+@keyframes slideFadeUp {
+    from { 
+        opacity: 0; 
+        transform: translateY(20px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
 }
 
 @media (max-width: 768px) {
