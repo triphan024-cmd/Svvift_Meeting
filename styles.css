@@ -1322,3 +1322,10 @@ body {
         font-size: 1rem;
     }
 }
+
+
+@media (max-width: 768px) {
+    .roadmap-matrix {
+        grid-template-columns: 1fr !important;
+    }
+}
