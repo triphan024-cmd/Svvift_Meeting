@@ -1143,3 +1143,69 @@ body {
         margin: -5px 0 -5px 20px;
     }
 }
+
+
+/* =========================================
+   BLUEPRINT NESTED UI & FLOWCHART
+   ========================================= */
+.bp-sub-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.bp-sub-card {
+    background: #ffffff;
+    border: 1px solid rgba(0,0,0,0.05);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+}
+
+.bp-sub-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.bp-bullet-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.bp-bullet-list li {
+    position: relative;
+    padding-left: 1.25rem;
+    margin-bottom: 0.75rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: var(--text-secondary);
+}
+
+.bp-bullet-list li::before {
+    content: '?';
+    position: absolute;
+    left: 0;
+    color: var(--accent-secondary);
+    font-weight: bold;
+}
+
+.bp-bullet-list li strong {
+    color: var(--text-primary);
+}
+
+@media (max-width: 640px) {
+    .flow-row {
+        flex-direction: column;
+        gap: 0.25rem !important;
+        margin-bottom: 1.5rem !important;
+    }
+    .flow-arrow {
+        transform: rotate(90deg);
+    }
+}
