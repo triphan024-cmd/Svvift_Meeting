@@ -1188,11 +1188,11 @@ body {
 }
 
 .bp-bullet-list li::before {
-    content: '?';
+    content: '✓';
     position: absolute;
     left: 0;
-    color: var(--accent-secondary);
-    font-weight: bold;
+    color: #10B981; /* Tailwind emerald-500 */
+    font-weight: 800;
 }
 
 .bp-bullet-list li strong {
