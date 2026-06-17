@@ -55,4 +55,29 @@ document.addEventListener('DOMContentLoaded', () => {
             radial-gradient(circle at ${85 - (x * 0.05)}% ${30 - (y * 0.05)}%, rgba(180,83,9,0.05), transparent 50%)
         `;
     });
+
+    // 4. Blueprint Accordion Logic
+    const accordionHeaders = document.querySelectorAll('.bp-acc-header');
+    accordionHeaders.forEach(header => {
+        header.addEventListener('click', () => {
+            const item = header.parentElement;
+            const content = item.querySelector('.bp-acc-content');
+            
+            // Close others (Accordion style)
+            document.querySelectorAll('.blueprint-acc-item').forEach(otherItem => {
+                if (otherItem !== item && otherItem.classList.contains('expanded')) {
+                    otherItem.classList.remove('expanded');
+                    otherItem.querySelector('.bp-acc-content').style.maxHeight = null;
+                }
+            });
+
+            // Toggle current
+            item.classList.toggle('expanded');
+            if (item.classList.contains('expanded')) {
+                content.style.maxHeight = content.scrollHeight + "px";
+            } else {
+                content.style.maxHeight = null;
+            }
+        });
+    });
 });
