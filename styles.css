@@ -1209,3 +1209,116 @@ body {
         transform: rotate(90deg);
     }
 }
+
+
+/* =========================================
+   PROCESS TABS UI
+   ========================================= */
+.bp-tabs-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+    position: relative;
+    z-index: 2;
+}
+
+.bp-tab-line {
+    flex-grow: 1;
+    height: 2px;
+    background: rgba(0,0,0,0.1);
+    margin: 0 1rem;
+    position: relative;
+    top: -15px; /* align with circles */
+    transition: background 0.4s;
+}
+
+.bp-tab-node {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    gap: 0.75rem;
+    position: relative;
+    transition: all 0.3s;
+}
+
+.node-circle {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: white;
+    border: 2px solid rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+    z-index: 2;
+}
+
+.node-label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    transition: color 0.3s;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.bp-tab-node.active .node-circle {
+    border-color: var(--accent-primary);
+    background: var(--accent-primary);
+    color: white;
+    box-shadow: 0 0 20px rgba(180,83,9,0.3);
+    transform: scale(1.1);
+}
+
+.bp-tab-node.active .node-label {
+    color: var(--accent-primary);
+}
+
+.bp-tab-node:hover:not(.active) .node-circle {
+    border-color: var(--accent-secondary);
+    color: var(--accent-secondary);
+}
+
+.bp-tab-panels {
+    position: relative;
+}
+
+.bp-tab-panel {
+    display: none;
+    animation: fadeIn 0.5s ease;
+}
+
+.bp-tab-panel.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+    .bp-tabs-nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+    }
+    .bp-tab-line {
+        display: none;
+    }
+    .bp-tab-node {
+        flex-direction: row;
+    }
+    .node-circle {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+}

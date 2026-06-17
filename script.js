@@ -56,28 +56,22 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
     });
 
-    // 4. Blueprint Accordion Logic
-    const accordionHeaders = document.querySelectorAll('.bp-acc-header');
-    accordionHeaders.forEach(header => {
-        header.addEventListener('click', () => {
-            const item = header.parentElement;
-            const content = item.querySelector('.bp-acc-content');
-            
-            // Close others (Accordion style)
-            document.querySelectorAll('.blueprint-acc-item').forEach(otherItem => {
-                if (otherItem !== item && otherItem.classList.contains('expanded')) {
-                    otherItem.classList.remove('expanded');
-                    otherItem.querySelector('.bp-acc-content').style.maxHeight = null;
-                }
-            });
+    // 4. Blueprint Process Tabs Logic
+    const tabNodes = document.querySelectorAll('.bp-tab-node');
+    const tabPanels = document.querySelectorAll('.bp-tab-panel');
 
-            // Toggle current
-            item.classList.toggle('expanded');
-            if (item.classList.contains('expanded')) {
-                content.style.maxHeight = content.scrollHeight + "px";
-            } else {
-                content.style.maxHeight = null;
-            }
+    tabNodes.forEach(node => {
+        node.addEventListener('click', () => {
+            // Remove active from all nodes and panels
+            tabNodes.forEach(n => n.classList.remove('active'));
+            tabPanels.forEach(p => p.classList.remove('active'));
+
+            // Add active to clicked node
+            node.classList.add('active');
+
+            // Show corresponding panel
+            const targetTab = node.getAttribute('data-tab');
+            document.getElementById(targetTab).classList.add('active');
         });
     });
 });
