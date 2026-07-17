@@ -85,9 +85,28 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 5. Phase Switcher Logic for Hero Actions
+    // 5. Phase Switcher & Content Visibility Logic
     const phaseBtns = document.querySelectorAll('.cta-button-phase');
     const phaseNavs = document.querySelectorAll('.phase-navigator');
+    const phase2Section = document.getElementById('phase2-section');
+    const phase1Sections = [
+        document.getElementById('experience'),
+        document.getElementById('blueprint')
+    ];
+
+    function switchPhase(phase) {
+        if (phase === 'phase1') {
+            phase1Sections.forEach(sec => {
+                if (sec) sec.style.display = 'block';
+            });
+            if (phase2Section) phase2Section.style.display = 'none';
+        } else if (phase === 'phase2') {
+            phase1Sections.forEach(sec => {
+                if (sec) sec.style.display = 'none';
+            });
+            if (phase2Section) phase2Section.style.display = 'block';
+        }
+    }
 
     phaseBtns.forEach(btn => {
         btn.addEventListener('click', () => {
@@ -101,6 +120,28 @@ document.addEventListener('DOMContentLoaded', () => {
             // Show corresponding navigator
             const targetPhase = btn.getAttribute('data-phase');
             document.getElementById(`nav-${targetPhase}`).classList.add('active');
+
+            // Toggle page content visibility
+            switchPhase(targetPhase);
+        });
+    });
+
+    // Auto-switch phase based on clicked anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const targetId = this.getAttribute('href');
+            
+            if (targetId.startsWith('#phase2-')) {
+                const btnPhase2 = document.querySelector('.cta-button-phase[data-phase="phase2"]');
+                if (btnPhase2 && !btnPhase2.classList.contains('active')) {
+                    btnPhase2.click();
+                }
+            } else if (targetId === '#experience' || targetId === '#blueprint' || targetId === '#hero') {
+                const btnPhase1 = document.querySelector('.cta-button-phase[data-phase="phase1"]');
+                if (btnPhase1 && !btnPhase1.classList.contains('active')) {
+                    btnPhase1.click();
+                }
+            }
         });
     });
 });
