@@ -91,6 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const phase2Section = document.getElementById('phase2-section');
     const phase1Sections = [
         document.getElementById('experience'),
+        document.getElementById('options'),
         document.getElementById('blueprint')
     ];
 
