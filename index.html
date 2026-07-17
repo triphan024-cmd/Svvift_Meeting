@@ -49,11 +49,29 @@
             </div>
             <h1 class="hero-title">Manufacturing <br><span class="gradient-text">Operational Systems</span></h1>
             <p class="hero-subtitle">Comprehensive diagnostic and system implementation driving 100% adherence and establishing total factory autonomy.</p>
-            <div class="hero-actions">
-                <a href="#experience" class="cta-button">
-                    Explore the Proposal
-                    <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2.5" fill="none" style="margin-left: 8px;"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </a>
+            <div class="hero-interactive-menu">
+                <div class="hero-actions">
+                    <button class="cta-button-phase active" data-phase="phase1">
+                        Phase I
+                    </button>
+                    <button class="cta-button-phase" data-phase="phase2">
+                        Phase II
+                    </button>
+                </div>
+                <div class="phase-navigator-container">
+                    <div class="phase-navigator active" id="nav-phase1">
+                        <a href="#hero" class="nav-chip">Overview</a>
+                        <a href="#experience" class="nav-chip">Concept</a>
+                        <a href="#options" class="nav-chip">Roadmap</a>
+                        <a href="#option1" class="nav-chip">Investment</a>
+                        <a href="#blueprint" class="nav-chip">Blueprint</a>
+                    </div>
+                    <div class="phase-navigator" id="nav-phase2">
+                        <a href="#phase2-survey" class="nav-chip"><span class="chip-num">1</span> Survey - Interview - Observation</a>
+                        <a href="#phase2-execution" class="nav-chip"><span class="chip-num">2</span> Execution</a>
+                        <a href="#phase2-actionplan" class="nav-chip"><span class="chip-num">3</span> Action Plan</a>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
@@ -515,6 +533,117 @@
                         </div>
                     </div>
                 </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Phase II: Execution & Action Plan Section -->
+        <section class="section phase2-section" id="phase2-section" style="background-color: var(--bg-base); padding: 5rem 0; border-top: 1px solid rgba(0,0,0,0.05);">
+            <div class="section-container">
+                <div class="section-header reveal" style="text-align: left; display: flex; flex-direction: column; gap: 0.5rem; max-width: 1000px; margin-inline: auto;">
+                    <div>
+                        <p class="section-meta" style="margin-bottom: 0.5rem;">PHASE II: SYSTEM EXECUTION</p>
+                        <h2 class="section-title" style="margin: 0;">Execution & <span class="accent-text">Action Plan</span></h2>
+                    </div>
+                    
+                    <div class="bp-objective" style="margin-top: 1rem; max-width: 900px;">
+                        <strong style="color: var(--accent-secondary); display: inline-block; margin-right: 0.5rem; letter-spacing: 1px; font-size: 0.95rem; text-transform: uppercase;">Objective:</strong>
+                        <span style="font-size: 1.1rem; line-height: 1.6; color: var(--text-secondary); font-weight: 500;">
+                            Deploy physical terminal infrastructure, launch the customized Manufacturing Execution System (MES), train the local workforce, and execute a structured transition to achieve absolute operational autonomy.
+                        </span>
+                    </div>
+                </div>
+
+                <div class="phase2-grid reveal delay-1" style="margin-top: 3rem; max-width: 1000px; margin-inline: auto; display: flex; flex-direction: column; gap: 3rem;">
+                    
+                    <!-- Item 1: Survey - Interview - Observation -->
+                    <div class="phase2-card glass-card" id="phase2-survey" style="padding: 2.5rem; border-radius: 12px; background: white; border: 1px solid rgba(0,0,0,0.05); box-shadow: 0 10px 40px rgba(0,0,0,0.04); position: relative; scroll-margin-top: 120px;">
+                        <div class="phase2-item-badge" style="position: absolute; top: -15px; left: 2.5rem; background: var(--accent-primary); color: white; padding: 0.35rem 1rem; border-radius: 30px; font-size: 0.85rem; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 4px 10px rgba(30,58,138,0.15);">Category 01</div>
+                        <h3 style="font-size: 1.5rem; font-weight: 700; color: var(--text-primary); margin-top: 0.5rem; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem;">
+                            <span style="color: var(--accent-primary);">1.</span> Survey - Interview - Observation
+                        </h3>
+                        <p class="bp-desc" style="font-weight: 500; color: var(--text-secondary); margin-bottom: 2rem;">Conducting targeted field diagnostics to align technical system architectures with actual worker capability and leadership vision.</p>
+                        
+                        <div class="bp-sub-grid">
+                            <div class="bp-sub-card" style="box-shadow: none; background: var(--bg-surface);">
+                                <h5 class="bp-sub-title">Field Surveys & Interviews</h5>
+                                <ul class="bp-bullet-list">
+                                    <li><strong>Workforce Capabilities:</strong> Assessment of bilingual capabilities and digital literacy levels among factory floor operators to tailor terminal interfaces.</li>
+                                    <li><strong>Management Interviews:</strong> One-on-one sessions with key managers to trace unofficial procedures, informal channels, and critical compliance issues.</li>
+                                    <li><strong>Operational Surveys:</strong> Standardized diagnostic surveys distributed to departments to measure perceived friction points.</li>
+                                </ul>
+                            </div>
+                            <div class="bp-sub-card" style="box-shadow: none; background: var(--bg-surface);">
+                                <h5 class="bp-sub-title">On-Floor Observations</h5>
+                                <ul class="bp-bullet-list">
+                                    <li><strong>Cycle Time Tracking:</strong> Directly observing shift setup procedures, job sequencing handoffs, and machinery operations to isolate idle times.</li>
+                                    <li><strong>Logbook Audit:</strong> Auditing active paper checklists and whiteboard registers to evaluate manual transcription errors and QC delay rates.</li>
+                                    <li><strong>Staging Readiness:</strong> Observing material staging workflows to pinpoint layout barriers causing operator transit delays.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 2: Execution -->
+                    <div class="phase2-card glass-card" id="phase2-execution" style="padding: 2.5rem; border-radius: 12px; background: white; border: 1px solid rgba(0,0,0,0.05); box-shadow: 0 10px 40px rgba(0,0,0,0.04); position: relative; scroll-margin-top: 120px;">
+                        <div class="phase2-item-badge" style="position: absolute; top: -15px; left: 2.5rem; background: var(--accent-primary); color: white; padding: 0.35rem 1rem; border-radius: 30px; font-size: 0.85rem; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 4px 10px rgba(30,58,138,0.15);">Category 02</div>
+                        <h3 style="font-size: 1.5rem; font-weight: 700; color: var(--text-primary); margin-top: 0.5rem; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem;">
+                            <span style="color: var(--accent-primary);">2.</span> System & SOP Execution
+                        </h3>
+                        <p class="bp-desc" style="font-weight: 500; color: var(--text-secondary); margin-bottom: 2rem;">Translating the finalized operational Blueprint into a live, interactive ecosystem of hardware, software, and skilled personnel.</p>
+                        
+                        <div class="bp-sub-grid">
+                            <div class="bp-sub-card" style="box-shadow: none; background: var(--bg-surface);">
+                                <h5 class="bp-sub-title">Infrastructure & Software Deployment</h5>
+                                <ul class="bp-bullet-list">
+                                    <li><strong>Terminal Installation:</strong> Mounting heavy-duty, dust-resistant touchscreens and terminals at critical QC gates and key workstations.</li>
+                                    <li><strong>Custom Database Setup:</strong> Launching the local secure network and database tables with real-time synchronization to executive dashboards.</li>
+                                    <li><strong>Dynamic SOP Loading:</strong> Uploading interactive, step-by-step SOP procedures directly into operator terminals for automated gatekeeping.</li>
+                                </ul>
+                            </div>
+                            <div class="bp-sub-card" style="box-shadow: none; background: rgba(30,58,138,0.03); border: 1px solid rgba(30,58,138,0.1);">
+                                <h5 class="bp-sub-title" style="color: #1E3A8A;">Workforce Onboarding & Handover</h5>
+                                <ul class="bp-bullet-list">
+                                    <li><strong>Operator Onboarding:</strong> Interactive training modules delivered in local languages to ensure 100% user capability and terminal adherence.</li>
+                                    <li><strong>Shift Supervisor Coaching:</strong> Standardizing escalation triggers, teaching supervisors how to resolve line micro-stops on the system.</li>
+                                    <li><strong>Parallel Run Testing:</strong> Maintaining dual manual and digital registers for 1 week to audit data integrity before transitioning to a 100% digital flow.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 3: Action Plan -->
+                    <div class="phase2-card glass-card" id="phase2-actionplan" style="padding: 2.5rem; border-radius: 12px; background: white; border: 1px solid rgba(0,0,0,0.05); box-shadow: 0 10px 40px rgba(0,0,0,0.04); position: relative; scroll-margin-top: 120px;">
+                        <div class="phase2-item-badge" style="position: absolute; top: -15px; left: 2.5rem; background: var(--accent-secondary); color: white; padding: 0.35rem 1rem; border-radius: 30px; font-size: 0.85rem; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 4px 10px rgba(180,83,9,0.15);">Category 03</div>
+                        <h3 style="font-size: 1.5rem; font-weight: 700; color: var(--text-primary); margin-top: 0.5rem; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem;">
+                            <span style="color: var(--accent-secondary);">3.</span> Action Plan (4-Week Implementation)
+                        </h3>
+                        <p class="bp-desc" style="font-weight: 500; color: var(--text-secondary); margin-bottom: 2rem;">A rigorous week-by-week implementation roadmap ensuring zero downtime, systematic onboarding, and immediate tracking results.</p>
+                        
+                        <div class="bp-sub-grid" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem;">
+                            <div class="bp-sub-card" style="box-shadow: none; background: var(--bg-surface); padding: 1.5rem 1.25rem;">
+                                <div style="font-family: monospace; font-size: 1.25rem; font-weight: 800; color: var(--accent-primary); margin-bottom: 0.5rem;">WEEK 5</div>
+                                <h6 style="font-size: 0.95rem; font-weight: 700; margin-bottom: 0.75rem; color: var(--text-primary);">Diagnosis Validation</h6>
+                                <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; margin: 0;">Launch workforce surveys, conduct manager interviews, complete floor time-motion tracking, and map terminal hardware placements.</p>
+                            </div>
+                            <div class="bp-sub-card" style="box-shadow: none; background: var(--bg-surface); padding: 1.5rem 1.25rem;">
+                                <div style="font-family: monospace; font-size: 1.25rem; font-weight: 800; color: var(--accent-primary); margin-bottom: 0.5rem;">WEEK 6</div>
+                                <h6 style="font-size: 0.95rem; font-weight: 700; margin-bottom: 0.75rem; color: var(--text-primary);">System Setup</h6>
+                                <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; margin: 0;">Mount touchscreen hardware, configure MES databases, deploy dynamic SOPs, and begin pilot training with key shift operators.</p>
+                            </div>
+                            <div class="bp-sub-card" style="box-shadow: none; background: var(--bg-surface); padding: 1.5rem 1.25rem;">
+                                <div style="font-family: monospace; font-size: 1.25rem; font-weight: 800; color: var(--accent-primary); margin-bottom: 0.5rem;">WEEK 7</div>
+                                <h6 style="font-size: 0.95rem; font-weight: 700; margin-bottom: 0.75rem; color: var(--text-primary);">Go-Live & Training</h6>
+                                <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; margin: 0;">Activate real-time executive dashboard reporting, conduct mandatory bilingual team-wide training, and initiate the system parallel run.</p>
+                            </div>
+                            <div class="bp-sub-card" style="box-shadow: none; background: rgba(5,150,105,0.03); border: 1px solid rgba(5,150,105,0.1); padding: 1.5rem 1.25rem;">
+                                <div style="font-family: monospace; font-size: 1.25rem; font-weight: 800; color: #059669; margin-bottom: 0.5rem;">WEEK 8</div>
+                                <h6 style="font-size: 0.95rem; font-weight: 700; margin-bottom: 0.75rem; color: #059669;">Handover Audit</h6>
+                                <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; margin: 0;">Conduct formal system compliance audits, transfer administrative control to shift managers, and complete Phase II final sign-off.</p>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>

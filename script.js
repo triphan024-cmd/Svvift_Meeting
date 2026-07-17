@@ -84,4 +84,23 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById(targetTab).classList.add('active');
         });
     });
+
+    // 5. Phase Switcher Logic for Hero Actions
+    const phaseBtns = document.querySelectorAll('.cta-button-phase');
+    const phaseNavs = document.querySelectorAll('.phase-navigator');
+
+    phaseBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // Remove active class from all buttons and navigators
+            phaseBtns.forEach(b => b.classList.remove('active'));
+            phaseNavs.forEach(n => n.classList.remove('active'));
+
+            // Add active to current button
+            btn.classList.add('active');
+
+            // Show corresponding navigator
+            const targetPhase = btn.getAttribute('data-phase');
+            document.getElementById(`nav-${targetPhase}`).classList.add('active');
+        });
+    });
 });
