@@ -558,26 +558,91 @@
                     <div class="phase2-card glass-card" id="phase2-survey" style="padding: 2.5rem; border-radius: 12px; background: white; border: 1px solid rgba(0,0,0,0.05); box-shadow: 0 10px 40px rgba(0,0,0,0.04); position: relative; scroll-margin-top: 120px;">
                         <div class="phase2-item-badge" style="position: absolute; top: -15px; left: 2.5rem; background: var(--accent-primary); color: white; padding: 0.35rem 1rem; border-radius: 30px; font-size: 0.85rem; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 4px 10px rgba(30,58,138,0.15);">Category 01</div>
                         <h3 style="font-size: 1.5rem; font-weight: 700; color: var(--text-primary); margin-top: 0.5rem; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem;">
-                            <span style="color: var(--accent-primary);">1.</span> Survey - Interview - Observation
+                            <span style="color: var(--accent-primary);">1.</span> Survey - Interview - Observation Result
                         </h3>
-                        <p class="bp-desc" style="font-weight: 500; color: var(--text-secondary); margin-bottom: 2rem;">Conducting targeted field diagnostics to align technical system architectures with actual worker capability and leadership vision.</p>
+                        <p class="bp-desc" style="font-weight: 500; color: var(--text-secondary); margin-bottom: 2rem;">Thorough floor diagnostic findings mapping current operational bottlenecks to their immediate business impact and definitive restructure actions.</p>
                         
-                        <div class="bp-sub-grid">
-                            <div class="bp-sub-card" style="box-shadow: none; background: var(--bg-surface);">
-                                <h5 class="bp-sub-title">Field Surveys & Interviews</h5>
-                                <ul class="bp-bullet-list">
-                                    <li><strong>Workforce Capabilities:</strong> Assessment of bilingual capabilities and digital literacy levels among factory floor operators to tailor terminal interfaces.</li>
-                                    <li><strong>Management Interviews:</strong> One-on-one sessions with key managers to trace unofficial procedures, informal channels, and critical compliance issues.</li>
-                                    <li><strong>Operational Surveys:</strong> Standardized diagnostic surveys distributed to departments to measure perceived friction points.</li>
-                                </ul>
+                        <!-- Diagnostic Result Grid -->
+                        <div class="diagnostic-grid" style="display: flex; flex-direction: column; gap: 1.25rem;">
+                            <div class="diagnostic-header-row" style="display: grid; grid-template-columns: 1fr 1.2fr 1.8fr; gap: 1.5rem; padding: 1rem 1.5rem; background: rgba(30, 58, 138, 0.04); border-radius: 8px; font-weight: 700; font-size: 0.85rem; color: var(--accent-primary); letter-spacing: 1px; border-bottom: 2px solid rgba(30, 58, 138, 0.08);">
+                                <div>ROOT CAUSE</div>
+                                <div>OPERATIONAL CONSEQUENCE</div>
+                                <div>DEFINITIVE ACTION</div>
                             </div>
-                            <div class="bp-sub-card" style="box-shadow: none; background: var(--bg-surface);">
-                                <h5 class="bp-sub-title">On-Floor Observations</h5>
-                                <ul class="bp-bullet-list">
-                                    <li><strong>Cycle Time Tracking:</strong> Directly observing shift setup procedures, job sequencing handoffs, and machinery operations to isolate idle times.</li>
-                                    <li><strong>Logbook Audit:</strong> Auditing active paper checklists and whiteboard registers to evaluate manual transcription errors and QC delay rates.</li>
-                                    <li><strong>Staging Readiness:</strong> Observing material staging workflows to pinpoint layout barriers causing operator transit delays.</li>
-                                </ul>
+                            
+                            <!-- Finding 1 -->
+                            <div class="diagnostic-row" style="display: grid; grid-template-columns: 1fr 1.2fr 1.8fr; gap: 1.5rem; padding: 1.5rem; border-radius: 8px; background: var(--bg-surface); border: 1px solid rgba(0,0,0,0.03);">
+                                <div style="font-weight: 700; color: var(--text-primary);">
+                                    <span style="color: var(--accent-secondary); margin-right: 4px;">1.</span> Missing a "Real" Captain
+                                    <small style="display: block; margin-top: 0.25rem; font-weight: 500; color: var(--text-secondary); font-size: 0.85rem; line-height: 1.4;">Lack of a definitive leader on-site to make final decisions.</small>
+                                </div>
+                                <div style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.5;">
+                                    Issues occur repeatedly and are not solved once and for all. Lack of consistency, endless meetings without preparation, and no actionable conclusions.
+                                </div>
+                                <div style="font-size: 0.875rem; color: var(--text-primary); line-height: 1.5; background: rgba(5, 150, 105, 0.02); border-left: 3px solid #059669; padding-left: 1rem;">
+                                    <strong style="color: #059669; display: block; font-size: 0.75rem; text-transform: uppercase; margin-bottom: 0.25rem; letter-spacing: 0.5px;">[PEOPLE]</strong>
+                                    <strong>Trí</strong> takes direct charge as the Captain of overall Factory Operations. Apply the <strong>"Speed of Light"</strong> discipline: rapid decision-making, resolving issues definitively (once and for all).
+                                </div>
+                            </div>
+
+                            <!-- Finding 2 -->
+                            <div class="diagnostic-row" style="display: grid; grid-template-columns: 1fr 1.2fr 1.8fr; gap: 1.5rem; padding: 1.5rem; border-radius: 8px; background: var(--bg-surface); border: 1px solid rgba(0,0,0,0.03);">
+                                <div style="font-weight: 700; color: var(--text-primary);">
+                                    <span style="color: var(--accent-secondary); margin-right: 4px;">2.</span> Fragmented Communication & Overcomplicating
+                                    <small style="display: block; margin-top: 0.25rem; font-weight: 500; color: var(--text-secondary); font-size: 0.85rem; line-height: 1.4;">Too many unnecessary group chats; individuals intentionally overcomplicate tasks to make them look more important and serious so only they can do them.</small>
+                                </div>
+                                <div style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.5;">
+                                    Information noise. Creates department silos, with personnel fighting against each other instead of focusing on the main goal.
+                                </div>
+                                <div style="font-size: 0.875rem; color: var(--text-primary); line-height: 1.5; background: rgba(30, 58, 138, 0.02); border-left: 3px solid var(--accent-primary); padding-left: 1rem;">
+                                    <strong style="color: var(--accent-primary); display: block; font-size: 0.75rem; text-transform: uppercase; margin-bottom: 0.25rem; letter-spacing: 0.5px;">[SYSTEM]</strong>
+                                    Standardize communication flows. Eliminate non-value-adding group chats. Enforce the <strong>"1-3-1" rule</strong> and <strong>"No Bluff"</strong> (fact-based/data-driven) mindset in all reporting: no talking in circles, only speak with data and solutions.
+                                </div>
+                            </div>
+
+                            <!-- Finding 3 -->
+                            <div class="diagnostic-row" style="display: grid; grid-template-columns: 1fr 1.2fr 1.8fr; gap: 1.5rem; padding: 1.5rem; border-radius: 8px; background: var(--bg-surface); border: 1px solid rgba(0,0,0,0.03);">
+                                <div style="font-weight: 700; color: var(--text-primary);">
+                                    <span style="color: var(--accent-secondary); margin-right: 4px;">3.</span> Missing Procedure Guidelines
+                                    <small style="display: block; margin-top: 0.25rem; font-weight: 500; color: var(--text-secondary); font-size: 0.85rem; line-height: 1.4;">No standard SOPs. Personnel make up improvised processes that only benefit their individual selves/departments.</small>
+                                </div>
+                                <div style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.5;">
+                                    Causes misunderstandings, shifting of blame, and malicious intent between departments. When an issue arises (smoke), no one focuses on putting out the fire; they just inflate it to blame others.
+                                </div>
+                                <div style="font-size: 0.875rem; color: var(--text-primary); line-height: 1.5; background: rgba(30, 58, 138, 0.02); border-left: 3px solid var(--accent-primary); padding-left: 1rem;">
+                                    <strong style="color: var(--accent-primary); display: block; font-size: 0.75rem; text-transform: uppercase; margin-bottom: 0.25rem; letter-spacing: 0.5px;">[SYSTEM]</strong>
+                                    Package and issue clear policy and procedure guidelines for core tasks using a <strong>"rolling" method</strong> (clean up department by department). Every individual must follow the general policy, with no exceptions.
+                                </div>
+                            </div>
+
+                            <!-- Finding 4 -->
+                            <div class="diagnostic-row" style="display: grid; grid-template-columns: 1fr 1.2fr 1.8fr; gap: 1.5rem; padding: 1.5rem; border-radius: 8px; background: var(--bg-surface); border: 1px solid rgba(0,0,0,0.03);">
+                                <div style="font-weight: 700; color: var(--text-primary);">
+                                    <span style="color: var(--accent-secondary); margin-right: 4px;">4.</span> Lack of Transparency
+                                    <small style="display: block; margin-top: 0.25rem; font-weight: 500; color: var(--text-secondary); font-size: 0.85rem; line-height: 1.4;">Individuals hide their work progress; files and data are kept separately and individually on personal computers.</small>
+                                </div>
+                                <div style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.5;">
+                                    Different Data. The Board is blinded and cannot accurately assess the organization's real performance.
+                                </div>
+                                <div style="font-size: 0.875rem; color: var(--text-primary); line-height: 1.5; background: rgba(180, 83, 9, 0.02); border-left: 3px solid #B45309; padding-left: 1rem;">
+                                    <strong style="color: #B45309; display: block; font-size: 0.75rem; text-transform: uppercase; margin-bottom: 0.25rem; letter-spacing: 0.5px;">[TOOLS]</strong>
+                                    Immediate digital transformation. Implement a centralized management App/Platform. <strong>100% of data and work files must be on a shared system</strong>. Absolute transparency in work progress.
+                                </div>
+                            </div>
+
+                            <!-- Finding 5 -->
+                            <div class="diagnostic-row" style="display: grid; grid-template-columns: 1fr 1.2fr 1.8fr; gap: 1.5rem; padding: 1.5rem; border-radius: 8px; background: var(--bg-surface); border: 1px solid rgba(0,0,0,0.03);">
+                                <div style="font-weight: 700; color: var(--text-primary);">
+                                    <span style="color: var(--accent-secondary); margin-right: 4px;">5.</span> Personnel Capacity (Skills & Mindset)
+                                    <small style="display: block; margin-top: 0.25rem; font-weight: 500; color: var(--text-secondary); font-size: 0.85rem; line-height: 1.4;">The current team is passive, lacking the skills to handle tasks properly, and missing a systemic mindset.</small>
+                                </div>
+                                <div style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.5;">
+                                    Bulky organization with low efficiency; repeated errors increase costs and waste time.
+                                </div>
+                                <div style="font-size: 0.875rem; color: var(--text-primary); line-height: 1.5; background: rgba(5, 150, 105, 0.02); border-left: 3px solid #059669; padding-left: 1rem;">
+                                    <strong style="color: #059669; display: block; font-size: 0.75rem; text-transform: uppercase; margin-bottom: 0.25rem; letter-spacing: 0.5px;">[PEOPLE]</strong>
+                                    Filter the team. Place active people with the right skills in the right positions to handle tasks properly. Apply strict evaluation and retraining disciplines.
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -618,7 +683,7 @@
                         </h3>
                         <p class="bp-desc" style="font-weight: 500; color: var(--text-secondary); margin-bottom: 2rem;">A rigorous week-by-week implementation roadmap ensuring zero downtime, systematic onboarding, and immediate tracking results.</p>
                         
-                        <div class="bp-sub-grid" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem;">
+                        <div class="bp-sub-grid" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-bottom: 2.5rem;">
                             <div class="bp-sub-card" style="box-shadow: none; background: var(--bg-surface); padding: 1.5rem 1.25rem;">
                                 <div style="font-family: monospace; font-size: 1.25rem; font-weight: 800; color: var(--accent-primary); margin-bottom: 0.5rem;">WEEK 5</div>
                                 <h6 style="font-size: 0.95rem; font-weight: 700; margin-bottom: 0.75rem; color: var(--text-primary);">Diagnosis Validation</h6>
@@ -638,6 +703,65 @@
                                 <div style="font-family: monospace; font-size: 1.25rem; font-weight: 800; color: #059669; margin-bottom: 0.5rem;">WEEK 8</div>
                                 <h6 style="font-size: 0.95rem; font-weight: 700; margin-bottom: 0.75rem; color: #059669;">Handover Audit</h6>
                                 <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; margin: 0;">Conduct formal system compliance audits, transfer administrative control to shift managers, and complete Phase II final sign-off.</p>
+                            </div>
+                        </div>
+
+                        <!-- Strategic Restructure Logic Section -->
+                        <div class="restructure-rationale-grid" style="display: grid; grid-template-columns: 1.6fr 1fr; gap: 2rem; border-top: 1px solid rgba(0,0,0,0.06); padding-top: 2rem;">
+                            
+                            <!-- Left Side: Why Restructure Now? -->
+                            <div>
+                                <h4 style="font-size: 1.05rem; font-weight: 800; color: var(--text-primary); margin-bottom: 1rem; display: flex; align-items: center; gap: 8px; letter-spacing: 0.5px; text-transform: uppercase;">
+                                    <span style="color: var(--accent-secondary); font-size: 1.2rem;">⚠️</span> WHY RESTRUCTURE NOW? (DO NOT WAIT UNTIL MID-AUGUST)
+                                </h4>
+                                <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1.25rem; line-height: 1.6; font-weight: 600; color: var(--accent-primary);">
+                                    This is the golden time to initiate restructuring. Waiting for Fay & Scot to return in mid-August is a waste of time (lag) and tolerates expanding operational risks.
+                                </p>
+                                
+                                <div style="display: flex; flex-direction: column; gap: 1rem;">
+                                    <div style="padding-left: 0.75rem; border-left: 3px solid var(--accent-primary);">
+                                        <strong style="display: block; font-size: 0.9rem; color: var(--text-primary); margin-bottom: 0.15rem;">Clear Resource Allocation</strong>
+                                        <span style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; display: block;">Fay & Scot need to focus 100% of their resources on Sales and Product Improvement to meet market demands. Cleaning up the internal "battlefield" and standardizing Factory Operations is Trí's responsibility (acting as the Captain).</span>
+                                    </div>
+                                    <div style="padding-left: 0.75rem; border-left: 3px solid #DC2626;">
+                                        <strong style="display: block; font-size: 0.9rem; color: var(--text-primary); margin-bottom: 0.15rem;">Stop the Toxic Culture</strong>
+                                        <span style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; display: block;">The situation of fighting against each other and "inflating issues" instead of putting out fires is spreading. The longer it is left, the greater the inertia and individual egos become. Discipline must be re-established immediately.</span>
+                                    </div>
+                                    <div style="padding-left: 0.75rem; border-left: 3px solid var(--accent-secondary);">
+                                        <strong style="display: block; font-size: 0.9rem; color: var(--text-primary); margin-bottom: 0.15rem;">Rolling Implementation Strategy</strong>
+                                        <span style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; display: block;">Restructuring is not about tearing everything down and rebuilding overnight. Starting right now allows us to break down problems, clean up specific clusters, and optimize each department gradually but definitively before the workload volume increases in August.</span>
+                                    </div>
+                                </div>
+                                <div style="margin-top: 1.25rem; background: rgba(180,83,9,0.03); border: 1px dashed rgba(180,83,9,0.3); border-radius: 6px; padding: 0.85rem; font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5;">
+                                    💡 <strong>Note on timing:</strong> We review the salary (increase), then a new captain with a new boat is the best start. Waiting will slow down their excitement and morale.
+                                </div>
+                            </div>
+
+                            <!-- Right Side: The Pillars (3 things: System, Tools, People) -->
+                            <div style="background: rgba(30,58,138,0.02); border: 1px solid rgba(30,58,138,0.06); border-radius: 8px; padding: 1.5rem; display: flex; flex-direction: column; justify-content: center;">
+                                <h4 style="font-size: 1rem; font-weight: 700; color: var(--text-primary); margin-bottom: 1.25rem; text-align: center; text-transform: uppercase; letter-spacing: 0.5px; color: var(--accent-primary);">
+                                    3 Pillars of Restructuring
+                                </h4>
+                                <div style="display: flex; flex-direction: column; gap: 1rem;">
+                                    <div class="glass-card" style="padding: 1rem; border-radius: 6px; background: white; border: 1px solid rgba(0,0,0,0.04);">
+                                        <strong style="display: flex; align-items: center; gap: 8px; color: var(--accent-primary); font-size: 0.9rem; margin-bottom: 0.25rem;">
+                                            <span style="background: var(--accent-primary); color: white; width: 20px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; font-weight: bold;">S</span> System
+                                        </strong>
+                                        <p style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.4; margin: 0;">Clear policy and procedure guideline to follow.</p>
+                                    </div>
+                                    <div class="glass-card" style="padding: 1rem; border-radius: 6px; background: white; border: 1px solid rgba(0,0,0,0.04);">
+                                        <strong style="display: flex; align-items: center; gap: 8px; color: var(--accent-secondary); font-size: 0.9rem; margin-bottom: 0.25rem;">
+                                            <span style="background: var(--accent-secondary); color: white; width: 20px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; font-weight: bold;">T</span> Tools (App)
+                                        </strong>
+                                        <p style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.4; margin: 0;">Tool for them to use complete their job easily.</p>
+                                    </div>
+                                    <div class="glass-card" style="padding: 1rem; border-radius: 6px; background: white; border: 1px solid rgba(0,0,0,0.04);">
+                                        <strong style="display: flex; align-items: center; gap: 8px; color: #059669; font-size: 0.9rem; margin-bottom: 0.25rem;">
+                                            <span style="background: #059669; color: white; width: 20px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; font-weight: bold;">P</span> People
+                                        </strong>
+                                        <p style="font-size: 0.8rem; color: var(--text-secondary); line-height: 1.4; margin: 0;">Skill, Active people to handle the tasks properly.</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
