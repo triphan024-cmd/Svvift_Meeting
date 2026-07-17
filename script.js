@@ -89,22 +89,38 @@ document.addEventListener('DOMContentLoaded', () => {
     const phaseBtns = document.querySelectorAll('.cta-button-phase');
     const phaseNavs = document.querySelectorAll('.phase-navigator');
     const phase2Section = document.getElementById('phase2-section');
-    const phase1Sections = [
-        document.getElementById('experience'),
-        document.getElementById('options'),
-        document.getElementById('blueprint')
-    ];
+    const experienceSec = document.getElementById('experience');
+    const blueprintSec = document.getElementById('blueprint');
+    const optionsSec = document.getElementById('options');
+    const optionsHeader = document.getElementById('options-header');
+    const phase1RoadmapBlock = document.getElementById('phase1-roadmap-block');
+    const roadmapConnectorLine = document.getElementById('roadmap-connector-line');
+    const phase2RoadmapBlock = document.getElementById('phase2-roadmap-block');
+    const optionsBranchConnector = document.getElementById('options-branch-connector');
 
     function switchPhase(phase) {
         if (phase === 'phase1') {
-            phase1Sections.forEach(sec => {
-                if (sec) sec.style.display = 'block';
-            });
+            if (experienceSec) experienceSec.style.display = 'block';
+            if (blueprintSec) blueprintSec.style.display = 'block';
+            if (optionsSec) optionsSec.style.display = 'block';
+            if (optionsHeader) optionsHeader.style.display = 'block';
+            if (phase1RoadmapBlock) phase1RoadmapBlock.style.display = 'block';
+            if (roadmapConnectorLine) roadmapConnectorLine.style.display = 'block';
+            if (phase2RoadmapBlock) phase2RoadmapBlock.style.display = 'block';
+            if (optionsBranchConnector) optionsBranchConnector.style.display = 'block';
             if (phase2Section) phase2Section.style.display = 'none';
         } else if (phase === 'phase2') {
-            phase1Sections.forEach(sec => {
-                if (sec) sec.style.display = 'none';
-            });
+            if (experienceSec) experienceSec.style.display = 'none';
+            if (blueprintSec) blueprintSec.style.display = 'none';
+            
+            // Show options but hide Phase 1 components, headers, and connector lines
+            if (optionsSec) optionsSec.style.display = 'block';
+            if (optionsHeader) optionsHeader.style.display = 'none';
+            if (phase1RoadmapBlock) phase1RoadmapBlock.style.display = 'none';
+            if (roadmapConnectorLine) roadmapConnectorLine.style.display = 'none';
+            if (phase2RoadmapBlock) phase2RoadmapBlock.style.display = 'none';
+            if (optionsBranchConnector) optionsBranchConnector.style.display = 'none';
+            
             if (phase2Section) phase2Section.style.display = 'block';
         }
     }
