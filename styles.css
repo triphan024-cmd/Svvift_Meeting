@@ -1750,3 +1750,40 @@ body {
         margin-left: 0;
     }
 }
+
+/* NEW SURVEY BADGES */
+.bottleneck-block {
+    border-left: 3px solid #C2410C;
+    background: linear-gradient(90deg, rgba(194,65,12,0.03) 0%, transparent 100%);
+}
+.badge-orange {
+    background: rgba(194, 65, 12, 0.1);
+    color: #C2410C;
+}
+
+.rootcause-block {
+    border-left: 3px solid #DC2626;
+    background: linear-gradient(90deg, rgba(220,38,38,0.03) 0%, transparent 100%);
+}
+.badge-red { /* Existing, but just in case */
+    background: rgba(220, 38, 38, 0.1);
+    color: #DC2626;
+}
+
+.consequence-block {
+    border-left: 3px solid #6D28D9;
+    background: linear-gradient(90deg, rgba(109,40,217,0.03) 0%, transparent 100%);
+}
+.badge-purple {
+    background: rgba(109, 40, 217, 0.1);
+    color: #6D28D9;
+}
+
+.expectation-block {
+    border-left: 3px solid var(--accent-primary);
+    background: linear-gradient(90deg, rgba(30,58,138,0.03) 0%, transparent 100%);
+}
+.badge-blue { /* Existing */
+    background: rgba(30, 58, 138, 0.1);
+    color: var(--accent-primary);
+}
