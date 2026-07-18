@@ -1779,7 +1779,7 @@ body {
     color: #6D28D9;
 }
 
-.expectation-block {
+.suggestion-block {
     border-left: 3px solid var(--accent-primary);
     background: linear-gradient(90deg, rgba(30,58,138,0.03) 0%, transparent 100%);
 }
