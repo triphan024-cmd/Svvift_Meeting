@@ -1708,6 +1708,7 @@ body {
     display: flex;
     align-items: flex-start;
     gap: 0.5rem;
+    white-space: nowrap;
 }
 
 .cause-num {
@@ -1748,6 +1749,10 @@ body {
     
     .cause-desc {
         margin-left: 0;
+    }
+
+    .cause-title {
+        white-space: normal;
     }
 }
 
