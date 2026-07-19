@@ -58,66 +58,6 @@
                     </button>
                 </div>
                 <div class="phase-navigator-container">
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Svvift Proposal | A Legacy System</title>
-    <meta name="description" content="A 3-Phase Adaptive Roadmap and Risk-Free Solution for Svvift. Prepared for Ms. Fay & Mr. Scot.">
-    
-    <!-- Google Fonts: Outfit -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <!-- Background Elements -->
-    <div class="bg-gradient"></div>
-    <div class="bg-glow"></div>
-
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-content">
-            <div class="logo">
-                <img src="logo.png" alt="Svvift Logo" class="logo-img">
-                The <span>Proposal</span>
-            </div>
-            <div class="nav-links">
-                <a href="#hero" class="nav-home-btn">
-                    <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2.5" fill="none" style="margin-right: 4px;"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-                    Home
-                </a>
-                <a href="dashboard.html" class="nav-demo-btn">Demo</a>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <header class="hero" id="hero">
-        <!-- Abstract Glowing Orbs -->
-        <div class="hero-glow hero-glow-1"></div>
-        <div class="hero-glow hero-glow-2"></div>
-        
-        <div class="hero-content fade-in-up">
-            <div class="hero-badge">
-                <span class="pulse-dot"></span>
-                Ms. Fay & Mr. Scot
-            </div>
-            <h1 class="hero-title">Manufacturing <br><span class="gradient-text">Operational Systems</span></h1>
-            <p class="hero-subtitle">Comprehensive diagnostic and system implementation driving 100% adherence and establishing total factory autonomy.</p>
-            <div class="hero-interactive-menu">
-                <div class="hero-actions">
-                    <button class="cta-button-phase active" data-phase="phase1">
-                        Phase I
-                    </button>
-                    <button class="cta-button-phase" data-phase="phase2">
-                        Phase II
-                    </button>
-                </div>
-                <div class="phase-navigator-container">
                     <div class="phase-navigator active" id="nav-phase1">
                         <a href="#experience" class="nav-chip">Concept</a>
                         <a href="#options" class="nav-chip">Roadmap</a>
@@ -126,9 +66,9 @@
                     </div>
                     <div class="phase-navigator" id="nav-phase2">
                         <a href="#phase2-survey" class="nav-chip">Survey</a>
-                        <a href="#phase2-interview" class="nav-chip">Interview</a>
+                        <a href="#phase2-execution" class="nav-chip">Interview</a>
                         <a href="#phase2-actionplan" class="nav-chip">New Boat</a>
-                        <a href="#phase2-execution" class="nav-chip">Execution</a>
+                        <a href="#blueprint" class="nav-chip">Execution</a>
                     </div>
                 </div>
             </div>
@@ -597,9 +537,9 @@
         </section>
         
         <!-- Phase II: Execution & Action Plan Section -->
-        <section class="section phase2-section" id="phase2-section" style="background-color: var(--bg-base); padding-top: 2rem; padding-bottom: 5rem; border-top: 1px solid rgba(0,0,0,0.05); display: none;">
+        <section class="section phase2-section" id="phase2-section" style="background-color: var(--bg-base); padding: 5rem 0; border-top: 1px solid rgba(0,0,0,0.05); display: none;">
             <div class="section-container">
-                <div class="phase2-grid" style="max-width: 1000px; margin-inline: auto; display: flex; flex-direction: column; gap: 4rem;">
+                <div class="phase2-grid" style="margin-top: 2rem; max-width: 1000px; margin-inline: auto; display: flex; flex-direction: column; gap: 4rem;">
                     
                     <!-- Item 1: Survey - Interview - Observation -->
                     <div class="phase2-block-wrapper" id="phase2-survey" style="scroll-margin-top: 120px; display: flex; flex-direction: column; gap: 0.5rem;">
@@ -853,6 +793,18 @@
                                             </ul>
                                         </div>
                                     </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 2. Interview & Observation -->
+                        <div style="margin-top: 4rem;">
+                            <div class="section-header" style="text-align: left; display: flex; flex-direction: column; gap: 0.5rem; max-width: 1000px; margin-inline: 0; padding: 0; margin-bottom: 0.5rem;">
+                                <div>
+                                    <h2 class="section-title" style="margin: 0; font-size: 2rem;">B. Interview & <span class="accent-text">Observation</span></h2>
+                                    <p class="bp-desc" style="font-weight: 500; color: var(--text-secondary); margin-top: 0.25rem; max-width: 800px; line-height: 1.6;">The objective of the following diagnostic is not to air grievances, cast blame, or complain about the current state of the team. Confronting these unvarnished truths head-on is mandatory to resolve conflicts, drive continuous improvement, and scale factory efficiency.</p>
+                                </div>
+                            </div>
                             
                             <div class="phase2-card glass-card" style="padding: 2.5rem; border-radius: 12px; background: white; border: 1px solid rgba(0,0,0,0.05); box-shadow: 0 10px 40px rgba(0,0,0,0.04);">
                             <!-- Diagnostic Result Grid -->
@@ -1115,7 +1067,7 @@
                                 </div>
 
                                 <!-- 2. Execution Focus -->
-                                <div id="phase2-execution" style="margin-bottom: 3.5rem; scroll-margin-top: 120px;">
+                                <div style="margin-bottom: 3.5rem;">
                                     <h5 style="font-size: 1.05rem; font-weight: 800; color: var(--text-primary); margin-bottom: 1.25rem; display: flex; align-items: center; gap: 8px;"><span style="color: var(--accent-secondary);">II.</span> STRATEGIC EXECUTION FOCUS</h5>
                                     <p style="font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 2rem; line-height: 1.6;">During the transition phase, my execution will be ruthlessly prioritized around two core pillars:</p>
                                     

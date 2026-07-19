@@ -222,7 +222,7 @@ body {
 
 .nav-links a.nav-home-btn {
     display: inline-flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     border: 1.5px solid rgba(30, 58, 138, 0.15);
     background: rgba(255, 255, 255, 0.6);
