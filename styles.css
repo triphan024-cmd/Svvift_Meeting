@@ -143,12 +143,12 @@ body {
     padding: 0 2rem;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .logo {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 8px;
     font-size: 1.25rem;
     font-weight: 800;
@@ -222,7 +222,7 @@ body {
 
 .nav-links a.nav-home-btn {
     display: inline-flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     border: 1.5px solid rgba(30, 58, 138, 0.15);
     background: rgba(255, 255, 255, 0.6);
@@ -254,7 +254,7 @@ body {
 .hero {
     min-height: 100vh;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     padding: 0 2rem;
     position: relative;
@@ -301,7 +301,7 @@ body {
 
 .hero-badge {
     display: inline-flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 8px;
     padding: 0.5rem 1.25rem;
     background: rgba(255, 255, 255, 0.6);
@@ -360,7 +360,7 @@ body {
 
 .cta-button {
     display: inline-flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     padding: 1.1rem 2.8rem;
     background: var(--accent-primary);
@@ -382,7 +382,7 @@ body {
 /* Phase Selector Buttons */
 .cta-button-phase {
     display: inline-flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     padding: 0.95rem 2.5rem;
     background: rgba(255, 255, 255, 0.6);
@@ -423,7 +423,7 @@ body {
 .hero-interactive-menu {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     gap: 1.75rem;
     width: 100%;
     max-width: 900px;
@@ -439,7 +439,7 @@ body {
 .phase-navigator {
     display: none;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     flex-wrap: wrap;
     gap: 0.75rem;
     animation: fadeInScale 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
@@ -451,7 +451,7 @@ body {
 
 .nav-chip {
     display: inline-flex;
-    align-items: center;
+    align-items: flex-start;
     padding: 0.55rem 1.25rem;
     background: rgba(255, 255, 255, 0.7);
     border: 1px solid rgba(30, 58, 138, 0.08);
@@ -475,7 +475,7 @@ body {
 
 .chip-num {
     display: inline-flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     width: 18px;
     height: 18px;
@@ -581,7 +581,7 @@ body {
 @media (max-width: 768px) {
     .ph-card {
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
         text-align: center;
     }
     
@@ -642,7 +642,7 @@ body {
 
 .ph-highlight-header {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     margin-bottom: 0.5rem;
 }
 
@@ -890,7 +890,7 @@ body {
 
 .rf-tier {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 1rem;
     margin-bottom: 1rem;
     padding-bottom: 1rem;
@@ -1048,7 +1048,7 @@ body {
 
 .bp-acc-header {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     padding: 1.5rem 2rem;
     cursor: pointer;
     background: #ffffff;
@@ -1082,7 +1082,7 @@ body {
     width: 32px;
     height: 32px;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     color: var(--text-secondary);
     transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
@@ -1136,7 +1136,7 @@ body {
 /* Node Infographic */
 .ig-nodes {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     gap: 1rem;
     flex-wrap: wrap;
@@ -1172,7 +1172,7 @@ body {
 .ig-funnel {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     gap: 0.5rem;
 }
 
@@ -1202,7 +1202,7 @@ body {
 .ig-blocks {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .block-top, .block-bottom {
@@ -1236,7 +1236,7 @@ body {
 /* Timeline Infographic */
 .ig-timeline {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     position: relative;
 }
@@ -1368,7 +1368,7 @@ body {
    ========================================= */
 .bp-tabs-nav {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     margin-bottom: 3rem;
     position: relative;
@@ -1394,7 +1394,7 @@ body {
 .bp-tab-node {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     cursor: pointer;
     gap: 0.75rem;
     position: relative;
@@ -1412,7 +1412,7 @@ body {
     background: white;
     border: 2px solid rgba(0,0,0,0.1);
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     font-weight: 800;
     font-size: 1.1rem;
@@ -1728,7 +1728,7 @@ body {
     color: var(--text-secondary);
     line-height: 1.6;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
 }
 
 @media (max-width: 768px) {
@@ -1843,5 +1843,6 @@ body {
 .row-consequence {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
+    padding-top: 2.2rem;
 }
