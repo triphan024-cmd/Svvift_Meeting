@@ -1832,16 +1832,17 @@ body {
     line-height: 1.6;
 }
 .interview-list li::before {
-    content: '→';
+    content: '✖';
     position: absolute;
     left: 0;
     top: 0.1rem;
-    color: var(--accent-secondary);
+    color: #DC2626;
+    font-size: 0.85rem;
     font-weight: 700;
 }
 .row-consequence .interview-list li::before {
     content: '⚠';
-    color: #DC2626;
+    color: #F59E0B;
     font-size: 0.9rem;
     top: 0.2rem;
 }
