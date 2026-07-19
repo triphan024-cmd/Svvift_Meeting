@@ -1753,39 +1753,47 @@ body {
 
 /* NEW SURVEY BADGES */
 .bottleneck-block {
-    border-left: 3px solid #C2410C;
-    background: linear-gradient(90deg, rgba(194,65,12,0.03) 0%, transparent 100%);
+    border-left: 3px solid #F59E0B;
+    background: linear-gradient(90deg, rgba(245,158,11,0.08) 0%, transparent 100%);
 }
 .badge-orange {
-    background: rgba(194, 65, 12, 0.1);
-    color: #C2410C;
+    background: #F59E0B;
+    color: #FFFFFF;
+    border: none;
+    box-shadow: 0 2px 8px rgba(245,158,11,0.3);
 }
 
 .rootcause-block {
-    border-left: 3px solid #DC2626;
-    background: linear-gradient(90deg, rgba(220,38,38,0.03) 0%, transparent 100%);
+    border-left: 3px solid #EF4444;
+    background: linear-gradient(90deg, rgba(239,68,68,0.08) 0%, transparent 100%);
 }
-.badge-red { /* Existing, but just in case */
-    background: rgba(220, 38, 38, 0.1);
-    color: #DC2626;
+.badge-red {
+    background: #EF4444;
+    color: #FFFFFF;
+    border: none;
+    box-shadow: 0 2px 8px rgba(239,68,68,0.3);
 }
 
 .consequence-block {
-    border-left: 3px solid #6D28D9;
-    background: linear-gradient(90deg, rgba(109,40,217,0.03) 0%, transparent 100%);
+    border-left: 3px solid #8B5CF6;
+    background: linear-gradient(90deg, rgba(139,92,246,0.08) 0%, transparent 100%);
 }
 .badge-purple {
-    background: rgba(109, 40, 217, 0.1);
-    color: #6D28D9;
+    background: #8B5CF6;
+    color: #FFFFFF;
+    border: none;
+    box-shadow: 0 2px 8px rgba(139,92,246,0.3);
 }
 
 .suggestion-block {
-    border-left: 3px solid var(--accent-primary);
-    background: linear-gradient(90deg, rgba(30,58,138,0.03) 0%, transparent 100%);
+    border-left: 3px solid #3B82F6;
+    background: linear-gradient(90deg, rgba(59,130,246,0.08) 0%, transparent 100%);
 }
-.badge-blue { /* Existing */
-    background: rgba(30, 58, 138, 0.1);
-    color: var(--accent-primary);
+.badge-blue {
+    background: #3B82F6;
+    color: #FFFFFF;
+    border: none;
+    box-shadow: 0 2px 8px rgba(59,130,246,0.3);
 }
 .survey-list {
     margin: 0;
