@@ -1852,3 +1852,11 @@ body {
     justify-content: flex-start;
     padding-top: 2.2rem;
 }
+
+.hover-lift { transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: default; }
+.hover-lift:hover { transform: translateY(-6px); box-shadow: 0 12px 30px rgba(0,0,0,0.08); }
+.focus-card { display: flex; align-items: stretch; background: white; border: 1px solid rgba(0,0,0,0.06); border-radius: 8px; overflow: hidden; transition: transform 0.2s ease; }
+.focus-card:hover { transform: translateX(5px); border-color: rgba(0,0,0,0.1); }
+.focus-badge { width: 140px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.9rem; letter-spacing: 0.5px; color: white; flex-shrink: 0; }
+.focus-content { padding: 1.25rem 1.5rem; display: flex; flex-direction: column; justify-content: center; }
+
