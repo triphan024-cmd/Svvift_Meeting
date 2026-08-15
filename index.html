@@ -1496,50 +1496,69 @@
                             <!-- AS-IS -->
                             <div style="margin-bottom: 2.5rem;">
                                 <h5 style="font-size: 1.15rem; font-weight: 800; color: #EF4444; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 8px;">❌ AS-IS (Before)</h5>
-                                <div style="display: flex; flex-direction: column; gap: 1.25rem;">
-                                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem;">
-                                        <div style="background: rgba(0,0,0,0.02); border: 1px solid rgba(0,0,0,0.05); padding: 1.25rem; border-radius: 8px;">
-                                            <strong style="color: #1e293b; font-size: 1rem; display: block; margin-bottom: 0.75rem;">1. Blind Receiving (No QA/QC)</strong>
-                                            <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6;">
-                                                <li>Goods accepted purely on paper signatures.</li>
-                                                <li>Zero physical quantity or quality checks upon arrival.</li>
-                                            </ul>
+                                <div class="interview-table" style="display: flex; flex-direction: column;">
+                                    <div class="interview-header" style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr); gap: 2rem; padding: 1rem 1.5rem; border-bottom: 2px solid rgba(239, 68, 68, 0.1); font-weight: 700; font-size: 0.85rem; color: #EF4444; letter-spacing: 1px;">
+                                        <div>ACTION</div>
+                                        <div>CONSEQUENCE</div>
+                                    </div>
+                                    
+                                    <!-- Item 1 -->
+                                    <div class="interview-row">
+                                        <div class="row-cause">
+                                            <div class="cause-title">
+                                                <span class="cause-num" style="color: #EF4444;">1.</span> Blind Receiving (No QA/QC)
+                                            </div>
+                                            <div class="cause-desc">
+                                                <ul class="interview-list">
+                                                    <li>Goods accepted purely on paper signatures.</li>
+                                                    <li>Zero physical quantity or quality checks upon arrival.</li>
+                                                </ul>
+                                            </div>
                                         </div>
-                                        <div style="background: rgba(239, 68, 68, 0.03); border: 1px solid rgba(239, 68, 68, 0.15); padding: 1.25rem; border-radius: 8px;">
-                                            <strong style="color: #B91C1C; font-size: 1rem; display: block; margin-bottom: 0.75rem;">Consequence</strong>
-                                            <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.95rem; color: #B91C1C; line-height: 1.6;">
+                                        <div class="row-consequence">
+                                            <ul class="interview-list" style="color: #B91C1C;">
                                                 <li>Missing quantity & defective materials entering the floor.</li>
                                                 <li>Extra administrative work: Returns, invoice discrepancies, production delays, and compensation headaches.</li>
                                             </ul>
                                         </div>
                                     </div>
-                                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem;">
-                                        <div style="background: rgba(0,0,0,0.02); border: 1px solid rgba(0,0,0,0.05); padding: 1.25rem; border-radius: 8px;">
-                                            <strong style="color: #1e293b; font-size: 1rem; display: block; margin-bottom: 0.75rem;">2. Phantom Inventory (Missing Assets)</strong>
-                                            <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6;">
-                                                <li>Production teams extracted materials randomly for convenience.</li>
-                                                <li>Zero tracking or documentation at the point of use.</li>
-                                            </ul>
+                                    
+                                    <!-- Item 2 -->
+                                    <div class="interview-row">
+                                        <div class="row-cause">
+                                            <div class="cause-title">
+                                                <span class="cause-num" style="color: #EF4444;">2.</span> Phantom Inventory (Missing Assets)
+                                            </div>
+                                            <div class="cause-desc">
+                                                <ul class="interview-list">
+                                                    <li>Production teams extracted materials randomly for convenience.</li>
+                                                    <li>Zero tracking or documentation at the point of use.</li>
+                                                </ul>
+                                            </div>
                                         </div>
-                                        <div style="background: rgba(239, 68, 68, 0.03); border: 1px solid rgba(239, 68, 68, 0.15); padding: 1.25rem; border-radius: 8px;">
-                                            <strong style="color: #B91C1C; font-size: 1rem; display: block; margin-bottom: 0.75rem;">Consequence</strong>
-                                            <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.95rem; color: #B91C1C; line-height: 1.6;">
+                                        <div class="row-consequence">
+                                            <ul class="interview-list" style="color: #B91C1C;">
                                                 <li>Severe data mismatch between system records and physical reality.</li>
                                                 <li>Constant physical stock discrepancies exposed after every audit.</li>
                                             </ul>
                                         </div>
                                     </div>
-                                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem;">
-                                        <div style="background: rgba(0,0,0,0.02); border: 1px solid rgba(0,0,0,0.05); padding: 1.25rem; border-radius: 8px;">
-                                            <strong style="color: #1e293b; font-size: 1rem; display: block; margin-bottom: 0.75rem;">3. Chaotic Workflows (No Plan)</strong>
-                                            <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6;">
-                                                <li>Unpredictable production schedules and ad-hoc material requests.</li>
-                                                <li>Failure to isolate and control NG (No Good/Defective) goods.</li>
-                                            </ul>
+                                    
+                                    <!-- Item 3 -->
+                                    <div class="interview-row">
+                                        <div class="row-cause">
+                                            <div class="cause-title">
+                                                <span class="cause-num" style="color: #EF4444;">3.</span> Chaotic Workflows (No Plan)
+                                            </div>
+                                            <div class="cause-desc">
+                                                <ul class="interview-list">
+                                                    <li>Unpredictable production schedules and ad-hoc material requests.</li>
+                                                    <li>Failure to isolate and control NG (No Good/Defective) goods.</li>
+                                                </ul>
+                                            </div>
                                         </div>
-                                        <div style="background: rgba(239, 68, 68, 0.03); border: 1px solid rgba(239, 68, 68, 0.15); padding: 1.25rem; border-radius: 8px;">
-                                            <strong style="color: #B91C1C; font-size: 1rem; display: block; margin-bottom: 0.75rem;">Consequence</strong>
-                                            <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.95rem; color: #B91C1C; line-height: 1.6;">
+                                        <div class="row-consequence">
+                                            <ul class="interview-list" style="color: #B91C1C;">
                                                 <li>Massive BOM (Bill of Materials) deviations.</li>
                                                 <li>Warehouse overload and continuous operational bottlenecks.</li>
                                             </ul>
@@ -1550,52 +1569,71 @@
 
                             <!-- TO-BE -->
                             <div style="margin-bottom: 2rem; padding-top: 2rem; border-top: 1px solid rgba(0,0,0,0.05);">
-                                <h5 style="font-size: 1.15rem; font-weight: 800; color: #10B981; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 8px;">✅ TO-BE (NOW: MES Upgraded)</h5>
-                                <div style="display: flex; flex-direction: column; gap: 1.25rem;">
-                                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem;">
-                                        <div style="background: rgba(0,0,0,0.02); border: 1px solid rgba(0,0,0,0.05); padding: 1.25rem; border-radius: 8px;">
-                                            <strong style="color: #1e293b; font-size: 1rem; display: block; margin-bottom: 0.75rem;">1. Role Specialization & 4-Stage Process</strong>
-                                            <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6;">
-                                                <li>Step-by-step workflow with absolute clarity on authority.</li>
-                                                <li style="list-style-type: none; margin-left: -1.25rem; display: flex; gap: 8px; margin-top: 0.5rem;"><span style="font-size: 1.1rem;">🧠</span> <div><strong>The Brain (Diễm):</strong> Manages data, documents, system input, and photographic evidence.</div></li>
-                                                <li style="list-style-type: none; margin-left: -1.25rem; display: flex; gap: 8px; margin-top: 0.5rem;"><span style="font-size: 1.1rem;">💪</span> <div><strong>The Muscle (Sơn):</strong> Handles physical execution, forklift, and material movement.</div></li>
-                                            </ul>
+                                <h5 style="font-size: 1.15rem; font-weight: 800; color: #10B981; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 8px;">✅ TO-BE (NOW)</h5>
+                                <div class="interview-table" style="display: flex; flex-direction: column;">
+                                    <div class="interview-header" style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr); gap: 2rem; padding: 1rem 1.5rem; border-bottom: 2px solid rgba(16, 185, 129, 0.1); font-weight: 700; font-size: 0.85rem; color: #10B981; letter-spacing: 1px;">
+                                        <div>ACTION</div>
+                                        <div>RESULT</div>
+                                    </div>
+                                    
+                                    <!-- Item 1 -->
+                                    <div class="interview-row">
+                                        <div class="row-cause">
+                                            <div class="cause-title">
+                                                <span class="cause-num" style="color: #10B981;">1.</span> Process & Role
+                                            </div>
+                                            <div class="cause-desc">
+                                                <ul class="interview-list">
+                                                    <li>Step-by-step workflow with absolute clarity on authority.</li>
+                                                    <li style="list-style: none; margin-left: -1rem; display: flex; gap: 8px; margin-top: 0.5rem;"><span style="font-size: 1.1rem;">🧠</span> <div><strong>The Brain (Diễm):</strong> Manages data, documents, system input, and photographic evidence.</div></li>
+                                                    <li style="list-style: none; margin-left: -1rem; display: flex; gap: 8px; margin-top: 0.5rem;"><span style="font-size: 1.1rem;">💪</span> <div><strong>The Muscle (Sơn):</strong> Handles physical execution, forklift, and material movement.</div></li>
+                                                </ul>
+                                            </div>
                                         </div>
-                                        <div style="background: rgba(16, 185, 129, 0.03); border: 1px solid rgba(16, 185, 129, 0.15); padding: 1.25rem; border-radius: 8px;">
-                                            <strong style="color: #047857; font-size: 1rem; display: block; margin-bottom: 0.75rem;">Result</strong>
-                                            <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.95rem; color: #047857; line-height: 1.6;">
+                                        <div class="row-consequence">
+                                            <ul class="interview-list" style="color: #047857;">
                                                 <li>100% accountability on the floor.</li>
                                                 <li>Real-time inventory tracking backed by photographic proof.</li>
                                             </ul>
                                         </div>
                                     </div>
-                                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem;">
-                                        <div style="background: rgba(0,0,0,0.02); border: 1px solid rgba(0,0,0,0.05); padding: 1.25rem; border-radius: 8px;">
-                                            <strong style="color: #1e293b; font-size: 1rem; display: block; margin-bottom: 0.75rem;">2. Gatekeeper Inspection System</strong>
-                                            <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6;">
-                                                <li>Immediate rejection of defective materials directly at the receiving gate (Supplier Fault).</li>
-                                                <li>Strict quality barrier before materials enter the facility.</li>
-                                            </ul>
+
+                                    <!-- Item 2 -->
+                                    <div class="interview-row">
+                                        <div class="row-cause">
+                                            <div class="cause-title">
+                                                <span class="cause-num" style="color: #10B981;">2.</span> Gatekeeper Inspection System
+                                            </div>
+                                            <div class="cause-desc">
+                                                <ul class="interview-list">
+                                                    <li>Immediate rejection of defective materials directly at the receiving gate (Supplier Fault).</li>
+                                                    <li>Strict quality barrier before materials enter the facility.</li>
+                                                </ul>
+                                            </div>
                                         </div>
-                                        <div style="background: rgba(16, 185, 129, 0.03); border: 1px solid rgba(16, 185, 129, 0.15); padding: 1.25rem; border-radius: 8px;">
-                                            <strong style="color: #047857; font-size: 1rem; display: block; margin-bottom: 0.75rem;">Result</strong>
-                                            <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.95rem; color: #047857; line-height: 1.6;">
+                                        <div class="row-consequence">
+                                            <ul class="interview-list" style="color: #047857;">
                                                 <li>Zero defective parts passed downstream to production.</li>
                                                 <li>Eliminates downstream administrative waste (returns, invoice corrections).</li>
                                             </ul>
                                         </div>
                                     </div>
-                                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem;">
-                                        <div style="background: rgba(0,0,0,0.02); border: 1px solid rgba(0,0,0,0.05); padding: 1.25rem; border-radius: 8px;">
-                                            <strong style="color: #1e293b; font-size: 1rem; display: block; margin-bottom: 0.75rem;">3. Standardized Counting & Scheduling</strong>
-                                            <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6;">
-                                                <li>Established exact conversion ratios (e.g., KG ➡️ EA, standardized package capacities).</li>
-                                                <li>Mandated advance scheduling for all material requests.</li>
-                                            </ul>
+
+                                    <!-- Item 3 -->
+                                    <div class="interview-row">
+                                        <div class="row-cause">
+                                            <div class="cause-title">
+                                                <span class="cause-num" style="color: #10B981;">3.</span> Standardized Counting & Scheduling
+                                            </div>
+                                            <div class="cause-desc">
+                                                <ul class="interview-list">
+                                                    <li>Established exact conversion ratios (e.g., KG ➡️ EA, standardized package capacities).</li>
+                                                    <li>Mandated advance scheduling for all material requests.</li>
+                                                </ul>
+                                            </div>
                                         </div>
-                                        <div style="background: rgba(16, 185, 129, 0.03); border: 1px solid rgba(16, 185, 129, 0.15); padding: 1.25rem; border-radius: 8px;">
-                                            <strong style="color: #047857; font-size: 1rem; display: block; margin-bottom: 0.75rem;">Result</strong>
-                                            <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.95rem; color: #047857; line-height: 1.6;">
+                                        <div class="row-consequence">
+                                            <ul class="interview-list" style="color: #047857;">
                                                 <li>Highly accurate and lightning-fast quantity checks.</li>
                                                 <li>Guaranteed preparation and staging time for warehouse staff.</li>
                                             </ul>
