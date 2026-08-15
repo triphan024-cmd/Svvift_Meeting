@@ -70,7 +70,7 @@
                 <span class="pulse-dot"></span>
                 Ms. Fay & Mr. Scot
             </div>
-            <h1 class="hero-title">Manufacturing <br><span class="gradient-text">Operational Systems</span></h1>
+            <h1 class="hero-title">Manufacturing <br><span class="gradient-text">Execution Systems</span></h1>
             <p class="hero-subtitle">Comprehensive diagnostic and system implementation driving 100% adherence and establishing total factory autonomy.</p>
             <div class="hero-interactive-menu">
                 <div class="hero-actions">
@@ -79,6 +79,9 @@
                     </button>
                     <button class="cta-button-phase" data-phase="phase2">
                         Phase II
+                    </button>
+                    <button class="cta-button-phase" data-phase="phase3">
+                        Phase III
                     </button>
                 </div>
                 <div class="phase-navigator-container">
@@ -93,6 +96,10 @@
                         <a href="#phase2-interview" class="nav-chip">Interview</a>
                         <a href="#phase2-actionplan" class="nav-chip">New Boat</a>
                         <a href="#phase2-execution" class="nav-chip">Execution</a>
+                    </div>
+                    <div class="phase-navigator" id="nav-phase3">
+                        <a href="#phase3-warehouse" class="nav-chip">Warehouse</a>
+                        <a href="#phase3-production" class="nav-chip">Production</a>
                     </div>
                 </div>
             </div>
@@ -1470,6 +1477,125 @@
             </div>
         </section>
 
+        <!-- Phase III: MES SYSTEM UPGRADE ASSESSMENT -->
+        <section class="section phase3-section" id="phase3-section" style="background-color: var(--bg-base); padding-top: 2rem; padding-bottom: 5rem; border-top: 1px solid rgba(0,0,0,0.05); display: none;">
+            <div class="section-container">
+                <div class="phase3-grid" style="max-width: 1000px; margin-inline: auto; display: flex; flex-direction: column; gap: 4rem;">
+                    
+                    <!-- MODULE 1: WAREHOUSE TRANSFORMATION -->
+                    <div class="phase3-block-wrapper" id="phase3-warehouse" style="scroll-margin-top: 120px; display: flex; flex-direction: column; gap: 0.5rem;">
+                        <div class="section-header" style="text-align: left; display: flex; flex-direction: column; gap: 0.5rem; max-width: 1000px; margin-inline: 0; padding: 0; margin-bottom: 0.5rem;">
+                            <div>
+                                <p class="section-meta" style="margin-bottom: 0.25rem;">PHASE III: MES SYSTEM UPGRADE ASSESSMENT</p>
+                                <h2 class="section-title" style="margin: 0; font-size: 2rem;">MODULE 1: <span class="accent-text">WAREHOUSE TRANSFORMATION</span></h2>
+                                <p class="bp-desc" style="font-weight: 500; color: var(--text-secondary); margin-top: 0.25rem; max-width: 800px; line-height: 1.6;"><strong>Goal:</strong> Shift from chaotic, manual storage to a strictly controlled, data-driven hub.</p>
+                            </div>
+                        </div>
+
+                        <div class="phase2-card glass-card" style="padding: 2.5rem; border-radius: 12px; background: white; border: 1px solid rgba(0,0,0,0.05); box-shadow: 0 10px 40px rgba(0,0,0,0.04);">
+                            <!-- AS-IS -->
+                            <div style="margin-bottom: 2rem;">
+                                <h5 style="font-size: 1.05rem; font-weight: 800; color: #EF4444; margin-bottom: 1.25rem; display: flex; align-items: center; gap: 8px;">❌ AS-IS (The Before State)</h5>
+                                <ul class="bp-bullet-list">
+                                    <li><strong>Blind Receiving (No QA/QC):</strong> Receiving was based purely on paper signatures. If a document stated 500 units, it was accepted without physical quantity or quality checks. This caused downstream chaos: missing parts, invoice discrepancies, production delays, and compensation headaches.</li>
+                                    <li><strong>Phantom Inventory (Missing Assets):</strong> Production teams took materials randomly for convenience with zero tracking. This resulted in constant discrepancies between system data and physical stock after every audit.</li>
+                                    <li><strong>Chaotic Workflows (No Plan):</strong> Unpredictable production schedules and failure to control NG (No Good/Defective) goods caused massive BOM (Bill of Materials) deviations. Constant, unplanned material requests led to warehouse overload.</li>
+                                </ul>
+                            </div>
+
+                            <!-- TO-BE -->
+                            <div style="margin-bottom: 2rem; padding-top: 2rem; border-top: 1px solid rgba(0,0,0,0.05);">
+                                <h5 style="font-size: 1.05rem; font-weight: 800; color: #10B981; margin-bottom: 1.25rem; display: flex; align-items: center; gap: 8px;">✅ TO-BE (The NOW State - MES Upgraded)</h5>
+                                <ul class="bp-bullet-list">
+                                    <li><strong>Clear 4-Stage Process:</strong> Step-by-step workflow with absolute clarity on authority and responsibilities.</li>
+                                    <li><strong>Role Specialization:</strong>
+                                        <ul style="margin-top: 0.5rem; margin-left: 1.5rem; list-style-type: circle; font-size: 0.95rem; color: var(--text-secondary); line-height: 1.5;">
+                                            <li style="margin-bottom: 0.25rem;"><strong>The Brain (Diễm):</strong> Manages data, documents, system input, and photographic evidence.</li>
+                                            <li><strong>The Muscle (Sơn):</strong> Handles physical execution (forklift, driving, material movement).</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>Live-Time Tracking:</strong> Real-time inventory numbers backed by photographic proof.</li>
+                                    <li><strong>Advanced Scheduling:</strong> Material requests must be scheduled in advance, allowing the Warehouse time to prep and stage materials.</li>
+                                    <li><strong>Gatekeeper Inspection System:</strong> Defective materials are rejected directly at the receiving gate (Supplier Fault). This eliminates downstream administrative waste (returns, invoice corrections).</li>
+                                    <li><strong>Standardized Counting Formula:</strong> Established clear conversion ratios (e.g., KG ➡️ EA, standardized box/package capacities) for highly accurate and fast quantity checks.</li>
+                                </ul>
+                            </div>
+
+                            <!-- AUDIT INSIGHT -->
+                            <div style="background: rgba(245, 158, 11, 0.05); border-left: 4px solid #F59E0B; padding: 1.5rem; border-radius: 0 8px 8px 0;">
+                                <h5 style="font-size: 1.05rem; font-weight: 800; color: #D97706; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 8px;">⚠️ AUDIT INSIGHT</h5>
+                                <p style="font-size: 0.95rem; line-height: 1.6; color: var(--text-secondary);"><strong>Learning Lesson:</strong> During the recent audit, the supervisor (Minn) repeated old mistakes: poor preparation and lack of strict supervision. Without oversight, counters took "easy shortcuts" instead of following the correct procedures, leading to inaccurate data.<br><br><strong>Impact:</strong> The inventory check took 4 days instead of the standard 2 days.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- MODULE 2: PRODUCTION ASSESSMENT -->
+                    <div class="phase3-block-wrapper" id="phase3-production" style="scroll-margin-top: 120px; display: flex; flex-direction: column; gap: 0.5rem;">
+                        <div class="section-header" style="text-align: left; display: flex; flex-direction: column; gap: 0.5rem; max-width: 1000px; margin-inline: 0; padding: 0; margin-bottom: 0.5rem;">
+                            <div>
+                                <h2 class="section-title" style="margin: 0; font-size: 2rem;">MODULE 2: <span class="accent-text">PRODUCTION ASSESSMENT</span></h2>
+                                <p class="bp-desc" style="font-weight: 500; color: var(--text-secondary); margin-top: 0.25rem; max-width: 800px; line-height: 1.6;"><strong>Goal:</strong> Transform the production floor from a chaotic, reactive group into a "Special Forces / SWAT Team" using Lean, Agile, and Disciplined frameworks.</p>
+                            </div>
+                        </div>
+
+                        <div class="phase2-card glass-card" style="padding: 2.5rem; border-radius: 12px; background: white; border: 1px solid rgba(0,0,0,0.05); box-shadow: 0 10px 40px rgba(0,0,0,0.04);">
+                            <!-- CURRENT STATE -->
+                            <div style="margin-bottom: 2rem;">
+                                <h5 style="font-size: 1.05rem; font-weight: 800; color: var(--text-primary); margin-bottom: 1.25rem; display: flex; align-items: center; gap: 8px;">🔍 CURRENT STATE & MANAGEMENT BOTTLENECKS</h5>
+                                <ul class="bp-bullet-list">
+                                    <li><strong>Fake Optimization (Cutting headcount, not waste):</strong> The PM reduced headcount from 56 to 34 but kept the exact same workflow. Doing the same work with fewer people is not "Lean"; it merely creates overload and stagnation.</li>
+                                    <li><strong>Administrative Illusion:</strong> Training is treated as an administrative checklist (taking photos of a worker next to a machine) rather than building core competencies.</li>
+                                    <li><strong>Lack of Big-Picture Strategy:</strong> The PM operates like a Floor Supervisor. There is no mapping of the Value Stream, no identification of bottlenecks, and no understanding of where WIP (Work In Progress) is piling up.</li>
+                                    <li><strong>Leadership Failures:</strong> Schedules change constantly. Data/reports are consistently inaccurate with endless excuses. The PM fails to provide clear tools, processes, or direction, leading to worker wasted time, and then blames the workers for the chaos.</li>
+                                </ul>
+                            </div>
+
+                            <!-- STRATEGIC DIRECTIVES -->
+                            <div style="margin-bottom: 2rem; padding-top: 2rem; border-top: 1px solid rgba(0,0,0,0.05);">
+                                <h5 style="font-size: 1.05rem; font-weight: 800; color: var(--text-primary); margin-bottom: 1.25rem; display: flex; align-items: center; gap: 8px;">🚀 STRATEGIC DIRECTIVES (The "SWAT Team" Blueprint)</h5>
+                                <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                                    <div>
+                                        <h6 style="font-size: 1rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">1. AGILE (Flexibility & Cross-Training)</h6>
+                                        <p style="font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 0.25rem;"><strong>Shift:</strong> From "Narrow Specialization" to "Cross-Training".</p>
+                                        <p style="font-size: 0.95rem; color: var(--text-secondary);"><strong>Action:</strong> Implement a Skill Matrix. A single worker must be trained to operate at least 3 different machines/stages. This prevents line stoppages when someone is absent and allows dynamic reallocation based on order volume.</p>
+                                    </div>
+                                    <div>
+                                        <h6 style="font-size: 1rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">2. LEAN (Eliminating The 7 Wastes)</h6>
+                                        <p style="font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 0.25rem;"><strong>Shift:</strong> From "Reducing People" to "Continuous Flow".</p>
+                                        <p style="font-size: 0.95rem; color: var(--text-secondary);"><strong>Action:</strong> Track the exact time a raw material (e.g., sheepskin) sits idle as WIP. Balance the line so upstream production doesn't choke downstream stages.</p>
+                                    </div>
+                                    <div>
+                                        <h6 style="font-size: 1rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">3. DISCIPLINED (5S & TPM Foundations)</h6>
+                                        <p style="font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 0.25rem;"><strong>5S Foundation:</strong> Mandatory visual management. Every tool and material must have a designated, marked location (lines, labels). 5S must be a daily KPI for every team.</p>
+                                        <p style="font-size: 0.95rem; color: var(--text-secondary);"><strong>TPM (Total Productive Maintenance):</strong> Operators must own their machines. Cleaning, lubricating, and tightening components (e.g., glue machine clamps) must happen daily before/after shifts—not waiting until the machine breaks down.</p>
+                                    </div>
+                                    <div>
+                                        <h6 style="font-size: 1rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">4. FAST (Real-Time Execution Metrics)</h6>
+                                        <p style="font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 0.25rem;">The system must replace "feelings" with sharp, undeniable data tracking:</p>
+                                        <ul style="margin-left: 1.5rem; font-size: 0.95rem; color: var(--text-secondary); list-style-type: circle;">
+                                            <li style="margin-bottom: 0.25rem;"><strong>Lead Time:</strong> Time from order start to finished batch.</li>
+                                            <li style="margin-bottom: 0.25rem;"><strong>Cycle Time:</strong> Speed of a single standard operational loop.</li>
+                                            <li><strong>Defect Rate:</strong> Error percentage at specific stages (e.g., brushing/beveling).</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- CORE MANAGEMENT RULES -->
+                            <div style="padding-top: 2rem; border-top: 1px solid rgba(0,0,0,0.05);">
+                                <h5 style="font-size: 1.05rem; font-weight: 800; color: var(--text-primary); margin-bottom: 1.25rem; display: flex; align-items: center; gap: 8px;">📌 CORE MANAGEMENT RULES (To be embedded in the MES Culture)</h5>
+                                <ul class="bp-bullet-list">
+                                    <li><strong>Focus on the Work, Not the Person:</strong> Assessments must be objective, results-driven, and data-backed. No personal blame.</li>
+                                    <li><strong>Clarity is Leadership:</strong> Providing direction means giving the team the exact steps, tools, and processes they need to succeed, not just pushing them blindly.</li>
+                                    <li><strong>Accountability:</strong> Every task must have a clearly assigned owner (Who does what).</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer class="footer">
