@@ -1486,7 +1486,7 @@
                     <div class="phase3-block-wrapper" id="phase3-warehouse" style="scroll-margin-top: 120px; display: flex; flex-direction: column; gap: 0.5rem;">
                         <div class="section-header" style="text-align: center; display: flex; flex-direction: column; align-items: center; gap: 0.5rem; max-width: 1000px; margin-inline: auto; padding: 0; margin-bottom: 2rem;">
                             <div style="display: flex; flex-direction: column; align-items: center;">
-                                <p class="section-meta" style="margin-bottom: 0.25rem;">PHASE III: MES SYSTEM UPGRADE ASSESSMENT</p>
+                                <p class="section-meta" style="margin-bottom: 0.25rem;">PHASE III: MES PROCESS</p>
                                 <h2 class="section-title" style="margin: 0; font-size: 2rem;">MODULE 1 - <span class="accent-text">WAREHOUSE TRANSFORMATION</span></h2>
                                 <p class="bp-desc" style="font-weight: 500; color: var(--text-secondary); margin-top: 0.5rem; max-width: 800px; line-height: 1.6; text-align: center;"><strong>Goal:</strong> Shift from chaotic, manual storage to a strictly controlled, data-driven hub.</p>
                             </div>
@@ -1499,32 +1499,50 @@
                                 <div style="display: flex; flex-direction: column; gap: 1.25rem;">
                                     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem;">
                                         <div style="background: rgba(0,0,0,0.02); border: 1px solid rgba(0,0,0,0.05); padding: 1.25rem; border-radius: 8px;">
-                                            <strong style="color: #1e293b; font-size: 1rem; display: block; margin-bottom: 0.5rem;">Blind Receiving (No QA/QC)</strong>
-                                            <p style="margin: 0; font-size: 0.95rem; color: var(--text-secondary); line-height: 1.5;">Receiving was based purely on paper signatures. Accepted without physical quantity or quality checks.</p>
+                                            <strong style="color: #1e293b; font-size: 1rem; display: block; margin-bottom: 0.75rem;">1. Blind Receiving (No QA/QC)</strong>
+                                            <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6;">
+                                                <li>Goods accepted purely on paper signatures.</li>
+                                                <li>Zero physical quantity or quality checks upon arrival.</li>
+                                            </ul>
                                         </div>
                                         <div style="background: rgba(239, 68, 68, 0.03); border: 1px solid rgba(239, 68, 68, 0.15); padding: 1.25rem; border-radius: 8px;">
-                                            <strong style="color: #B91C1C; font-size: 1rem; display: block; margin-bottom: 0.5rem;">Consequence</strong>
-                                            <p style="margin: 0; font-size: 0.95rem; color: #B91C1C; line-height: 1.5;">Downstream chaos, missing parts, invoice discrepancies, production delays, and compensation headaches.</p>
+                                            <strong style="color: #B91C1C; font-size: 1rem; display: block; margin-bottom: 0.75rem;">Consequence</strong>
+                                            <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.95rem; color: #B91C1C; line-height: 1.6;">
+                                                <li>Missing quantity & defective materials entering the floor.</li>
+                                                <li>Extra administrative work: Returns, invoice discrepancies, production delays, and compensation headaches.</li>
+                                            </ul>
                                         </div>
                                     </div>
                                     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem;">
                                         <div style="background: rgba(0,0,0,0.02); border: 1px solid rgba(0,0,0,0.05); padding: 1.25rem; border-radius: 8px;">
-                                            <strong style="color: #1e293b; font-size: 1rem; display: block; margin-bottom: 0.5rem;">Phantom Inventory (Missing Assets)</strong>
-                                            <p style="margin: 0; font-size: 0.95rem; color: var(--text-secondary); line-height: 1.5;">Production teams took materials randomly for convenience with zero tracking.</p>
+                                            <strong style="color: #1e293b; font-size: 1rem; display: block; margin-bottom: 0.75rem;">2. Phantom Inventory (Missing Assets)</strong>
+                                            <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6;">
+                                                <li>Production teams extracted materials randomly for convenience.</li>
+                                                <li>Zero tracking or documentation at the point of use.</li>
+                                            </ul>
                                         </div>
                                         <div style="background: rgba(239, 68, 68, 0.03); border: 1px solid rgba(239, 68, 68, 0.15); padding: 1.25rem; border-radius: 8px;">
-                                            <strong style="color: #B91C1C; font-size: 1rem; display: block; margin-bottom: 0.5rem;">Consequence</strong>
-                                            <p style="margin: 0; font-size: 0.95rem; color: #B91C1C; line-height: 1.5;">Constant discrepancies between system data and physical stock after every audit.</p>
+                                            <strong style="color: #B91C1C; font-size: 1rem; display: block; margin-bottom: 0.75rem;">Consequence</strong>
+                                            <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.95rem; color: #B91C1C; line-height: 1.6;">
+                                                <li>Severe data mismatch between system records and physical reality.</li>
+                                                <li>Constant physical stock discrepancies exposed after every audit.</li>
+                                            </ul>
                                         </div>
                                     </div>
                                     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem;">
                                         <div style="background: rgba(0,0,0,0.02); border: 1px solid rgba(0,0,0,0.05); padding: 1.25rem; border-radius: 8px;">
-                                            <strong style="color: #1e293b; font-size: 1rem; display: block; margin-bottom: 0.5rem;">Chaotic Workflows (No Plan)</strong>
-                                            <p style="margin: 0; font-size: 0.95rem; color: var(--text-secondary); line-height: 1.5;">Unpredictable production schedules and failure to control NG (No Good/Defective) goods.</p>
+                                            <strong style="color: #1e293b; font-size: 1rem; display: block; margin-bottom: 0.75rem;">3. Chaotic Workflows (No Plan)</strong>
+                                            <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6;">
+                                                <li>Unpredictable production schedules and ad-hoc material requests.</li>
+                                                <li>Failure to isolate and control NG (No Good/Defective) goods.</li>
+                                            </ul>
                                         </div>
                                         <div style="background: rgba(239, 68, 68, 0.03); border: 1px solid rgba(239, 68, 68, 0.15); padding: 1.25rem; border-radius: 8px;">
-                                            <strong style="color: #B91C1C; font-size: 1rem; display: block; margin-bottom: 0.5rem;">Consequence</strong>
-                                            <p style="margin: 0; font-size: 0.95rem; color: #B91C1C; line-height: 1.5;">Massive BOM (Bill of Materials) deviations and warehouse overload due to constant, unplanned material requests.</p>
+                                            <strong style="color: #B91C1C; font-size: 1rem; display: block; margin-bottom: 0.75rem;">Consequence</strong>
+                                            <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.95rem; color: #B91C1C; line-height: 1.6;">
+                                                <li>Massive BOM (Bill of Materials) deviations.</li>
+                                                <li>Warehouse overload and continuous operational bottlenecks.</li>
+                                            </ul>
                                         </div>
                                     </div>
                                 </div>
@@ -1532,40 +1550,55 @@
 
                             <!-- TO-BE -->
                             <div style="margin-bottom: 2rem; padding-top: 2rem; border-top: 1px solid rgba(0,0,0,0.05);">
-                                <h5 style="font-size: 1.15rem; font-weight: 800; color: #10B981; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 8px;">✅ TO-BE (NOW)</h5>
+                                <h5 style="font-size: 1.15rem; font-weight: 800; color: #10B981; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 8px;">✅ TO-BE (NOW: MES Upgraded)</h5>
                                 <div style="display: flex; flex-direction: column; gap: 1.25rem;">
                                     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem;">
                                         <div style="background: rgba(0,0,0,0.02); border: 1px solid rgba(0,0,0,0.05); padding: 1.25rem; border-radius: 8px;">
-                                            <strong style="color: #1e293b; font-size: 1rem; display: block; margin-bottom: 0.5rem;">Role Specialization & 4-Stage Process</strong>
-                                            <p style="margin: 0; font-size: 0.95rem; color: var(--text-secondary); line-height: 1.5;">Step-by-step workflow with absolute clarity on authority.</p>
-                                            <ul style="margin-top: 0.75rem; margin-left: 0; list-style: none; padding-left: 0; font-size: 0.95rem; color: var(--text-secondary); line-height: 1.5; display: flex; flex-direction: column; gap: 0.5rem;">
-                                                <li style="display: flex; gap: 8px;"><span style="font-size: 1.1rem;">🧠</span> <div><strong>The Brain (Diễm):</strong> Manages data, documents, system input, and photographic evidence.</div></li>
-                                                <li style="display: flex; gap: 8px;"><span style="font-size: 1.1rem;">💪</span> <div><strong>The Muscle (Sơn):</strong> Handles physical execution (forklift, driving, material movement).</div></li>
+                                            <strong style="color: #1e293b; font-size: 1rem; display: block; margin-bottom: 0.75rem;">1. Role Specialization & 4-Stage Process</strong>
+                                            <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6;">
+                                                <li>Step-by-step workflow with absolute clarity on authority.</li>
+                                                <li style="list-style-type: none; margin-left: -1.25rem; display: flex; gap: 8px; margin-top: 0.5rem;"><span style="font-size: 1.1rem;">🧠</span> <div><strong>The Brain (Diễm):</strong> Manages data, documents, system input, and photographic evidence.</div></li>
+                                                <li style="list-style-type: none; margin-left: -1.25rem; display: flex; gap: 8px; margin-top: 0.5rem;"><span style="font-size: 1.1rem;">💪</span> <div><strong>The Muscle (Sơn):</strong> Handles physical execution, forklift, and material movement.</div></li>
                                             </ul>
                                         </div>
                                         <div style="background: rgba(16, 185, 129, 0.03); border: 1px solid rgba(16, 185, 129, 0.15); padding: 1.25rem; border-radius: 8px;">
-                                            <strong style="color: #047857; font-size: 1rem; display: block; margin-bottom: 0.5rem;">Result</strong>
-                                            <p style="margin: 0; font-size: 0.95rem; color: #047857; line-height: 1.5;">Clear accountability and real-time inventory tracking backed by proof.</p>
+                                            <strong style="color: #047857; font-size: 1rem; display: block; margin-bottom: 0.75rem;">Result</strong>
+                                            <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.95rem; color: #047857; line-height: 1.6;">
+                                                <li>100% accountability on the floor.</li>
+                                                <li>Real-time inventory tracking backed by photographic proof.</li>
+                                            </ul>
                                         </div>
                                     </div>
                                     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem;">
                                         <div style="background: rgba(0,0,0,0.02); border: 1px solid rgba(0,0,0,0.05); padding: 1.25rem; border-radius: 8px;">
-                                            <strong style="color: #1e293b; font-size: 1rem; display: block; margin-bottom: 0.5rem;">Gatekeeper Inspection System</strong>
-                                            <p style="margin: 0; font-size: 0.95rem; color: var(--text-secondary); line-height: 1.5;">Defective materials are rejected directly at the receiving gate.</p>
+                                            <strong style="color: #1e293b; font-size: 1rem; display: block; margin-bottom: 0.75rem;">2. Gatekeeper Inspection System</strong>
+                                            <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6;">
+                                                <li>Immediate rejection of defective materials directly at the receiving gate (Supplier Fault).</li>
+                                                <li>Strict quality barrier before materials enter the facility.</li>
+                                            </ul>
                                         </div>
                                         <div style="background: rgba(16, 185, 129, 0.03); border: 1px solid rgba(16, 185, 129, 0.15); padding: 1.25rem; border-radius: 8px;">
-                                            <strong style="color: #047857; font-size: 1rem; display: block; margin-bottom: 0.5rem;">Result</strong>
-                                            <p style="margin: 0; font-size: 0.95rem; color: #047857; line-height: 1.5;">Eliminates downstream administrative waste (returns, invoice corrections).</p>
+                                            <strong style="color: #047857; font-size: 1rem; display: block; margin-bottom: 0.75rem;">Result</strong>
+                                            <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.95rem; color: #047857; line-height: 1.6;">
+                                                <li>Zero defective parts passed downstream to production.</li>
+                                                <li>Eliminates downstream administrative waste (returns, invoice corrections).</li>
+                                            </ul>
                                         </div>
                                     </div>
                                     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem;">
                                         <div style="background: rgba(0,0,0,0.02); border: 1px solid rgba(0,0,0,0.05); padding: 1.25rem; border-radius: 8px;">
-                                            <strong style="color: #1e293b; font-size: 1rem; display: block; margin-bottom: 0.5rem;">Standardized Counting & Scheduling</strong>
-                                            <p style="margin: 0; font-size: 0.95rem; color: var(--text-secondary); line-height: 1.5;">Established conversion ratios (e.g., KG ➡️ EA) and mandated advance scheduling.</p>
+                                            <strong style="color: #1e293b; font-size: 1rem; display: block; margin-bottom: 0.75rem;">3. Standardized Counting & Scheduling</strong>
+                                            <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6;">
+                                                <li>Established exact conversion ratios (e.g., KG ➡️ EA, standardized package capacities).</li>
+                                                <li>Mandated advance scheduling for all material requests.</li>
+                                            </ul>
                                         </div>
                                         <div style="background: rgba(16, 185, 129, 0.03); border: 1px solid rgba(16, 185, 129, 0.15); padding: 1.25rem; border-radius: 8px;">
-                                            <strong style="color: #047857; font-size: 1rem; display: block; margin-bottom: 0.5rem;">Result</strong>
-                                            <p style="margin: 0; font-size: 0.95rem; color: #047857; line-height: 1.5;">Highly accurate/fast quantity checks and allowed staging time for warehouse staff.</p>
+                                            <strong style="color: #047857; font-size: 1rem; display: block; margin-bottom: 0.75rem;">Result</strong>
+                                            <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.95rem; color: #047857; line-height: 1.6;">
+                                                <li>Highly accurate and lightning-fast quantity checks.</li>
+                                                <li>Guaranteed preparation and staging time for warehouse staff.</li>
+                                            </ul>
                                         </div>
                                     </div>
                                 </div>
