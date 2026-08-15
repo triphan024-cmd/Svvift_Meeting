@@ -1641,7 +1641,7 @@
                         <div class="phase2-card glass-card" style="padding: 2.5rem; border-radius: 12px; background: white; border: 1px solid rgba(239, 68, 68, 0.2); box-shadow: 0 10px 40px rgba(239, 68, 68, 0.05);">
                             <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem; margin-bottom: 2rem;">
                                 <div>
-                                    <h5 style="font-size: 1.15rem; font-weight: 800; color: #B91C1C; margin-bottom: 0.25rem; display: flex; align-items: center; gap: 8px;">🔍 CURRENT STATE & BOTTLENECKS</h5>
+                                    <h5 style="font-size: 1.15rem; font-weight: 800; color: #B91C1C; margin-bottom: 0.25rem; display: flex; align-items: center; gap: 8px;">⚠️ SYSTEM DIAGNOSTIC: CURRENT BOTTLENECKS</h5>
                                     <p style="font-size: 0.95rem; color: var(--text-secondary); font-weight: 500;">Assessment of Proposed Plan: Systemic Gaps</p>
                                 </div>
                                 <a href="https://docs.google.com/spreadsheets/d/1FL_KTfMVPG9IeB_ot8gTnT4PbCsNgrA4OMo1bG1hVe4/edit?gid=821871331#gid=821871331" target="_blank" style="display: inline-flex; align-items: center; gap: 6px; padding: 0.5rem 1rem; background: rgba(239, 68, 68, 0.1); color: #B91C1C; font-size: 0.85rem; font-weight: 600; border-radius: 20px; text-decoration: none; transition: background 0.2s ease;">
@@ -1674,41 +1674,74 @@
                                 </div>
                             </div>
                             
-                            <!-- BOTTLENECKS ACCORDION/LIST -->
-                            <div style="display: flex; flex-direction: column; gap: 1rem;">
-                                <!-- Point 1 -->
-                                <div style="background: rgba(239, 68, 68, 0.02); border: 1px solid rgba(239, 68, 68, 0.1); border-left: 4px solid #EF4444; padding: 1.25rem 1.5rem; border-radius: 0 8px 8px 0;">
-                                    <h6 style="font-size: 1rem; font-weight: 700; color: #991B1B; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 8px;"><svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/><path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.553.553 0 0 1-1.1 0z"/></svg> 1. Organization & System Vision</h6>
-                                    <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 0.5rem; line-height: 1.5;"><strong>Gap:</strong> Reducing headcount (56 ➡️ 34) without workflow changes.</p>
-                                    <p style="font-size: 0.9rem; color: #B91C1C; line-height: 1.5; font-weight: 500;"><strong>Impact:</strong> Worker overload. Stagnation. Lacks systemic experience.</p>
+                            <!-- BOTTLENECKS DIAGNOSTIC GRID -->
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+                                <!-- Card 1 -->
+                                <div style="background: white; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.02); display: flex; flex-direction: column;">
+                                    <div style="background: #f8fafc; padding: 1rem 1.25rem; border-bottom: 1px solid #e2e8f0;">
+                                        <h6 style="font-size: 0.95rem; font-weight: 800; color: #1e293b; margin: 0; display: flex; align-items: center; gap: 8px;">🛑 FALSE OPTIMIZATION <span style="font-weight: 500; font-size: 0.85rem; color: var(--text-secondary);">(Organization)</span></h6>
+                                    </div>
+                                    <div style="padding: 1.25rem; background: rgba(248, 250, 252, 0.5); flex-grow: 1;">
+                                        <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0; line-height: 1.5;"><strong style="color: #64748b;">🔴 SYMPTOM:</strong> PM proposed cutting headcount (56 ➡️ 34) without altering the broken workflow.</p>
+                                    </div>
+                                    <div style="padding: 1.25rem; background: rgba(239, 68, 68, 0.05); border-top: 1px solid rgba(239, 68, 68, 0.1);">
+                                        <p style="font-size: 0.85rem; color: #991B1B; margin: 0; line-height: 1.5;"><strong style="color: #B91C1C;">💥 SYSTEMIC RISK:</strong> Severe bottlenecking. <span style="color:#B91C1C; font-weight:700;">Blind downsizing causes stagnation, not Lean.</span></p>
+                                    </div>
+                                    <div style="padding: 1rem 1.25rem; background: rgba(16, 185, 129, 0.05); border-top: 1px solid rgba(16, 185, 129, 0.1);">
+                                        <p style="font-size: 0.8rem; color: #047857; margin: 0; line-height: 1.5;"><strong style="color: #059669;">🛡️ CORRECTION:</strong> Strategic Filtering. Let go of underperformers + Intensively train high-potential staff into elite experts.</p>
+                                    </div>
                                 </div>
 
-                                <!-- Point 2 -->
-                                <div style="background: rgba(239, 68, 68, 0.02); border: 1px solid rgba(239, 68, 68, 0.1); border-left: 4px solid #EF4444; padding: 1.25rem 1.5rem; border-radius: 0 8px 8px 0;">
-                                    <h6 style="font-size: 1rem; font-weight: 700; color: #991B1B; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 8px;"><svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/><path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.553.553 0 0 1-1.1 0z"/></svg> 2. Training & Development</h6>
-                                    <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 0.5rem; line-height: 1.5;"><strong>Gap:</strong> Administrative, check-the-box training.</p>
-                                    <p style="font-size: 0.9rem; color: #B91C1C; line-height: 1.5; font-weight: 500;"><strong>Impact:</strong> Fails to build core competencies or multi-skilled experts.</p>
+                                <!-- Card 2 -->
+                                <div style="background: white; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.02); display: flex; flex-direction: column;">
+                                    <div style="background: #f8fafc; padding: 1rem 1.25rem; border-bottom: 1px solid #e2e8f0;">
+                                        <h6 style="font-size: 0.95rem; font-weight: 800; color: #1e293b; margin: 0; display: flex; align-items: center; gap: 8px;">📉 CAPABILITY STAGNATION <span style="font-weight: 500; font-size: 0.85rem; color: var(--text-secondary);">(Training)</span></h6>
+                                    </div>
+                                    <div style="padding: 1.25rem; background: rgba(248, 250, 252, 0.5); flex-grow: 1;">
+                                        <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0; line-height: 1.5;"><strong style="color: #64748b;">🔴 SYMPTOM:</strong> Administrative "photo-op" training. Submitting photos of a worker next to a machine as proof of skill.</p>
+                                    </div>
+                                    <div style="padding: 1.25rem; background: rgba(239, 68, 68, 0.05); border-top: 1px solid rgba(239, 68, 68, 0.1);">
+                                        <p style="font-size: 0.85rem; color: #991B1B; margin: 0; line-height: 1.5;"><strong style="color: #B91C1C;">💥 SYSTEMIC RISK:</strong> Fragile workforce. <span style="color:#B91C1C; font-weight:700;">Zero real multi-skilled operators built.</span></p>
+                                    </div>
                                 </div>
 
-                                <!-- Point 3 -->
-                                <div style="background: rgba(239, 68, 68, 0.02); border: 1px solid rgba(239, 68, 68, 0.1); border-left: 4px solid #EF4444; padding: 1.25rem 1.5rem; border-radius: 0 8px 8px 0;">
-                                    <h6 style="font-size: 1rem; font-weight: 700; color: #991B1B; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 8px;"><svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/><path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.553.553 0 0 1-1.1 0z"/></svg> 3. Production Scheduling & Execution</h6>
-                                    <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 0.5rem; line-height: 1.5;"><strong>Gap:</strong> Random "filling blanks" rather than executing a master schedule.</p>
-                                    <p style="font-size: 0.9rem; color: #B91C1C; line-height: 1.5; font-weight: 500;"><strong>Impact:</strong> Floor actions misalign with schedule.</p>
+                                <!-- Card 3 -->
+                                <div style="background: white; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.02); display: flex; flex-direction: column;">
+                                    <div style="background: #f8fafc; padding: 1rem 1.25rem; border-bottom: 1px solid #e2e8f0;">
+                                        <h6 style="font-size: 0.95rem; font-weight: 800; color: #1e293b; margin: 0; display: flex; align-items: center; gap: 8px;">🌪️ REACTIVE OPERATIONS <span style="font-weight: 500; font-size: 0.85rem; color: var(--text-secondary);">(Scheduling)</span></h6>
+                                    </div>
+                                    <div style="padding: 1.25rem; background: rgba(248, 250, 252, 0.5); flex-grow: 1;">
+                                        <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0; line-height: 1.5;"><strong style="color: #64748b;">🔴 SYMPTOM:</strong> Constant schedule changes. Floor stability relies on random "filling the blanks."</p>
+                                    </div>
+                                    <div style="padding: 1.25rem; background: rgba(239, 68, 68, 0.05); border-top: 1px solid rgba(239, 68, 68, 0.1);">
+                                        <p style="font-size: 0.85rem; color: #991B1B; margin: 0; line-height: 1.5;"><strong style="color: #B91C1C;">💥 SYSTEMIC RISK:</strong> <span style="color:#B91C1C; font-weight:700;">Loss of operational control.</span> Floor actions constantly misalign with master planning.</p>
+                                    </div>
                                 </div>
 
-                                <!-- Point 4 -->
-                                <div style="background: rgba(239, 68, 68, 0.02); border: 1px solid rgba(239, 68, 68, 0.1); border-left: 4px solid #EF4444; padding: 1.25rem 1.5rem; border-radius: 0 8px 8px 0;">
-                                    <h6 style="font-size: 1rem; font-weight: 700; color: #991B1B; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 8px;"><svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/><path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.553.553 0 0 1-1.1 0z"/></svg> 4. Process & Task Assignment</h6>
-                                    <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 0.5rem; line-height: 1.5;"><strong>Gap:</strong> Missing targets. No "Who does what" clarity.</p>
-                                    <p style="font-size: 0.9rem; color: #B91C1C; line-height: 1.5; font-weight: 500;"><strong>Impact:</strong> Chaos. Blaming workers instead of broken processes.</p>
+                                <!-- Card 4 -->
+                                <div style="background: white; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.02); display: flex; flex-direction: column;">
+                                    <div style="background: #f8fafc; padding: 1rem 1.25rem; border-bottom: 1px solid #e2e8f0;">
+                                        <h6 style="font-size: 0.95rem; font-weight: 800; color: #1e293b; margin: 0; display: flex; align-items: center; gap: 8px;">🚷 EXECUTION CHAOS <span style="font-weight: 500; font-size: 0.85rem; color: var(--text-secondary);">(Process & Culture)</span></h6>
+                                    </div>
+                                    <div style="padding: 1.25rem; background: rgba(248, 250, 252, 0.5); flex-grow: 1;">
+                                        <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0; line-height: 1.5;"><strong style="color: #64748b;">🔴 SYMPTOM:</strong> Missing GPS. No clear "Who does what." Default behavior is blaming operators.</p>
+                                    </div>
+                                    <div style="padding: 1.25rem; background: rgba(239, 68, 68, 0.05); border-top: 1px solid rgba(239, 68, 68, 0.1);">
+                                        <p style="font-size: 0.85rem; color: #991B1B; margin: 0; line-height: 1.5;"><strong style="color: #B91C1C;">💥 SYSTEMIC RISK:</strong> <span style="background: rgba(239,68,68,0.1); color: #B91C1C; padding: 2px 6px; border-radius: 4px; font-weight: bold;">Accountability vacuum</span>. A chaotic floor culture driven by broken processes, not bad workers.</p>
+                                    </div>
                                 </div>
 
-                                <!-- Point 5 -->
-                                <div style="background: rgba(239, 68, 68, 0.02); border: 1px solid rgba(239, 68, 68, 0.1); border-left: 4px solid #EF4444; padding: 1.25rem 1.5rem; border-radius: 0 8px 8px 0;">
-                                    <h6 style="font-size: 1rem; font-weight: 700; color: #991B1B; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 8px;"><svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/><path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.553.553 0 0 1-1.1 0z"/></svg> 5. Data & System Thinking</h6>
-                                    <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 0.5rem; line-height: 1.5;"><strong>Gap:</strong> Lacks real-world metrics (<strong>Cycle Time</strong>, <strong>Defect Rate</strong>).</p>
-                                    <p style="font-size: 0.9rem; color: #B91C1C; line-height: 1.5; font-weight: 500;"><strong>Impact:</strong> High risk execution without validated data.</p>
+                                <!-- Card 5 -->
+                                <div style="background: white; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.02); display: flex; flex-direction: column;">
+                                    <div style="background: #f8fafc; padding: 1rem 1.25rem; border-bottom: 1px solid #e2e8f0;">
+                                        <h6 style="font-size: 0.95rem; font-weight: 800; color: #1e293b; margin: 0; display: flex; align-items: center; gap: 8px;">👁️ BLIND NAVIGATION <span style="font-weight: 500; font-size: 0.85rem; color: var(--text-secondary);">(Data & Vision)</span></h6>
+                                    </div>
+                                    <div style="padding: 1.25rem; background: rgba(248, 250, 252, 0.5); flex-grow: 1;">
+                                        <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0; line-height: 1.5;"><strong style="color: #64748b;">🔴 SYMPTOM:</strong> Setting targets without baselines. No Value Stream map.</p>
+                                    </div>
+                                    <div style="padding: 1.25rem; background: rgba(239, 68, 68, 0.05); border-top: 1px solid rgba(239, 68, 68, 0.1);">
+                                        <p style="font-size: 0.85rem; color: #991B1B; margin: 0; line-height: 1.5;"><strong style="color: #B91C1C;">💥 SYSTEMIC RISK:</strong> High-risk management based on "feelings." Missing critical metrics: <span style="color:#B91C1C; font-weight:700;">Cycle Time, Takt Time, Defect Rate, WIP tracking</span>.</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
