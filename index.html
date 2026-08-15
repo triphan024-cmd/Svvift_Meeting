@@ -1484,41 +1484,61 @@
                     
                     <!-- MODULE 1: WAREHOUSE TRANSFORMATION -->
                     <div class="phase3-block-wrapper" id="phase3-warehouse" style="scroll-margin-top: 120px; display: flex; flex-direction: column; gap: 0.5rem;">
-                        <div class="section-header" style="text-align: left; display: flex; flex-direction: column; gap: 0.5rem; max-width: 1000px; margin-inline: 0; padding: 0; margin-bottom: 0.5rem;">
-                            <div>
+                        <div class="section-header" style="text-align: center; display: flex; flex-direction: column; align-items: center; gap: 0.5rem; max-width: 1000px; margin-inline: auto; padding: 0; margin-bottom: 2rem;">
+                            <div style="display: flex; flex-direction: column; align-items: center;">
                                 <p class="section-meta" style="margin-bottom: 0.25rem;">PHASE III: MES SYSTEM UPGRADE ASSESSMENT</p>
-                                <h2 class="section-title" style="margin: 0; font-size: 2rem;">MODULE 1: <span class="accent-text">WAREHOUSE TRANSFORMATION</span></h2>
-                                <p class="bp-desc" style="font-weight: 500; color: var(--text-secondary); margin-top: 0.25rem; max-width: 800px; line-height: 1.6;"><strong>Goal:</strong> Shift from chaotic, manual storage to a strictly controlled, data-driven hub.</p>
+                                <h2 class="section-title" style="margin: 0; font-size: 2rem;">MODULE 1 - <span class="accent-text">WAREHOUSE TRANSFORMATION</span></h2>
+                                <p class="bp-desc" style="font-weight: 500; color: var(--text-secondary); margin-top: 0.5rem; max-width: 800px; line-height: 1.6; text-align: center;"><strong>Goal:</strong> Shift from chaotic, manual storage to a strictly controlled, data-driven hub.</p>
                             </div>
                         </div>
 
                         <div class="phase2-card glass-card" style="padding: 2.5rem; border-radius: 12px; background: white; border: 1px solid rgba(0,0,0,0.05); box-shadow: 0 10px 40px rgba(0,0,0,0.04);">
                             <!-- AS-IS -->
                             <div style="margin-bottom: 2rem;">
-                                <h5 style="font-size: 1.05rem; font-weight: 800; color: #EF4444; margin-bottom: 1.25rem; display: flex; align-items: center; gap: 8px;">❌ AS-IS (The Before State)</h5>
-                                <ul class="bp-bullet-list">
-                                    <li><strong>Blind Receiving (No QA/QC):</strong> Receiving was based purely on paper signatures. If a document stated 500 units, it was accepted without physical quantity or quality checks. This caused downstream chaos: missing parts, invoice discrepancies, production delays, and compensation headaches.</li>
-                                    <li><strong>Phantom Inventory (Missing Assets):</strong> Production teams took materials randomly for convenience with zero tracking. This resulted in constant discrepancies between system data and physical stock after every audit.</li>
-                                    <li><strong>Chaotic Workflows (No Plan):</strong> Unpredictable production schedules and failure to control NG (No Good/Defective) goods caused massive BOM (Bill of Materials) deviations. Constant, unplanned material requests led to warehouse overload.</li>
-                                </ul>
+                                <h5 style="font-size: 1.05rem; font-weight: 800; color: #EF4444; margin-bottom: 1.25rem; display: flex; align-items: center; gap: 8px;">❌ AS-IS (Before)</h5>
+                                <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                                    <div>
+                                        <strong style="color: #1e293b; font-size: 1.05rem;">Blind Receiving (No QA/QC)</strong>
+                                        <p style="margin: 0.25rem 0; font-size: 0.95rem; color: var(--text-secondary);"><strong>Action:</strong> Receiving was based purely on paper signatures. Accepted without physical quantity or quality checks.</p>
+                                        <p style="margin: 0; font-size: 0.95rem; color: #EF4444;"><strong>Consequence:</strong> Downstream chaos, missing parts, invoice discrepancies, production delays, and compensation headaches.</p>
+                                    </div>
+                                    <div>
+                                        <strong style="color: #1e293b; font-size: 1.05rem;">Phantom Inventory (Missing Assets)</strong>
+                                        <p style="margin: 0.25rem 0; font-size: 0.95rem; color: var(--text-secondary);"><strong>Action:</strong> Production teams took materials randomly for convenience with zero tracking.</p>
+                                        <p style="margin: 0; font-size: 0.95rem; color: #EF4444;"><strong>Consequence:</strong> Constant discrepancies between system data and physical stock after every audit.</p>
+                                    </div>
+                                    <div>
+                                        <strong style="color: #1e293b; font-size: 1.05rem;">Chaotic Workflows (No Plan)</strong>
+                                        <p style="margin: 0.25rem 0; font-size: 0.95rem; color: var(--text-secondary);"><strong>Action:</strong> Unpredictable production schedules and failure to control NG (No Good/Defective) goods.</p>
+                                        <p style="margin: 0; font-size: 0.95rem; color: #EF4444;"><strong>Consequence:</strong> Massive BOM (Bill of Materials) deviations and warehouse overload due to constant, unplanned material requests.</p>
+                                    </div>
+                                </div>
                             </div>
 
                             <!-- TO-BE -->
                             <div style="margin-bottom: 2rem; padding-top: 2rem; border-top: 1px solid rgba(0,0,0,0.05);">
-                                <h5 style="font-size: 1.05rem; font-weight: 800; color: #10B981; margin-bottom: 1.25rem; display: flex; align-items: center; gap: 8px;">✅ TO-BE (The NOW State - MES Upgraded)</h5>
-                                <ul class="bp-bullet-list">
-                                    <li><strong>Clear 4-Stage Process:</strong> Step-by-step workflow with absolute clarity on authority and responsibilities.</li>
-                                    <li><strong>Role Specialization:</strong>
-                                        <ul style="margin-top: 0.5rem; margin-left: 1.5rem; list-style-type: circle; font-size: 0.95rem; color: var(--text-secondary); line-height: 1.5;">
-                                            <li style="margin-bottom: 0.25rem;"><strong>The Brain (Diễm):</strong> Manages data, documents, system input, and photographic evidence.</li>
-                                            <li><strong>The Muscle (Sơn):</strong> Handles physical execution (forklift, driving, material movement).</li>
+                                <h5 style="font-size: 1.05rem; font-weight: 800; color: #10B981; margin-bottom: 1.25rem; display: flex; align-items: center; gap: 8px;">✅ TO-BE (NOW)</h5>
+                                <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                                    <div>
+                                        <strong style="color: #1e293b; font-size: 1.05rem;">Role Specialization & 4-Stage Process</strong>
+                                        <p style="margin: 0.25rem 0; font-size: 0.95rem; color: var(--text-secondary);"><strong>Action:</strong> Step-by-step workflow with absolute clarity on authority.</p>
+                                        <ul style="margin-top: 0.5rem; margin-left: 0; list-style: none; padding-left: 0; font-size: 0.95rem; color: var(--text-secondary); line-height: 1.5; display: flex; flex-direction: column; gap: 0.5rem;">
+                                            <li style="display: flex; gap: 8px;"><span style="font-size: 1.1rem;">🧠</span> <div><strong>The Brain (Diễm):</strong> Manages data, documents, system input, and photographic evidence.</div></li>
+                                            <li style="display: flex; gap: 8px;"><span style="font-size: 1.1rem;">💪</span> <div><strong>The Muscle (Sơn):</strong> Handles physical execution (forklift, driving, material movement).</div></li>
                                         </ul>
-                                    </li>
-                                    <li><strong>Live-Time Tracking:</strong> Real-time inventory numbers backed by photographic proof.</li>
-                                    <li><strong>Advanced Scheduling:</strong> Material requests must be scheduled in advance, allowing the Warehouse time to prep and stage materials.</li>
-                                    <li><strong>Gatekeeper Inspection System:</strong> Defective materials are rejected directly at the receiving gate (Supplier Fault). This eliminates downstream administrative waste (returns, invoice corrections).</li>
-                                    <li><strong>Standardized Counting Formula:</strong> Established clear conversion ratios (e.g., KG ➡️ EA, standardized box/package capacities) for highly accurate and fast quantity checks.</li>
-                                </ul>
+                                        <p style="margin: 0.5rem 0 0; font-size: 0.95rem; color: #10B981;"><strong>Result:</strong> Clear accountability and real-time inventory tracking backed by proof.</p>
+                                    </div>
+                                    <div>
+                                        <strong style="color: #1e293b; font-size: 1.05rem;">Gatekeeper Inspection System</strong>
+                                        <p style="margin: 0.25rem 0; font-size: 0.95rem; color: var(--text-secondary);"><strong>Action:</strong> Defective materials are rejected directly at the receiving gate.</p>
+                                        <p style="margin: 0; font-size: 0.95rem; color: #10B981;"><strong>Result:</strong> Eliminates downstream administrative waste (returns, invoice corrections).</p>
+                                    </div>
+                                    <div>
+                                        <strong style="color: #1e293b; font-size: 1.05rem;">Standardized Counting & Scheduling</strong>
+                                        <p style="margin: 0.25rem 0; font-size: 0.95rem; color: var(--text-secondary);"><strong>Action:</strong> Established conversion ratios (e.g., KG ➡️ EA) and mandated advance scheduling.</p>
+                                        <p style="margin: 0; font-size: 0.95rem; color: #10B981;"><strong>Result:</strong> Highly accurate/fast quantity checks and allowed staging time for warehouse staff.</p>
+                                    </div>
+                                </div>
                             </div>
 
                             <!-- AUDIT INSIGHT -->
