@@ -148,3 +148,34 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+// Login Logic
+document.addEventListener('DOMContentLoaded', () => {
+    const loginForm = document.getElementById('login-form');
+    const loginOverlay = document.getElementById('login-overlay');
+    const mainContent = document.getElementById('main-content-wrapper');
+    const loginError = document.getElementById('login-error');
+
+    if (loginForm) {
+        loginForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const usernameInput = document.getElementById('username').value;
+            const passwordInput = document.getElementById('password').value;
+
+            if (usernameInput === 'Admin' && passwordInput === 'Svvift2026#') {
+                loginOverlay.style.opacity = '0';
+                setTimeout(() => {
+                    loginOverlay.style.display = 'none';
+                    mainContent.style.display = 'block';
+                    // Trigger scroll event to ensure animations fire
+                    window.dispatchEvent(new Event('scroll'));
+                }, 400);
+            } else {
+                loginError.style.display = 'block';
+                loginForm.classList.add('shake');
+                setTimeout(() => loginForm.classList.remove('shake'), 500);
+            }
+        });
+    }
+});
+
