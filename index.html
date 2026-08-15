@@ -1710,56 +1710,48 @@
                             <p style="font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 2rem; font-weight: 500;">(Director's Requirements for Production Optimization)</p>
                             
                             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem;">
-                                <!-- Directive 1 -->
-                                <div style="background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%); border: 1px solid rgba(16, 185, 129, 0.2); padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); display: flex; gap: 1rem;">
-                                    <div style="flex-shrink: 0; width: 48px; height: 48px; border-radius: 12px; background: rgba(16, 185, 129, 0.1); color: #10B981; display: flex; align-items: center; justify-content: center;">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 3 21 3 21 8"></polyline><line x1="4" y1="20" x2="21" y2="3"></line><polyline points="21 16 21 21 16 21"></polyline><line x1="15" y1="15" x2="21" y2="21"></line><line x1="4" y1="4" x2="9" y2="9"></line></svg>
-                                    </div>
-                                    <div>
-                                        <h6 style="font-size: 1.05rem; font-weight: 800; color: #047857; margin-bottom: 0.5rem; text-transform: uppercase;">1. Agile</h6>
-                                        <p style="font-size: 0.95rem; color: var(--text-primary); margin-bottom: 0.5rem;"><strong>Shift:</strong> From "Narrow Specialization" to "Cross-Training".</p>
-                                        <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.5;"><strong>Action:</strong> Implement a Skill Matrix. A single worker must be trained to operate at least 3 different machines/stages. Prevents line stoppages and allows dynamic reallocation.</p>
-                                    </div>
+                                <!-- Directive 1: Agile -->
+                                <div class="hover-lift" style="padding: 1.5rem; border-radius: 8px; background: var(--bg-surface); border: 1px solid rgba(0,0,0,0.04); border-top: 3px solid #1E3A8A;">
+                                    <strong style="display: block; font-size: 1.05rem; font-weight: 800; color: #1E3A8A; margin-bottom: 0.75rem; text-transform: uppercase;">1. Agile</strong>
+                                    <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6; list-style-type: disc;">
+                                        <li style="margin-bottom: 0.25rem;"><strong>Shift:</strong> From "Narrow Specialization" to "Cross-Training".</li>
+                                        <li style="margin-bottom: 0.25rem;"><strong>Action:</strong> Implement a Skill Matrix.</li>
+                                        <li style="margin-bottom: 0.25rem;">A single worker must be trained to operate at least 3 different machines/stages.</li>
+                                        <li>Prevents line stoppages and allows dynamic reallocation.</li>
+                                    </ul>
                                 </div>
                                 
-                                <!-- Directive 2 -->
-                                <div style="background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%); border: 1px solid rgba(16, 185, 129, 0.2); padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); display: flex; gap: 1rem;">
-                                    <div style="flex-shrink: 0; width: 48px; height: 48px; border-radius: 12px; background: rgba(16, 185, 129, 0.1); color: #10B981; display: flex; align-items: center; justify-content: center;">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
-                                    </div>
-                                    <div>
-                                        <h6 style="font-size: 1.05rem; font-weight: 800; color: #047857; margin-bottom: 0.5rem; text-transform: uppercase;">2. Lean</h6>
-                                        <p style="font-size: 0.95rem; color: var(--text-primary); margin-bottom: 0.5rem;"><strong>Focus:</strong> Achieve "Continuous Flow".</p>
-                                        <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.5;"><strong>Action:</strong> Systematically optimize workflow. Track idle WIP time. Balance the line so upstream production doesn't choke downstream stages. Eliminate non-value-added actions.</p>
-                                    </div>
+                                <!-- Directive 2: Lean -->
+                                <div class="hover-lift" style="padding: 1.5rem; border-radius: 8px; background: var(--bg-surface); border: 1px solid rgba(0,0,0,0.04); border-top: 3px solid #059669;">
+                                    <strong style="display: block; font-size: 1.05rem; font-weight: 800; color: #059669; margin-bottom: 0.75rem; text-transform: uppercase;">2. Lean</strong>
+                                    <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6; list-style-type: disc;">
+                                        <li style="margin-bottom: 0.25rem;"><strong>Focus:</strong> Achieve "Continuous Flow".</li>
+                                        <li style="margin-bottom: 0.25rem;"><strong>Action:</strong> Systematically optimize workflow.</li>
+                                        <li style="margin-bottom: 0.25rem;">Track idle WIP time and eliminate non-value-added actions.</li>
+                                        <li>Balance the line so upstream production doesn't choke downstream stages.</li>
+                                    </ul>
                                 </div>
 
-                                <!-- Directive 3 -->
-                                <div style="background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%); border: 1px solid rgba(16, 185, 129, 0.2); padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); display: flex; gap: 1rem;">
-                                    <div style="flex-shrink: 0; width: 48px; height: 48px; border-radius: 12px; background: rgba(16, 185, 129, 0.1); color: #10B981; display: flex; align-items: center; justify-content: center;">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
-                                    </div>
-                                    <div>
-                                        <h6 style="font-size: 1.05rem; font-weight: 800; color: #047857; margin-bottom: 0.5rem; text-transform: uppercase;">3. Disciplined</h6>
-                                        <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 0.5rem; line-height: 1.5;"><strong>5S Foundation:</strong> Mandatory visual management. Every tool/material must have a marked location. 5S is a daily KPI.</p>
-                                        <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.5;"><strong>TPM (Total Productive Maintenance):</strong> Operators own their machines. Cleaning/lubricating must happen daily—not waiting until it breaks.</p>
-                                    </div>
+                                <!-- Directive 3: Disciplined -->
+                                <div class="hover-lift" style="padding: 1.5rem; border-radius: 8px; background: var(--bg-surface); border: 1px solid rgba(0,0,0,0.04); border-top: 3px solid #D97706;">
+                                    <strong style="display: block; font-size: 1.05rem; font-weight: 800; color: #D97706; margin-bottom: 0.75rem; text-transform: uppercase;">3. Disciplined</strong>
+                                    <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6; list-style-type: disc;">
+                                        <li style="margin-bottom: 0.25rem;"><strong>5S Foundation:</strong> Mandatory visual management.</li>
+                                        <li style="margin-bottom: 0.25rem;">Every tool/material must have a marked location, making 5S a daily KPI.</li>
+                                        <li style="margin-bottom: 0.25rem;"><strong>TPM (Total Productive Maintenance):</strong> Operators own their machines.</li>
+                                        <li>Cleaning and lubricating must happen daily—not waiting until it breaks.</li>
+                                    </ul>
                                 </div>
 
-                                <!-- Directive 4 -->
-                                <div style="background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%); border: 1px solid rgba(16, 185, 129, 0.2); padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); display: flex; gap: 1rem;">
-                                    <div style="flex-shrink: 0; width: 48px; height: 48px; border-radius: 12px; background: rgba(16, 185, 129, 0.1); color: #10B981; display: flex; align-items: center; justify-content: center;">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="14" r="8"></circle><polyline points="12 10 12 14 14 16"></polyline><line x1="12" y1="2" x2="12" y2="4"></line><line x1="10" y1="2" x2="14" y2="2"></line></svg>
-                                    </div>
-                                    <div>
-                                        <h6 style="font-size: 1.05rem; font-weight: 800; color: #047857; margin-bottom: 0.5rem; text-transform: uppercase;">4. Fast</h6>
-                                        <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 0.5rem;">Replace "feelings" with sharp data tracking:</p>
-                                        <ul style="margin-left: 1rem; font-size: 0.9rem; color: var(--text-secondary); list-style-type: circle; line-height: 1.5;">
-                                            <li><strong>Lead Time:</strong> Start to finish.</li>
-                                            <li><strong>Cycle Time:</strong> Standard loop speed.</li>
-                                            <li><strong>Defect Rate:</strong> Error % at specific stages.</li>
-                                        </ul>
-                                    </div>
+                                <!-- Directive 4: Speed -->
+                                <div class="hover-lift" style="padding: 1.5rem; border-radius: 8px; background: var(--bg-surface); border: 1px solid rgba(0,0,0,0.04); border-top: 3px solid #DC2626;">
+                                    <strong style="display: block; font-size: 1.05rem; font-weight: 800; color: #DC2626; margin-bottom: 0.75rem; text-transform: uppercase;">4. Speed</strong>
+                                    <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6; list-style-type: disc;">
+                                        <li style="margin-bottom: 0.25rem;">Replace "feelings" with sharp data tracking.</li>
+                                        <li style="margin-bottom: 0.25rem;"><strong>Lead Time:</strong> Start to finish.</li>
+                                        <li style="margin-bottom: 0.25rem;"><strong>Cycle Time:</strong> Standard loop speed.</li>
+                                        <li><strong>Defect Rate:</strong> Error % at specific stages.</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
