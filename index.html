@@ -1498,7 +1498,7 @@
                                 <h5 style="font-size: 1.15rem; font-weight: 800; color: #EF4444; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 8px;">❌ AS-IS (Before)</h5>
                                 <div class="interview-table" style="display: flex; flex-direction: column;">
                                     <div class="interview-header" style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr); gap: 2rem; padding: 1rem 1.5rem; border-bottom: 2px solid rgba(239, 68, 68, 0.1); font-weight: 700; font-size: 0.85rem; color: #EF4444; letter-spacing: 1px;">
-                                        <div>ACTION</div>
+                                        <div>STATUS</div>
                                         <div>CONSEQUENCE</div>
                                     </div>
                                     
@@ -1570,7 +1570,25 @@
                             <!-- TO-BE -->
                             <div style="margin-bottom: 2rem; padding-top: 2rem; border-top: 1px solid rgba(0,0,0,0.05);">
                                 <h5 style="font-size: 1.15rem; font-weight: 800; color: #10B981; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 8px;">✅ TO-BE (NOW)</h5>
-                                <div class="interview-table" style="display: flex; flex-direction: column;">
+                                <style>
+                                    .tobe-table .interview-list li::before {
+                                        content: '✔';
+                                        color: #10B981;
+                                    }
+                                    .tobe-table .row-consequence .interview-list li::before {
+                                        content: '➔';
+                                        color: #047857;
+                                        font-size: 1rem;
+                                        top: 0.15rem;
+                                    }
+                                    .tobe-table .interview-list li.no-icon {
+                                        padding-left: 0;
+                                    }
+                                    .tobe-table .interview-list li.no-icon::before {
+                                        content: none !important;
+                                    }
+                                </style>
+                                <div class="interview-table tobe-table" style="display: flex; flex-direction: column;">
                                     <div class="interview-header" style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr); gap: 2rem; padding: 1rem 1.5rem; border-bottom: 2px solid rgba(16, 185, 129, 0.1); font-weight: 700; font-size: 0.85rem; color: #10B981; letter-spacing: 1px;">
                                         <div>ACTION</div>
                                         <div>RESULT</div>
@@ -1585,8 +1603,8 @@
                                             <div class="cause-desc">
                                                 <ul class="interview-list">
                                                     <li>Step-by-step workflow with absolute clarity on authority.</li>
-                                                    <li style="list-style: none; margin-left: -1rem; display: flex; gap: 8px; margin-top: 0.5rem;"><span style="font-size: 1.1rem;">🧠</span> <div><strong>The Brain (Diễm):</strong> Manages data, documents, system input, and photographic evidence.</div></li>
-                                                    <li style="list-style: none; margin-left: -1rem; display: flex; gap: 8px; margin-top: 0.5rem;"><span style="font-size: 1.1rem;">💪</span> <div><strong>The Muscle (Sơn):</strong> Handles physical execution, forklift, and material movement.</div></li>
+                                                    <li class="no-icon" style="list-style: none; display: flex; gap: 8px; margin-top: 0.5rem;"><span style="font-size: 1.1rem;">🧠</span> <div><strong>The Brain (Diễm):</strong> Manages data, documents, system input, and photographic evidence.</div></li>
+                                                    <li class="no-icon" style="list-style: none; display: flex; gap: 8px; margin-top: 0.5rem;"><span style="font-size: 1.1rem;">💪</span> <div><strong>The Muscle (Sơn):</strong> Handles physical execution, forklift, and material movement.</div></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -1643,9 +1661,19 @@
                             </div>
 
                             <!-- AUDIT INSIGHT -->
-                            <div style="background: rgba(245, 158, 11, 0.05); border-left: 4px solid #F59E0B; padding: 1.5rem; border-radius: 0 8px 8px 0;">
-                                <h5 style="font-size: 1.05rem; font-weight: 800; color: #D97706; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 8px;">⚠️ AUDIT INSIGHT</h5>
-                                <p style="font-size: 0.95rem; line-height: 1.6; color: var(--text-secondary);"><strong>Learning Lesson:</strong> During the recent audit, the supervisor (Minn) repeated old mistakes: poor preparation and lack of strict supervision. Without oversight, counters took "easy shortcuts" instead of following the correct procedures, leading to inaccurate data.<br><br><strong>Impact:</strong> The inventory check took 4 days instead of the standard 2 days.</p>
+                            <div class="conclusion-block" style="margin-top: 2rem; padding: 1.5rem 2rem; border-radius: 8px; background: linear-gradient(135deg, rgba(245, 158, 11, 0.05) 0%, rgba(245, 158, 11, 0.1) 100%); border-left: 4px solid #F59E0B;">
+                                <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+                                    <span style="font-size: 1.25rem;">⚠️</span>
+                                    <strong style="color: #D97706; font-size: 1.1rem; letter-spacing: 0.5px;">AUDIT INSIGHT</strong>
+                                </div>
+                                <ul style="margin: 0; padding-left: 1.25rem; color: var(--text-secondary); line-height: 1.7; font-size: 0.95rem; display: flex; flex-direction: column; gap: 0.75rem;">
+                                    <li>
+                                        <strong style="color: var(--text-primary);">Learning Lesson:</strong> During the recent audit, the supervisor (Minn) repeated old mistakes: poor preparation and lack of strict supervision. Without oversight, counters took "easy shortcuts" instead of following the correct procedures, leading to inaccurate data.
+                                    </li>
+                                    <li>
+                                        <strong style="color: var(--text-primary);">Impact:</strong> The inventory check took 4 days instead of the standard 2 days.
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
