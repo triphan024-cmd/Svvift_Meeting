@@ -1789,183 +1789,192 @@
                                 </div>
                             </div>
                             
-                            <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+                            <style>
+                                .gap-impact-table .interview-header {
+                                    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+                                }
+                                .gap-impact-table .interview-row {
+                                    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+                                    border-bottom: none !important;
+                                }
+                                .gap-impact-table .interview-list li::before {
+                                    content: '🔴';
+                                    font-size: 0.7rem;
+                                    top: 50%;
+                                    transform: translateY(-50%);
+                                }
+                                .gap-impact-table .row-consequence .interview-list li::before {
+                                    content: '💥';
+                                    font-size: 1rem;
+                                    top: 50%;
+                                    transform: translateY(-50%);
+                                }
+                                @media (max-width: 768px) {
+                                    .gap-impact-table .interview-header {
+                                        display: none !important;
+                                    }
+                                    .gap-impact-table .interview-row {
+                                        grid-template-columns: 1fr !important;
+                                    }
+                                }
+                            </style>
+                            <div class="bottleneck-container" style="display: flex; flex-direction: column; gap: 2.5rem;">
                                 <!-- Point 1 -->
-                                <div style="background: white; border: 1px solid rgba(239, 68, 68, 0.2); border-left: 4px solid #EF4444; padding: 1.5rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
-                                    <h6 style="font-size: 1.05rem; font-weight: 800; color: var(--text-primary); margin-bottom: 1rem;"><span style="margin-right: 8px;">🔴</span> Organization: False Optimization</h6>
-                                    <div style="display: flex; flex-direction: column; gap: 0.75rem;">
-                                        <div style="display: flex; gap: 0.75rem;">
-                                            <div style="margin-top: 3px;"><span style="display: flex; align-items: center; justify-content: center; width: 20px; height: 20px; background: rgba(239, 68, 68, 0.1); color: #EF4444; border-radius: 50%; font-size: 0.65rem;">🔴</span></div>
-                                            <div>
-                                                <p style="font-size: 0.95rem; color: #991B1B; font-weight: 700; margin-bottom: 0.25rem;">Gap:</p>
-                                                <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.95rem; color: var(--text-secondary); line-height: 1.5;">
-                                                    <li style="margin-bottom: 0.25rem;"><strong>Misconception of optimization:</strong> The PM proposed reducing headcount (from 56 to 34) and lowering production volume as the primary solution.</li>
-                                                    <li><strong>Broken workflows:</strong> The plan maintains the exact same broken workflow without any systemic improvements.</li>
+                                <div>
+                                    <h6 style="font-size: 1.05rem; font-weight: 800; color: var(--text-primary); margin-bottom: 1rem; display: flex; align-items: center; gap: 8px;"><span style="font-size: 1.2rem;">🔴</span> 1. Organization: False Optimization</h6>
+                                    <div class="interview-table gap-impact-table" style="display: flex; flex-direction: column; background: white; border-radius: 8px; border: 1px solid rgba(239, 68, 68, 0.2); overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+                                        <div class="interview-header" style="display: grid; gap: 2rem; padding: 1rem 1.5rem; border-bottom: 1px solid rgba(239, 68, 68, 0.1); font-weight: 700; font-size: 0.85rem; color: #991B1B; letter-spacing: 1px; background: rgba(239, 68, 68, 0.04);">
+                                            <div>GAP</div>
+                                            <div>IMPACT</div>
+                                        </div>
+                                        <div class="interview-row" style="gap: 2rem; padding: 1.5rem;">
+                                            <div class="row-cause">
+                                                <ul class="interview-list" style="color: var(--text-secondary); margin: 0;">
+                                                    <li style="margin-bottom: 0.5rem; min-height: 24px; display: flex; align-items: center;"><div><strong>Misconception of optimization:</strong> The PM proposed reducing headcount (from 56 to 34) and lowering production volume as the primary solution.</div></li>
+                                                    <li style="min-height: 24px; display: flex; align-items: center;"><div><strong>Broken workflows:</strong> The plan maintains the exact same broken workflow without any systemic improvements.</div></li>
+                                                </ul>
+                                            </div>
+                                            <div class="row-consequence">
+                                                <ul class="interview-list" style="color: #991B1B; margin: 0;">
+                                                    <li style="margin-bottom: 0.5rem; min-height: 24px; display: flex; align-items: center;"><div><strong>Extreme overload:</strong> Forcing a smaller team to use broken methods only creates extreme worker overload and production stagnation.</div></li>
+                                                    <li style="min-height: 24px; display: flex; align-items: center;"><div><strong>Skill stagnation:</strong> Blind downsizing does not improve the skill level or quality of the workforce.</div></li>
                                                 </ul>
                                             </div>
                                         </div>
-                                        <div style="display: flex; gap: 0.75rem; background: rgba(239, 68, 68, 0.04); padding: 1rem; border-radius: 8px;">
-                                            <div style="margin-top: 3px;"><span style="font-size: 1.1rem;">💥</span></div>
-                                            <div>
-                                                <p style="font-size: 0.95rem; color: #991B1B; font-weight: 800; margin-bottom: 0.25rem;">Impact:</p>
-                                                <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.95rem; color: #7F1D1D; line-height: 1.5;">
-                                                    <li style="margin-bottom: 0.25rem;"><strong>Extreme overload:</strong> Forcing a smaller team to use broken methods only creates extreme worker overload and production stagnation.</li>
-                                                    <li><strong>Skill stagnation:</strong> Blind downsizing does not improve the skill level or quality of the workforce.</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div style="display: flex; gap: 0.75rem; background: rgba(16, 185, 129, 0.05); padding: 1rem; border-radius: 8px; border-left: 3px solid #10B981; margin-top: 0.5rem;">
-                                            <div style="margin-top: 3px;"><span style="font-size: 1.1rem;">✅</span></div>
-                                            <div>
-                                                <p style="font-size: 0.95rem; color: #047857; font-weight: 800; margin-bottom: 0.25rem;">Correction:</p>
-                                                <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.95rem; color: #065F46; line-height: 1.5;">
-                                                    <li><strong>Strategic Filtering:</strong> Let go of underperformers and intensively train high-potential staff into elite experts.</li>
-                                                </ul>
-                                            </div>
+                                    </div>
+                                    <div class="conclusion-block" style="margin-top: 0.75rem; padding: 1.25rem 1.5rem; border-radius: 8px; background: rgba(16, 185, 129, 0.05); border-left: 4px solid #10B981; display: flex; gap: 0.75rem; align-items: flex-start;">
+                                        <span style="font-size: 1.1rem; margin-top: 2px;">✅</span>
+                                        <div>
+                                            <strong style="color: #047857; font-size: 0.95rem; display: block; margin-bottom: 0.25rem;">Correction:</strong>
+                                            <p style="margin: 0; color: #065F46; font-size: 0.95rem; line-height: 1.5;"><strong>Strategic Filtering:</strong> Let go of underperformers and intensively train high-potential staff into elite experts.</p>
                                         </div>
                                     </div>
                                 </div>
 
                                 <!-- Point 2 -->
-                                <div style="background: white; border: 1px solid rgba(239, 68, 68, 0.2); border-left: 4px solid #EF4444; padding: 1.5rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
-                                    <h6 style="font-size: 1.05rem; font-weight: 800; color: var(--text-primary); margin-bottom: 1rem;"><span style="margin-right: 8px;">📉</span> Training: Capability Stagnation</h6>
-                                    <div style="display: flex; flex-direction: column; gap: 0.75rem;">
-                                        <div style="display: flex; gap: 0.75rem;">
-                                            <div style="margin-top: 3px;"><span style="display: flex; align-items: center; justify-content: center; width: 20px; height: 20px; background: rgba(239, 68, 68, 0.1); color: #EF4444; border-radius: 50%; font-size: 0.65rem;">🔴</span></div>
-                                            <div>
-                                                <p style="font-size: 0.95rem; color: #991B1B; font-weight: 700; margin-bottom: 0.25rem;">Gap:</p>
-                                                <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.95rem; color: var(--text-secondary); line-height: 1.5;">
-                                                    <li style="margin-bottom: 0.25rem;"><strong>Check-the-box approach:</strong> The PM relies on an administrative approach rather than practical, hands-on skill-building.</li>
-                                                    <li><strong>Fake evidence:</strong> Submitting photos of a worker standing next to a machine with a signed paper is not functional training.</li>
+                                <div>
+                                    <h6 style="font-size: 1.05rem; font-weight: 800; color: var(--text-primary); margin-bottom: 1rem; display: flex; align-items: center; gap: 8px;"><span style="font-size: 1.2rem;">📉</span> 2. Training: Capability Stagnation</h6>
+                                    <div class="interview-table gap-impact-table" style="display: flex; flex-direction: column; background: white; border-radius: 8px; border: 1px solid rgba(239, 68, 68, 0.2); overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+                                        <div class="interview-header" style="display: grid; gap: 2rem; padding: 1rem 1.5rem; border-bottom: 1px solid rgba(239, 68, 68, 0.1); font-weight: 700; font-size: 0.85rem; color: #991B1B; letter-spacing: 1px; background: rgba(239, 68, 68, 0.04);">
+                                            <div>GAP</div>
+                                            <div>IMPACT</div>
+                                        </div>
+                                        <div class="interview-row" style="gap: 2rem; padding: 1.5rem;">
+                                            <div class="row-cause">
+                                                <ul class="interview-list" style="color: var(--text-secondary); margin: 0;">
+                                                    <li style="margin-bottom: 0.5rem; min-height: 24px; display: flex; align-items: center;"><div><strong>Check-the-box approach:</strong> The PM relies on an administrative approach rather than practical, hands-on skill-building.</div></li>
+                                                    <li style="min-height: 24px; display: flex; align-items: center;"><div><strong>Fake evidence:</strong> Submitting photos of a worker standing next to a machine with a signed paper is not functional training.</div></li>
+                                                </ul>
+                                            </div>
+                                            <div class="row-consequence">
+                                                <ul class="interview-list" style="color: #991B1B; margin: 0;">
+                                                    <li style="margin-bottom: 0.5rem; min-height: 24px; display: flex; align-items: center;"><div><strong>Zero competency:</strong> This superficial training fails to build real, functional core competencies on the floor.</div></li>
+                                                    <li style="min-height: 24px; display: flex; align-items: center;"><div><strong>No clear path:</strong> It leaves no practical method for how the remaining staff will actually become multi-skilled experts.</div></li>
                                                 </ul>
                                             </div>
                                         </div>
-                                        <div style="display: flex; gap: 0.75rem; background: rgba(239, 68, 68, 0.04); padding: 1rem; border-radius: 8px;">
-                                            <div style="margin-top: 3px;"><span style="font-size: 1.1rem;">💥</span></div>
-                                            <div>
-                                                <p style="font-size: 0.95rem; color: #991B1B; font-weight: 800; margin-bottom: 0.25rem;">Impact:</p>
-                                                <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.95rem; color: #7F1D1D; line-height: 1.5;">
-                                                    <li style="margin-bottom: 0.25rem;"><strong>Zero competency:</strong> This superficial training fails to build real, functional core competencies on the floor.</li>
-                                                    <li><strong>No clear path:</strong> It leaves no practical method for how the remaining staff will actually become multi-skilled experts.</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div style="display: flex; gap: 0.75rem; background: rgba(16, 185, 129, 0.05); padding: 1rem; border-radius: 8px; border-left: 3px solid #10B981; margin-top: 0.5rem;">
-                                            <div style="margin-top: 3px;"><span style="font-size: 1.1rem;">✅</span></div>
-                                            <div>
-                                                <p style="font-size: 0.95rem; color: #047857; font-weight: 800; margin-bottom: 0.25rem;">Correction:</p>
-                                                <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.95rem; color: #065F46; line-height: 1.5;">
-                                                    <li><strong>Functional Training:</strong> Implement rigorous, hands-on training tailored to building specific, measurable competencies.</li>
-                                                </ul>
-                                            </div>
+                                    </div>
+                                    <div class="conclusion-block" style="margin-top: 0.75rem; padding: 1.25rem 1.5rem; border-radius: 8px; background: rgba(16, 185, 129, 0.05); border-left: 4px solid #10B981; display: flex; gap: 0.75rem; align-items: flex-start;">
+                                        <span style="font-size: 1.1rem; margin-top: 2px;">✅</span>
+                                        <div>
+                                            <strong style="color: #047857; font-size: 0.95rem; display: block; margin-bottom: 0.25rem;">Correction:</strong>
+                                            <p style="margin: 0; color: #065F46; font-size: 0.95rem; line-height: 1.5;"><strong>Functional Training:</strong> Implement rigorous, hands-on training tailored to building specific, measurable competencies.</p>
                                         </div>
                                     </div>
                                 </div>
 
                                 <!-- Point 3 -->
-                                <div style="background: white; border: 1px solid rgba(239, 68, 68, 0.2); border-left: 4px solid #EF4444; padding: 1.5rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
-                                    <h6 style="font-size: 1.05rem; font-weight: 800; color: var(--text-primary); margin-bottom: 1rem;"><span style="margin-right: 8px;">🌪️</span> Scheduling: Reactive Operations</h6>
-                                    <div style="display: flex; flex-direction: column; gap: 0.75rem;">
-                                        <div style="display: flex; gap: 0.75rem;">
-                                            <div style="margin-top: 3px;"><span style="display: flex; align-items: center; justify-content: center; width: 20px; height: 20px; background: rgba(239, 68, 68, 0.1); color: #EF4444; border-radius: 50%; font-size: 0.65rem;">🔴</span></div>
-                                            <div>
-                                                <p style="font-size: 0.95rem; color: #991B1B; font-weight: 700; margin-bottom: 0.25rem;">Gap:</p>
-                                                <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.95rem; color: var(--text-secondary); line-height: 1.5;">
-                                                    <li style="margin-bottom: 0.25rem;"><strong>Unstable master schedule:</strong> The master schedule is highly reactive, with continuous, erratic changes.</li>
-                                                    <li><strong>Filling the blanks:</strong> Floor stability is achieved by randomly plugging holes rather than executing a master plan.</li>
+                                <div>
+                                    <h6 style="font-size: 1.05rem; font-weight: 800; color: var(--text-primary); margin-bottom: 1rem; display: flex; align-items: center; gap: 8px;"><span style="font-size: 1.2rem;">🌪️</span> 3. Scheduling: Reactive Operations</h6>
+                                    <div class="interview-table gap-impact-table" style="display: flex; flex-direction: column; background: white; border-radius: 8px; border: 1px solid rgba(239, 68, 68, 0.2); overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+                                        <div class="interview-header" style="display: grid; gap: 2rem; padding: 1rem 1.5rem; border-bottom: 1px solid rgba(239, 68, 68, 0.1); font-weight: 700; font-size: 0.85rem; color: #991B1B; letter-spacing: 1px; background: rgba(239, 68, 68, 0.04);">
+                                            <div>GAP</div>
+                                            <div>IMPACT</div>
+                                        </div>
+                                        <div class="interview-row" style="gap: 2rem; padding: 1.5rem;">
+                                            <div class="row-cause">
+                                                <ul class="interview-list" style="color: var(--text-secondary); margin: 0;">
+                                                    <li style="margin-bottom: 0.5rem; min-height: 24px; display: flex; align-items: center;"><div><strong>Unstable master schedule:</strong> The master schedule is highly reactive, with continuous, erratic changes.</div></li>
+                                                    <li style="min-height: 24px; display: flex; align-items: center;"><div><strong>Filling the blanks:</strong> Floor stability is achieved by randomly plugging holes rather than executing a master plan.</div></li>
                                                 </ul>
                                             </div>
-                                        </div>
-                                        <div style="display: flex; gap: 0.75rem; background: rgba(239, 68, 68, 0.04); padding: 1rem; border-radius: 8px;">
-                                            <div style="margin-top: 3px;"><span style="font-size: 1.1rem;">💥</span></div>
-                                            <div>
-                                                <p style="font-size: 0.95rem; color: #991B1B; font-weight: 800; margin-bottom: 0.25rem;">Impact:</p>
-                                                <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.95rem; color: #7F1D1D; line-height: 1.5;">
-                                                    <li style="margin-bottom: 0.25rem;"><strong>Loss of direction:</strong> The lack of clear, consistent guidance leaves the production team confused and lost.</li>
-                                                    <li><strong>Execution chaos:</strong> Daily floor actions consistently misalign with any planned schedule.</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div style="display: flex; gap: 0.75rem; background: rgba(16, 185, 129, 0.05); padding: 1rem; border-radius: 8px; border-left: 3px solid #10B981; margin-top: 0.5rem;">
-                                            <div style="margin-top: 3px;"><span style="font-size: 1.1rem;">✅</span></div>
-                                            <div>
-                                                <p style="font-size: 0.95rem; color: #047857; font-weight: 800; margin-bottom: 0.25rem;">Correction:</p>
-                                                <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.95rem; color: #065F46; line-height: 1.5;">
-                                                    <li><strong>Stable Master Plan:</strong> Establish a fixed, predictive master schedule that dictates clear, sequential floor actions.</li>
+                                            <div class="row-consequence">
+                                                <ul class="interview-list" style="color: #991B1B; margin: 0;">
+                                                    <li style="margin-bottom: 0.5rem; min-height: 24px; display: flex; align-items: center;"><div><strong>Loss of direction:</strong> The lack of clear, consistent guidance leaves the production team confused and lost.</div></li>
+                                                    <li style="min-height: 24px; display: flex; align-items: center;"><div><strong>Execution chaos:</strong> Daily floor actions consistently misalign with any planned schedule.</div></li>
                                                 </ul>
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="conclusion-block" style="margin-top: 0.75rem; padding: 1.25rem 1.5rem; border-radius: 8px; background: rgba(16, 185, 129, 0.05); border-left: 4px solid #10B981; display: flex; gap: 0.75rem; align-items: flex-start;">
+                                        <span style="font-size: 1.1rem; margin-top: 2px;">✅</span>
+                                        <div>
+                                            <strong style="color: #047857; font-size: 0.95rem; display: block; margin-bottom: 0.25rem;">Correction:</strong>
+                                            <p style="margin: 0; color: #065F46; font-size: 0.95rem; line-height: 1.5;"><strong>Stable Master Plan:</strong> Establish a fixed, predictive master schedule that dictates clear, sequential floor actions.</p>
+                                        </div>
+                                    </div>
                                 </div>
-                                
+
                                 <!-- Point 4 -->
-                                <div style="background: white; border: 1px solid rgba(239, 68, 68, 0.2); border-left: 4px solid #EF4444; padding: 1.5rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
-                                    <h6 style="font-size: 1.05rem; font-weight: 800; color: var(--text-primary); margin-bottom: 1rem;"><span style="margin-right: 8px;">🚫</span> Process & Culture: Execution Chaos</h6>
-                                    <div style="display: flex; flex-direction: column; gap: 0.75rem;">
-                                        <div style="display: flex; gap: 0.75rem;">
-                                            <div style="margin-top: 3px;"><span style="display: flex; align-items: center; justify-content: center; width: 20px; height: 20px; background: rgba(239, 68, 68, 0.1); color: #EF4444; border-radius: 50%; font-size: 0.65rem;">🔴</span></div>
-                                            <div>
-                                                <p style="font-size: 0.95rem; color: #991B1B; font-weight: 700; margin-bottom: 0.25rem;">Gap:</p>
-                                                <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.95rem; color: var(--text-secondary); line-height: 1.5;">
-                                                    <li style="margin-bottom: 0.25rem;"><strong>Missing GPS:</strong> There is no clear breakdown of "Who does what" and no daily targets provided to the team.</li>
-                                                    <li><strong>Undefined tools:</strong> Workers are not given explicit processes, tools, or structured task assignments.</li>
+                                <div>
+                                    <h6 style="font-size: 1.05rem; font-weight: 800; color: var(--text-primary); margin-bottom: 1rem; display: flex; align-items: center; gap: 8px;"><span style="font-size: 1.2rem;">🚫</span> 4. Process & Culture: Execution Chaos</h6>
+                                    <div class="interview-table gap-impact-table" style="display: flex; flex-direction: column; background: white; border-radius: 8px; border: 1px solid rgba(239, 68, 68, 0.2); overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+                                        <div class="interview-header" style="display: grid; gap: 2rem; padding: 1rem 1.5rem; border-bottom: 1px solid rgba(239, 68, 68, 0.1); font-weight: 700; font-size: 0.85rem; color: #991B1B; letter-spacing: 1px; background: rgba(239, 68, 68, 0.04);">
+                                            <div>GAP</div>
+                                            <div>IMPACT</div>
+                                        </div>
+                                        <div class="interview-row" style="gap: 2rem; padding: 1.5rem;">
+                                            <div class="row-cause">
+                                                <ul class="interview-list" style="color: var(--text-secondary); margin: 0;">
+                                                    <li style="margin-bottom: 0.5rem; min-height: 24px; display: flex; align-items: center;"><div><strong>Missing GPS:</strong> There is no clear breakdown of "Who does what" and no daily targets provided to the team.</div></li>
+                                                    <li style="min-height: 24px; display: flex; align-items: center;"><div><strong>Undefined tools:</strong> Workers are not given explicit processes, tools, or structured task assignments.</div></li>
                                                 </ul>
                                             </div>
-                                        </div>
-                                        <div style="display: flex; gap: 0.75rem; background: rgba(239, 68, 68, 0.04); padding: 1rem; border-radius: 8px;">
-                                            <div style="margin-top: 3px;"><span style="font-size: 1.1rem;">💥</span></div>
-                                            <div>
-                                                <p style="font-size: 0.95rem; color: #991B1B; font-weight: 800; margin-bottom: 0.25rem;">Impact:</p>
-                                                <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.95rem; color: #7F1D1D; line-height: 1.5;">
-                                                    <li style="margin-bottom: 0.25rem;"><strong>Massive waste:</strong> The inevitable chaos leads to massive wasted time and effort on the production floor.</li>
-                                                    <li><strong>Misdirected blame:</strong> Leadership blames the workers for failures instead of fixing the broken, undefined processes.</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div style="display: flex; gap: 0.75rem; background: rgba(16, 185, 129, 0.05); padding: 1rem; border-radius: 8px; border-left: 3px solid #10B981; margin-top: 0.5rem;">
-                                            <div style="margin-top: 3px;"><span style="font-size: 1.1rem;">✅</span></div>
-                                            <div>
-                                                <p style="font-size: 0.95rem; color: #047857; font-weight: 800; margin-bottom: 0.25rem;">Correction:</p>
-                                                <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.95rem; color: #065F46; line-height: 1.5;">
-                                                    <li><strong>Clear GPS & Tools:</strong> Provide explicit daily targets, clear processes, and the right tools for every single task.</li>
+                                            <div class="row-consequence">
+                                                <ul class="interview-list" style="color: #991B1B; margin: 0;">
+                                                    <li style="margin-bottom: 0.5rem; min-height: 24px; display: flex; align-items: center;"><div><strong>Massive waste:</strong> The inevitable chaos leads to massive wasted time and effort on the production floor.</div></li>
+                                                    <li style="min-height: 24px; display: flex; align-items: center;"><div><strong>Misdirected blame:</strong> Leadership blames the workers for failures instead of fixing the broken, undefined processes.</div></li>
                                                 </ul>
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="conclusion-block" style="margin-top: 0.75rem; padding: 1.25rem 1.5rem; border-radius: 8px; background: rgba(16, 185, 129, 0.05); border-left: 4px solid #10B981; display: flex; gap: 0.75rem; align-items: flex-start;">
+                                        <span style="font-size: 1.1rem; margin-top: 2px;">✅</span>
+                                        <div>
+                                            <strong style="color: #047857; font-size: 0.95rem; display: block; margin-bottom: 0.25rem;">Correction:</strong>
+                                            <p style="margin: 0; color: #065F46; font-size: 0.95rem; line-height: 1.5;"><strong>Clear GPS & Tools:</strong> Provide explicit daily targets, clear processes, and the right tools for every single task.</p>
+                                        </div>
+                                    </div>
                                 </div>
-                                
+
                                 <!-- Point 5 -->
-                                <div style="background: white; border: 1px solid rgba(239, 68, 68, 0.2); border-left: 4px solid #EF4444; padding: 1.5rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
-                                    <h6 style="font-size: 1.05rem; font-weight: 800; color: var(--text-primary); margin-bottom: 1rem;"><span style="margin-right: 8px;">❌</span> Data & System: Blind Navigation</h6>
-                                    <div style="display: flex; flex-direction: column; gap: 0.75rem;">
-                                        <div style="display: flex; gap: 0.75rem;">
-                                            <div style="margin-top: 3px;"><span style="display: flex; align-items: center; justify-content: center; width: 20px; height: 20px; background: rgba(239, 68, 68, 0.1); color: #EF4444; border-radius: 50%; font-size: 0.65rem;">🔴</span></div>
-                                            <div>
-                                                <p style="font-size: 0.95rem; color: #991B1B; font-weight: 700; margin-bottom: 0.25rem;">Gap:</p>
-                                                <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.95rem; color: var(--text-secondary); line-height: 1.5;">
-                                                    <li style="margin-bottom: 0.25rem;"><strong>Half-done metrics:</strong> Targets are set without real-world metrics (Cycle Time, Takt Time, Defect Rate) to prove their feasibility.</li>
-                                                    <li><strong>No bottleneck mapping:</strong> The PM failed to map the Value Stream or identify where the actual Work In Progress (WIP) bottlenecks are.</li>
+                                <div>
+                                    <h6 style="font-size: 1.05rem; font-weight: 800; color: var(--text-primary); margin-bottom: 1rem; display: flex; align-items: center; gap: 8px;"><span style="font-size: 1.2rem;">❌</span> 5. Data & System: Blind Navigation</h6>
+                                    <div class="interview-table gap-impact-table" style="display: flex; flex-direction: column; background: white; border-radius: 8px; border: 1px solid rgba(239, 68, 68, 0.2); overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+                                        <div class="interview-header" style="display: grid; gap: 2rem; padding: 1rem 1.5rem; border-bottom: 1px solid rgba(239, 68, 68, 0.1); font-weight: 700; font-size: 0.85rem; color: #991B1B; letter-spacing: 1px; background: rgba(239, 68, 68, 0.04);">
+                                            <div>GAP</div>
+                                            <div>IMPACT</div>
+                                        </div>
+                                        <div class="interview-row" style="gap: 2rem; padding: 1.5rem;">
+                                            <div class="row-cause">
+                                                <ul class="interview-list" style="color: var(--text-secondary); margin: 0;">
+                                                    <li style="margin-bottom: 0.5rem; min-height: 24px; display: flex; align-items: center;"><div><strong>Half-done metrics:</strong> Targets are set without real-world metrics (Cycle Time, Takt Time, Defect Rate) to prove their feasibility.</div></li>
+                                                    <li style="min-height: 24px; display: flex; align-items: center;"><div><strong>No bottleneck mapping:</strong> The PM failed to map the Value Stream or identify where the actual Work In Progress (WIP) bottlenecks are.</div></li>
+                                                </ul>
+                                            </div>
+                                            <div class="row-consequence">
+                                                <ul class="interview-list" style="color: #991B1B; margin: 0;">
+                                                    <li style="margin-bottom: 0.5rem; min-height: 24px; display: flex; align-items: center;"><div><strong>High risk:</strong> Imposing goals without validated data or a clear methodology is a blind, highly risky approach.</div></li>
+                                                    <li style="min-height: 24px; display: flex; align-items: center;"><div><strong>Systemic failure:</strong> This reveals a profound lack of systemic vision and engineering capability in production management.</div></li>
                                                 </ul>
                                             </div>
                                         </div>
-                                        <div style="display: flex; gap: 0.75rem; background: rgba(239, 68, 68, 0.04); padding: 1rem; border-radius: 8px;">
-                                            <div style="margin-top: 3px;"><span style="font-size: 1.1rem;">💥</span></div>
-                                            <div>
-                                                <p style="font-size: 0.95rem; color: #991B1B; font-weight: 800; margin-bottom: 0.25rem;">Impact:</p>
-                                                <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.95rem; color: #7F1D1D; line-height: 1.5;">
-                                                    <li style="margin-bottom: 0.25rem;"><strong>High risk:</strong> Imposing goals without validated data or a clear methodology is a blind, highly risky approach.</li>
-                                                    <li><strong>Systemic failure:</strong> This reveals a profound lack of systemic vision and engineering capability in production management.</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div style="display: flex; gap: 0.75rem; background: rgba(16, 185, 129, 0.05); padding: 1rem; border-radius: 8px; border-left: 3px solid #10B981; margin-top: 0.5rem;">
-                                            <div style="margin-top: 3px;"><span style="font-size: 1.1rem;">✅</span></div>
-                                            <div>
-                                                <p style="font-size: 0.95rem; color: #047857; font-weight: 800; margin-bottom: 0.25rem;">Correction:</p>
-                                                <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.95rem; color: #065F46; line-height: 1.5;">
-                                                    <li><strong>Data-Driven Strategy:</strong> Base all targets on real-world metrics and map the Value Stream to systematically eliminate bottlenecks.</li>
-                                                </ul>
-                                            </div>
+                                    </div>
+                                    <div class="conclusion-block" style="margin-top: 0.75rem; padding: 1.25rem 1.5rem; border-radius: 8px; background: rgba(16, 185, 129, 0.05); border-left: 4px solid #10B981; display: flex; gap: 0.75rem; align-items: flex-start;">
+                                        <span style="font-size: 1.1rem; margin-top: 2px;">✅</span>
+                                        <div>
+                                            <strong style="color: #047857; font-size: 0.95rem; display: block; margin-bottom: 0.25rem;">Correction:</strong>
+                                            <p style="margin: 0; color: #065F46; font-size: 0.95rem; line-height: 1.5;"><strong>Data-Driven Strategy:</strong> Base all targets on real-world metrics and map the Value Stream to systematically eliminate bottlenecks.</p>
                                         </div>
                                     </div>
                                 </div>
