@@ -1796,18 +1796,19 @@
                                 .gap-impact-table .interview-row {
                                     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
                                     border-bottom: none !important;
+                                    align-items: start;
                                 }
                                 .gap-impact-table .interview-list li::before {
                                     content: '🔴';
-                                    font-size: 0.7rem;
-                                    top: 50%;
-                                    transform: translateY(-50%);
+                                    font-size: 0.65rem;
+                                    top: 5px;
+                                    transform: none;
                                 }
-                                .gap-impact-table .row-consequence .interview-list li::before {
+                                .gap-impact-table .impact-list.interview-list li::before {
                                     content: '💥';
-                                    font-size: 1rem;
-                                    top: 50%;
-                                    transform: translateY(-50%);
+                                    font-size: 0.9rem;
+                                    top: 2px;
+                                    transform: none;
                                 }
                                 @media (max-width: 768px) {
                                     .gap-impact-table .interview-header {
@@ -1821,23 +1822,23 @@
                             <div class="bottleneck-container" style="display: flex; flex-direction: column; gap: 2.5rem;">
                                 <!-- Point 1 -->
                                 <div>
-                                    <h6 style="font-size: 1.05rem; font-weight: 800; color: var(--text-primary); margin-bottom: 1rem; display: flex; align-items: center; gap: 8px;"><span style="font-size: 1.2rem;">🔴</span> 1. Organization: False Optimization</h6>
+                                    <h6 style="font-size: 1.05rem; font-weight: 800; color: var(--text-primary); margin-bottom: 1rem; display: flex; align-items: center; gap: 8px;"><span style="font-size: 1.2rem;">🔴</span> 1. ORGANIZATION: FALSE OPTIMIZATION</h6>
                                     <div class="interview-table gap-impact-table" style="display: flex; flex-direction: column; background: white; border-radius: 8px; border: 1px solid rgba(239, 68, 68, 0.2); overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
                                         <div class="interview-header" style="display: grid; gap: 2rem; padding: 1rem 1.5rem; border-bottom: 1px solid rgba(239, 68, 68, 0.1); font-weight: 700; font-size: 0.85rem; color: #991B1B; letter-spacing: 1px; background: rgba(239, 68, 68, 0.04);">
                                             <div>GAP</div>
                                             <div>IMPACT</div>
                                         </div>
                                         <div class="interview-row" style="gap: 2rem; padding: 1.5rem;">
-                                            <div class="row-cause">
+                                            <div>
                                                 <ul class="interview-list" style="color: var(--text-secondary); margin: 0;">
-                                                    <li style="margin-bottom: 0.5rem; min-height: 24px; display: flex; align-items: center;"><div><strong>Misconception of optimization:</strong> The PM proposed reducing headcount (from 56 to 34) and lowering production volume as the primary solution.</div></li>
-                                                    <li style="min-height: 24px; display: flex; align-items: center;"><div><strong>Broken workflows:</strong> The plan maintains the exact same broken workflow without any systemic improvements.</div></li>
+                                                    <li style="margin-bottom: 0.5rem;"><strong>Misconception of optimization:</strong> The PM proposed reducing headcount (from 56 to 34) and lowering production volume as the primary solution.</li>
+                                                    <li><strong>Broken workflows:</strong> The plan maintains the exact same broken workflow without any systemic improvements.</li>
                                                 </ul>
                                             </div>
-                                            <div class="row-consequence">
-                                                <ul class="interview-list" style="color: #991B1B; margin: 0;">
-                                                    <li style="margin-bottom: 0.5rem; min-height: 24px; display: flex; align-items: center;"><div><strong>Extreme overload:</strong> Forcing a smaller team to use broken methods only creates extreme worker overload and production stagnation.</div></li>
-                                                    <li style="min-height: 24px; display: flex; align-items: center;"><div><strong>Skill stagnation:</strong> Blind downsizing does not improve the skill level or quality of the workforce.</div></li>
+                                            <div>
+                                                <ul class="interview-list impact-list" style="color: #991B1B; margin: 0;">
+                                                    <li style="margin-bottom: 0.5rem;"><strong>Extreme overload:</strong> Forcing a smaller team to use broken methods only creates extreme worker overload and production stagnation.</li>
+                                                    <li><strong>Skill stagnation:</strong> Blind downsizing does not improve the skill level or quality of the workforce.</li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -1853,23 +1854,23 @@
 
                                 <!-- Point 2 -->
                                 <div>
-                                    <h6 style="font-size: 1.05rem; font-weight: 800; color: var(--text-primary); margin-bottom: 1rem; display: flex; align-items: center; gap: 8px;"><span style="font-size: 1.2rem;">📉</span> 2. Training: Capability Stagnation</h6>
+                                    <h6 style="font-size: 1.05rem; font-weight: 800; color: var(--text-primary); margin-bottom: 1rem; display: flex; align-items: center; gap: 8px;"><span style="font-size: 1.2rem;">📉</span> 2. TRAINING: CAPABILITY STAGNATION</h6>
                                     <div class="interview-table gap-impact-table" style="display: flex; flex-direction: column; background: white; border-radius: 8px; border: 1px solid rgba(239, 68, 68, 0.2); overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
                                         <div class="interview-header" style="display: grid; gap: 2rem; padding: 1rem 1.5rem; border-bottom: 1px solid rgba(239, 68, 68, 0.1); font-weight: 700; font-size: 0.85rem; color: #991B1B; letter-spacing: 1px; background: rgba(239, 68, 68, 0.04);">
                                             <div>GAP</div>
                                             <div>IMPACT</div>
                                         </div>
                                         <div class="interview-row" style="gap: 2rem; padding: 1.5rem;">
-                                            <div class="row-cause">
+                                            <div>
                                                 <ul class="interview-list" style="color: var(--text-secondary); margin: 0;">
-                                                    <li style="margin-bottom: 0.5rem; min-height: 24px; display: flex; align-items: center;"><div><strong>Check-the-box approach:</strong> The PM relies on an administrative approach rather than practical, hands-on skill-building.</div></li>
-                                                    <li style="min-height: 24px; display: flex; align-items: center;"><div><strong>Fake evidence:</strong> Submitting photos of a worker standing next to a machine with a signed paper is not functional training.</div></li>
+                                                    <li style="margin-bottom: 0.5rem;"><strong>Check-the-box approach:</strong> The PM relies on an administrative approach rather than practical, hands-on skill-building.</li>
+                                                    <li><strong>Fake evidence:</strong> Submitting photos of a worker standing next to a machine with a signed paper is not functional training.</li>
                                                 </ul>
                                             </div>
-                                            <div class="row-consequence">
-                                                <ul class="interview-list" style="color: #991B1B; margin: 0;">
-                                                    <li style="margin-bottom: 0.5rem; min-height: 24px; display: flex; align-items: center;"><div><strong>Zero competency:</strong> This superficial training fails to build real, functional core competencies on the floor.</div></li>
-                                                    <li style="min-height: 24px; display: flex; align-items: center;"><div><strong>No clear path:</strong> It leaves no practical method for how the remaining staff will actually become multi-skilled experts.</div></li>
+                                            <div>
+                                                <ul class="interview-list impact-list" style="color: #991B1B; margin: 0;">
+                                                    <li style="margin-bottom: 0.5rem;"><strong>Zero competency:</strong> This superficial training fails to build real, functional core competencies on the floor.</li>
+                                                    <li><strong>No clear path:</strong> It leaves no practical method for how the remaining staff will actually become multi-skilled experts.</li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -1885,23 +1886,23 @@
 
                                 <!-- Point 3 -->
                                 <div>
-                                    <h6 style="font-size: 1.05rem; font-weight: 800; color: var(--text-primary); margin-bottom: 1rem; display: flex; align-items: center; gap: 8px;"><span style="font-size: 1.2rem;">🌪️</span> 3. Scheduling: Reactive Operations</h6>
+                                    <h6 style="font-size: 1.05rem; font-weight: 800; color: var(--text-primary); margin-bottom: 1rem; display: flex; align-items: center; gap: 8px;"><span style="font-size: 1.2rem;">🌪️</span> 3. SCHEDULING: REACTIVE OPERATIONS</h6>
                                     <div class="interview-table gap-impact-table" style="display: flex; flex-direction: column; background: white; border-radius: 8px; border: 1px solid rgba(239, 68, 68, 0.2); overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
                                         <div class="interview-header" style="display: grid; gap: 2rem; padding: 1rem 1.5rem; border-bottom: 1px solid rgba(239, 68, 68, 0.1); font-weight: 700; font-size: 0.85rem; color: #991B1B; letter-spacing: 1px; background: rgba(239, 68, 68, 0.04);">
                                             <div>GAP</div>
                                             <div>IMPACT</div>
                                         </div>
                                         <div class="interview-row" style="gap: 2rem; padding: 1.5rem;">
-                                            <div class="row-cause">
+                                            <div>
                                                 <ul class="interview-list" style="color: var(--text-secondary); margin: 0;">
-                                                    <li style="margin-bottom: 0.5rem; min-height: 24px; display: flex; align-items: center;"><div><strong>Unstable master schedule:</strong> The master schedule is highly reactive, with continuous, erratic changes.</div></li>
-                                                    <li style="min-height: 24px; display: flex; align-items: center;"><div><strong>Filling the blanks:</strong> Floor stability is achieved by randomly plugging holes rather than executing a master plan.</div></li>
+                                                    <li style="margin-bottom: 0.5rem;"><strong>Unstable master schedule:</strong> The master schedule is highly reactive, with continuous, erratic changes.</li>
+                                                    <li><strong>Filling the blanks:</strong> Floor stability is achieved by randomly plugging holes rather than executing a master plan.</li>
                                                 </ul>
                                             </div>
-                                            <div class="row-consequence">
-                                                <ul class="interview-list" style="color: #991B1B; margin: 0;">
-                                                    <li style="margin-bottom: 0.5rem; min-height: 24px; display: flex; align-items: center;"><div><strong>Loss of direction:</strong> The lack of clear, consistent guidance leaves the production team confused and lost.</div></li>
-                                                    <li style="min-height: 24px; display: flex; align-items: center;"><div><strong>Execution chaos:</strong> Daily floor actions consistently misalign with any planned schedule.</div></li>
+                                            <div>
+                                                <ul class="interview-list impact-list" style="color: #991B1B; margin: 0;">
+                                                    <li style="margin-bottom: 0.5rem;"><strong>Loss of direction:</strong> The lack of clear, consistent guidance leaves the production team confused and lost.</li>
+                                                    <li><strong>Execution chaos:</strong> Daily floor actions consistently misalign with any planned schedule.</li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -1917,23 +1918,23 @@
 
                                 <!-- Point 4 -->
                                 <div>
-                                    <h6 style="font-size: 1.05rem; font-weight: 800; color: var(--text-primary); margin-bottom: 1rem; display: flex; align-items: center; gap: 8px;"><span style="font-size: 1.2rem;">🚫</span> 4. Process & Culture: Execution Chaos</h6>
+                                    <h6 style="font-size: 1.05rem; font-weight: 800; color: var(--text-primary); margin-bottom: 1rem; display: flex; align-items: center; gap: 8px;"><span style="font-size: 1.2rem;">🚫</span> 4. PROCESS & CULTURE: EXECUTION CHAOS</h6>
                                     <div class="interview-table gap-impact-table" style="display: flex; flex-direction: column; background: white; border-radius: 8px; border: 1px solid rgba(239, 68, 68, 0.2); overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
                                         <div class="interview-header" style="display: grid; gap: 2rem; padding: 1rem 1.5rem; border-bottom: 1px solid rgba(239, 68, 68, 0.1); font-weight: 700; font-size: 0.85rem; color: #991B1B; letter-spacing: 1px; background: rgba(239, 68, 68, 0.04);">
                                             <div>GAP</div>
                                             <div>IMPACT</div>
                                         </div>
                                         <div class="interview-row" style="gap: 2rem; padding: 1.5rem;">
-                                            <div class="row-cause">
+                                            <div>
                                                 <ul class="interview-list" style="color: var(--text-secondary); margin: 0;">
-                                                    <li style="margin-bottom: 0.5rem; min-height: 24px; display: flex; align-items: center;"><div><strong>Missing GPS:</strong> There is no clear breakdown of "Who does what" and no daily targets provided to the team.</div></li>
-                                                    <li style="min-height: 24px; display: flex; align-items: center;"><div><strong>Undefined tools:</strong> Workers are not given explicit processes, tools, or structured task assignments.</div></li>
+                                                    <li style="margin-bottom: 0.5rem;"><strong>Missing GPS:</strong> There is no clear breakdown of "Who does what" and no daily targets provided to the team.</li>
+                                                    <li><strong>Undefined tools:</strong> Workers are not given explicit processes, tools, or structured task assignments.</li>
                                                 </ul>
                                             </div>
-                                            <div class="row-consequence">
-                                                <ul class="interview-list" style="color: #991B1B; margin: 0;">
-                                                    <li style="margin-bottom: 0.5rem; min-height: 24px; display: flex; align-items: center;"><div><strong>Massive waste:</strong> The inevitable chaos leads to massive wasted time and effort on the production floor.</div></li>
-                                                    <li style="min-height: 24px; display: flex; align-items: center;"><div><strong>Misdirected blame:</strong> Leadership blames the workers for failures instead of fixing the broken, undefined processes.</div></li>
+                                            <div>
+                                                <ul class="interview-list impact-list" style="color: #991B1B; margin: 0;">
+                                                    <li style="margin-bottom: 0.5rem;"><strong>Massive waste:</strong> The inevitable chaos leads to massive wasted time and effort on the production floor.</li>
+                                                    <li><strong>Misdirected blame:</strong> Leadership blames the workers for failures instead of fixing the broken, undefined processes.</li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -1949,23 +1950,23 @@
 
                                 <!-- Point 5 -->
                                 <div>
-                                    <h6 style="font-size: 1.05rem; font-weight: 800; color: var(--text-primary); margin-bottom: 1rem; display: flex; align-items: center; gap: 8px;"><span style="font-size: 1.2rem;">❌</span> 5. Data & System: Blind Navigation</h6>
+                                    <h6 style="font-size: 1.05rem; font-weight: 800; color: var(--text-primary); margin-bottom: 1rem; display: flex; align-items: center; gap: 8px;"><span style="font-size: 1.2rem;">❌</span> 5. DATA & SYSTEM: BLIND NAVIGATION</h6>
                                     <div class="interview-table gap-impact-table" style="display: flex; flex-direction: column; background: white; border-radius: 8px; border: 1px solid rgba(239, 68, 68, 0.2); overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
                                         <div class="interview-header" style="display: grid; gap: 2rem; padding: 1rem 1.5rem; border-bottom: 1px solid rgba(239, 68, 68, 0.1); font-weight: 700; font-size: 0.85rem; color: #991B1B; letter-spacing: 1px; background: rgba(239, 68, 68, 0.04);">
                                             <div>GAP</div>
                                             <div>IMPACT</div>
                                         </div>
                                         <div class="interview-row" style="gap: 2rem; padding: 1.5rem;">
-                                            <div class="row-cause">
+                                            <div>
                                                 <ul class="interview-list" style="color: var(--text-secondary); margin: 0;">
-                                                    <li style="margin-bottom: 0.5rem; min-height: 24px; display: flex; align-items: center;"><div><strong>Half-done metrics:</strong> Targets are set without real-world metrics (Cycle Time, Takt Time, Defect Rate) to prove their feasibility.</div></li>
-                                                    <li style="min-height: 24px; display: flex; align-items: center;"><div><strong>No bottleneck mapping:</strong> The PM failed to map the Value Stream or identify where the actual Work In Progress (WIP) bottlenecks are.</div></li>
+                                                    <li style="margin-bottom: 0.5rem;"><strong>Half-done metrics:</strong> Targets are set without real-world metrics (Cycle Time, Takt Time, Defect Rate) to prove their feasibility.</li>
+                                                    <li><strong>No bottleneck mapping:</strong> The PM failed to map the Value Stream or identify where the actual Work In Progress (WIP) bottlenecks are.</li>
                                                 </ul>
                                             </div>
-                                            <div class="row-consequence">
-                                                <ul class="interview-list" style="color: #991B1B; margin: 0;">
-                                                    <li style="margin-bottom: 0.5rem; min-height: 24px; display: flex; align-items: center;"><div><strong>High risk:</strong> Imposing goals without validated data or a clear methodology is a blind, highly risky approach.</div></li>
-                                                    <li style="min-height: 24px; display: flex; align-items: center;"><div><strong>Systemic failure:</strong> This reveals a profound lack of systemic vision and engineering capability in production management.</div></li>
+                                            <div>
+                                                <ul class="interview-list impact-list" style="color: #991B1B; margin: 0;">
+                                                    <li style="margin-bottom: 0.5rem;"><strong>High risk:</strong> Imposing goals without validated data or a clear methodology is a blind, highly risky approach.</li>
+                                                    <li><strong>Systemic failure:</strong> This reveals a profound lack of systemic vision and engineering capability in production management.</li>
                                                 </ul>
                                             </div>
                                         </div>
