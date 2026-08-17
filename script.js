@@ -134,8 +134,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Set default phase to Phase II on load
-    const defaultPhaseBtn = document.querySelector('.cta-button-phase[data-phase="phase2"]');
+    // Set default phase to Phase III on load
+    const defaultPhaseBtn = document.querySelector('.cta-button-phase[data-phase="phase3"]');
     if (defaultPhaseBtn) defaultPhaseBtn.click();
 
     // Auto-switch phase based on clicked anchor links
